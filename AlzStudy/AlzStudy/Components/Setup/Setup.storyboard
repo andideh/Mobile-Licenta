@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GujaratiSangamMN.ttc">
+            <string>GujaratiSangamMN</string>
+            <string>GujaratiSangamMN-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Setup View Controller-->
+        <scene sceneID="Yld-fT-pIw">
+            <objects>
+                <viewController storyboardIdentifier="SetupViewController" id="7GP-ZE-cbn" customClass="SetupViewController" customModule="AlzStudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MtK-Dx-CLh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mh-aP-dfc">
+                                <rect key="frame" x="16" y="40" width="161.5" height="42"/>
+                                <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="65" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h1M-KJ-rJ2">
+                                <rect key="frame" x="0.0" y="102" width="375" height="545"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SetupCell" rowHeight="80" id="s5L-gG-Oog" customClass="SetupCell" customModule="AlzStudy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s5L-gG-Oog" id="D2y-mE-hm0">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yQ-Tk-s09">
+                                                    <rect key="frame" x="18" y="28" width="49" height="24"/>
+                                                    <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
+                                                    <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="k8f-3d-fWg">
+                                                    <rect key="frame" x="330" y="27.5" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="IPR-NS-QYs"/>
+                                                        <constraint firstAttribute="width" secondItem="k8f-3d-fWg" secondAttribute="height" multiplier="1:1" id="jiR-pB-c59"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2yQ-Tk-s09" firstAttribute="leading" secondItem="D2y-mE-hm0" secondAttribute="leadingMargin" constant="10" id="4f0-1L-2Zt"/>
+                                                <constraint firstItem="2yQ-Tk-s09" firstAttribute="centerY" secondItem="D2y-mE-hm0" secondAttribute="centerY" id="ATi-I4-cRd"/>
+                                                <constraint firstItem="k8f-3d-fWg" firstAttribute="centerY" secondItem="D2y-mE-hm0" secondAttribute="centerY" id="E8g-1g-5OQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="k8f-3d-fWg" secondAttribute="trailing" constant="20" id="wf9-Sf-EjQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="checkmarkImage" destination="k8f-3d-fWg" id="q2Y-AM-obP"/>
+                                            <outlet property="titleLabel" destination="2yQ-Tk-s09" id="Vhm-qk-o3M"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="7GP-ZE-cbn" id="B48-Gf-Uqn"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="h1M-KJ-rJ2" firstAttribute="leading" secondItem="w4a-5r-9u1" secondAttribute="leading" id="IUc-Yv-UXS"/>
+                            <constraint firstItem="h1M-KJ-rJ2" firstAttribute="trailing" secondItem="w4a-5r-9u1" secondAttribute="trailing" id="MSH-0E-OCk"/>
+                            <constraint firstItem="h1M-KJ-rJ2" firstAttribute="top" secondItem="0mh-aP-dfc" secondAttribute="bottom" constant="20" id="Wx6-33-qLk"/>
+                            <constraint firstItem="0mh-aP-dfc" firstAttribute="top" secondItem="w4a-5r-9u1" secondAttribute="top" constant="20" id="Z1q-gI-S3c"/>
+                            <constraint firstItem="0mh-aP-dfc" firstAttribute="leading" secondItem="w4a-5r-9u1" secondAttribute="leading" constant="16" id="mSA-zY-Q9g"/>
+                            <constraint firstItem="w4a-5r-9u1" firstAttribute="bottom" secondItem="h1M-KJ-rJ2" secondAttribute="bottom" constant="20" id="ycf-PT-dMg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="w4a-5r-9u1"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="h1M-KJ-rJ2" id="chK-Dr-bOe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o8f-Cc-2Ec" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="248.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="empty_checkmark" width="24" height="24"/>
+    </resources>
+</document>
