@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class WalkThroughViewController: UIViewController {
+final class WalkThroughViewController: BaseViewController {
     
     // MARK: - IBOutlets
     
@@ -22,17 +22,35 @@ final class WalkThroughViewController: UIViewController {
     }
     
     // MARK: - Private properties
-    let dataSource = CardsDataSource()
     
-    // MARK: - VC lifecycle
+    let dataSource = CardsDataSource()
+    let viewModel: WalkThroughViewModelType = WalkThroughViewModel()
+    
+    // MARK: - VC methods
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dataSource.delegate = self
         configureCollectionView()
+        self.viewModel.inputs.viewDidLoad()
     }
     
     override var prefersStatusBarHidden: Bool { return true } 
+    
+    
+    override func bindViewModel() {
+        super.bindViewModel()
+        
+        viewModel.outputs.loadCards
+            .observeForUI()
+            .observeValues { [weak self] cards in
+                self?.dataSource.load(cards: cards)
+            }
+        
+    }
+    
+    // MARK: - Public methods
+    
     
     
     // MARK: - Private methods
@@ -42,10 +60,9 @@ final class WalkThroughViewController: UIViewController {
         collectionView.dataSource = dataSource
         collectionView.bounces = false
         
-        pageControl.numberOfPages = dataSource.cards.count
+        pageControl.numberOfPages = dataSource.elementsCount
         view.bringSubview(toFront: pageControl)
     }
-    
     
 }
 
@@ -54,7 +71,7 @@ extension WalkThroughViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         pageControl.currentPage = indexPath.item
         
-        if indexPath.item == dataSource.cards.count - 1 {
+        if indexPath.item == dataSource.elementsCount - 1 {
             (cell as! CardViewCell).animateJoinButton()
         }
     }
@@ -70,15 +87,3 @@ extension WalkThroughViewController: UICollectionViewDelegateFlowLayout {
 
 }
 
-extension WalkThroughViewController: CardsDataSourceProtocol {
-    
-    func joinButtonTapped() {
-        let registration = ContainerViewController.instantiate()
-        
-        registration.modalTransitionStyle = .crossDissolve
-        
-        self.present(registration, animated: true, completion: nil)
-    }
-}
-
-extension WalkThroughViewController: Reusable { }

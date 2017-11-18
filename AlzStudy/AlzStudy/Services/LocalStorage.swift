@@ -9,20 +9,27 @@
 import Foundation
 
 
-enum Keys: String {
+enum Key: String {
     case hasJoined
+    case isLoggedIn
 }
 
-struct LocalStorage {
+// Generic interface for a service which stores info on device local storage
+protocol LocalStorageType {
+    func set(bool: Bool, forKey key: Key)
+    func bool(for key: Key) -> Bool 
+}
+
+struct UserDefaultsLocalStorage: LocalStorageType {
     
     let userDefaults = UserDefaults.standard
     
     
-    func set(bool: Bool, forKey key: String) {
-        userDefaults.set(bool, forKey: key)
+    func set(bool: Bool, forKey key: Key) {
+        userDefaults.set(bool, forKey: key.rawValue)
     }
     
-    func bool(for key: String) -> Bool {
-        return userDefaults.bool(forKey: key)
+    func bool(for key: Key) -> Bool {
+        return userDefaults.bool(forKey: key.rawValue)
     }
 }

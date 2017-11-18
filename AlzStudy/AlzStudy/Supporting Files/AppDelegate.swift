@@ -11,26 +11,25 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
-
-
+    lazy var window: UIWindow? = {
+        return UIWindow(frame: UIScreen.main.bounds)
+    }()
+    
+    lazy var services: [UIApplicationDelegate] = {
+        return [
+            RootScreenInitService(with: self.window)
+        ]
+    }()
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-       
         
-        window = UIWindow(frame: UIScreen.main.bounds)
-        
-        
-        if !LocalStorage().bool(for: Keys.hasJoined.rawValue) {
-            let walkThrough = WalkThroughViewController.instantiate()
-            window?.rootViewController = walkThrough
+        let result = services.reduce(true) { partialResult, service in
+            return partialResult && (service.application?(application, didFinishLaunchingWithOptions: launchOptions) ?? true)
         }
         
-        window?.makeKeyAndVisible()
-        
-        return true
+        return result
     }
-
-  
 
 
 }

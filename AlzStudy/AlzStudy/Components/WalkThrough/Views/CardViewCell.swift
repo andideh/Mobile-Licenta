@@ -8,24 +8,27 @@
 
 import UIKit
 
-final class CardViewCell: UICollectionViewCell {
+final class CardViewCell: UICollectionViewCell, ValueCell {
+    
+    typealias Value = CardViewData
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var joinButton: UIButton!
     
-    fileprivate var viewData: CardViewData?
+    
+    private var viewData: CardViewData?
     
     // MARK: - public methods
     
-    func configure(with viewData: CardViewData) {
-        imageView.image = viewData.image
-        title.text = viewData.title
-        descriptionLabel.text = viewData.description
-        backgroundColor = viewData.color
+    func configure(with value: CardViewData) {
+        self.viewData = value
         
-        self.viewData = viewData
+        imageView.image = value.image
+        title.text = value.title
+        descriptionLabel.text = value.description
+        backgroundColor = value.color
     }
     
     func animateJoinButton() {
@@ -47,9 +50,7 @@ final class CardViewCell: UICollectionViewCell {
     
     
     @IBAction func joinButtonTapped(_ sender: UIButton) {
-        viewData?.buttonAction?()
+        // Here should use first responder
     }
 }
-
-extension CardViewCell: Reusable { }
 

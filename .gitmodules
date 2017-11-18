@@ -1,0 +1,3 @@
+[submodule "AlzStudy/Kickstarter-ReactiveExtensions"]
+	path = AlzStudy/Kickstarter-ReactiveExtensions
+	url = https://github.com/kickstarter/Kickstarter-ReactiveExtensions.git
