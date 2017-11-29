@@ -13,14 +13,12 @@ struct CardViewData {
     let title: String
     let description: String
     let color: UIColor
-    let buttonAction: VoidBlock?
     
-    init(image: UIImage, title: String, description: String, color: UIColor, buttonAction: VoidBlock? = nil) {
+    init(image: UIImage, title: String, description: String, color: UIColor) {
         self.image = image
         self.title = title
         self.description = description
         self.color = color
-        self.buttonAction = buttonAction
     }
 }
 

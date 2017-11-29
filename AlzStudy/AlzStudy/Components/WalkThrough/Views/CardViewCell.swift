@@ -18,17 +18,12 @@ final class CardViewCell: UICollectionViewCell, ValueCell {
     @IBOutlet weak var joinButton: UIButton!
     
     
-    private var viewData: CardViewData?
+    private var viewModel: CardCellViewModelType = CardCellViewModel()
     
     // MARK: - public methods
     
     func configure(with value: CardViewData) {
-        self.viewData = value
-        
-        imageView.image = value.image
-        title.text = value.title
-        descriptionLabel.text = value.description
-        backgroundColor = value.color
+        viewModel.inputs.configureWith(viewData: value)
     }
     
     func animateJoinButton() {
@@ -48,9 +43,41 @@ final class CardViewCell: UICollectionViewCell, ValueCell {
         joinButton.alpha = 0.0
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        bindViewModel()
+    }
+    
+    fileprivate func bindViewModel() {
+        viewModel.outputs.titleText
+            .observeForUI()
+            .observeValues { [weak self] in
+                self?.title.text = $0
+            }
+        
+        viewModel.outputs.descriptionText
+            .observeForUI()
+            .observeValues { [weak self] in
+                self?.descriptionLabel.text = $0
+            }
+        
+        viewModel.outputs.backgroundColor
+            .observeForUI()
+            .observeValues { [weak self] in
+                self?.backgroundColor = $0
+            }
+        
+        viewModel.outputs.cardImage
+            .observeForUI()
+            .observeValues {
+                self.imageView.image = $0
+            }
+    }
     
     @IBAction func joinButtonTapped(_ sender: UIButton) {
         // Here should use first responder
+        
     }
 }
 

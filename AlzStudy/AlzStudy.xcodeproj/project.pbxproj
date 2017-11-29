@@ -44,6 +44,7 @@
 		99C1E6EB1FB858BC008C79B9 /* RootScreenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C1E6EA1FB858BC008C79B9 /* RootScreenService.swift */; };
 		99C1E6ED1FB85954008C79B9 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C1E6EC1FB85954008C79B9 /* Environment.swift */; };
 		99C1E6EF1FB8595D008C79B9 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C1E6EE1FB8595D008C79B9 /* AppEnvironment.swift */; };
+		99DBCEDA1FC1A17A004CA222 /* CardCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DBCED91FC1A17A004CA222 /* CardCellViewModel.swift */; };
 		99FD17C31FAF6FAE009D320A /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FD17C21FAF6FAE009D320A /* RegistrationViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +117,7 @@
 		99C1E6EA1FB858BC008C79B9 /* RootScreenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreenService.swift; sourceTree = "<group>"; };
 		99C1E6EC1FB85954008C79B9 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		99C1E6EE1FB8595D008C79B9 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		99DBCED91FC1A17A004CA222 /* CardCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellViewModel.swift; sourceTree = "<group>"; };
 		99FD17C21FAF6FAE009D320A /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -376,6 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				99A34EF61FB8913400F33BCF /* WalkThroughViewModel.swift */,
+				99DBCED91FC1A17A004CA222 /* CardCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -637,6 +640,7 @@
 				9995B6931FAF7B61000AAEFD /* ParameterViewData.swift in Sources */,
 				9969D8C01FAF508500196C82 /* ConsentViewController.swift in Sources */,
 				99A34EFA1FB8925200F33BCF /* BaseViewController.swift in Sources */,
+				99DBCEDA1FC1A17A004CA222 /* CardCellViewModel.swift in Sources */,
 				9969D8971FAF243800196C82 /* CardViewData.swift in Sources */,
 				9969D8AF1FAF2E9500196C82 /* UIColor.swift in Sources */,
 				99A34F001FB8956200F33BCF /* ValueCell.swift in Sources */,

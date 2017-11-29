@@ -60,12 +60,7 @@ final class WalkThroughViewModel: WalkThroughViewModelType, WalkThroughViewModel
     func joinTapped() {
         joinTappedProperty.value = ()
     }
-    
-    
-    
-    
-    
-    
+
     
     var inputs: WalkThroughViewModelInputs { return self }
     var outputs: WalkThroughViewModelOutputs { return self }

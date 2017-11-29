@@ -15,8 +15,8 @@ class ValueCellDataSource: NSObject, UITableViewDataSource, UICollectionViewData
     private var values: [[ValueCellType]] = []
     
     // MARK : - Public API
-    var elementsCount: Int {
-        return values.count
+    func elementsIn(section: Int) -> Int {
+        return values[section].count
     }
     
     func configureCell(tableCell cell: UITableViewCell, withValue value: Any) { }

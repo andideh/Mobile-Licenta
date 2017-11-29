@@ -45,8 +45,18 @@ final class WalkThroughViewController: BaseViewController {
             .observeForUI()
             .observeValues { [weak self] cards in
                 self?.dataSource.load(cards: cards)
+                self?.collectionView.reloadData()
+                self?.pageControl.numberOfPages = cards.count
             }
         
+        
+        viewModel.outputs.goToSetup
+            .observeForControllerAction()
+            .observeValues { [weak self] in
+                let setupVC = SetupViewController.instantiate()
+                
+                self?.present(setupVC, animated: true)
+            }
     }
     
     // MARK: - Public methods
@@ -60,7 +70,6 @@ final class WalkThroughViewController: BaseViewController {
         collectionView.dataSource = dataSource
         collectionView.bounces = false
         
-        pageControl.numberOfPages = dataSource.elementsCount
         view.bringSubview(toFront: pageControl)
     }
     
@@ -71,9 +80,15 @@ extension WalkThroughViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         pageControl.currentPage = indexPath.item
         
-        if indexPath.item == dataSource.elementsCount - 1 {
+        if indexPath.item == dataSource.elementsIn(section: 0) - 1 {
             (cell as! CardViewCell).animateJoinButton()
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard indexPath.item == dataSource.elementsIn(section: 0) - 1 else { return }
+        
+        viewModel.inputs.joinTapped()
     }
 
 }
