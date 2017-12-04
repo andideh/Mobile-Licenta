@@ -13,6 +13,7 @@ import Result
 protocol CardCellViewModelInputs {
     
     func configureWith(viewData: CardViewData)
+    func prepareForReuse()
 }
 
 protocol CardCellViewModelOutputs {
@@ -21,6 +22,7 @@ protocol CardCellViewModelOutputs {
     var titleText: Signal<String, NoError> { get }
     var descriptionText: Signal<String, NoError> { get }
     var backgroundColor: Signal<UIColor, NoError> { get }
+    var joinButtonAlpha: Signal<Bool, NoError> { get }
     
 }
 
@@ -35,6 +37,7 @@ final class CardCellViewModel: CardCellViewModelOutputs, CardCellViewModelInputs
     let titleText: Signal<String, NoError>
     let descriptionText: Signal<String, NoError>
     let backgroundColor: Signal<UIColor, NoError>
+    let joinButtonAlpha: Signal<Bool, NoError>
     
     init() {
         
@@ -45,11 +48,19 @@ final class CardCellViewModel: CardCellViewModelOutputs, CardCellViewModelInputs
         descriptionText = data.map { $0.description }
         backgroundColor = data.map { $0.color }
         
+        joinButtonAlpha = prepareForReuseProperty.signal
+            .mapConst(false)
+        
     }
     
     private let viewDataProperty = MutableProperty<CardViewData?>(nil)
     func configureWith(viewData: CardViewData) {
         viewDataProperty.value = viewData
+    }
+    
+    private let prepareForReuseProperty = MutableProperty(())
+    func prepareForReuse() {
+        prepareForReuseProperty.value = ()
     }
     
     var inputs: CardCellViewModelInputs { return self }

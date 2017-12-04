@@ -40,7 +40,7 @@ final class CardViewCell: UICollectionViewCell, ValueCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        joinButton.alpha = 0.0
+        viewModel.inputs.prepareForReuse()
     }
     
     override func awakeFromNib() {
@@ -72,6 +72,12 @@ final class CardViewCell: UICollectionViewCell, ValueCell {
             .observeForUI()
             .observeValues {
                 self.imageView.image = $0
+            }
+        
+        viewModel.outputs.joinButtonAlpha
+            .observeForUI()
+            .observeValues {
+                self.joinButton.isHidden = $0
             }
     }
     

@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Gender: String {
+enum Gender: Int {
     case male
     case female
 }
@@ -27,20 +27,12 @@ enum Parameter {
         }
     }
     
-    mutating func modify(_ newValue: String) {
-        switch self {
-        case .height: self = .height(Int(newValue)!)
-        case .age: self = .age(Int(newValue)!)
-        case .gender: self = .gender(Gender.init(rawValue: newValue) ?? .male)
-        case .weight: self = .weight(Int(newValue)!)
-        }
-    }
     
     var value: String {
         switch self {
             
         case .age(let value): return "\(value)"
-        case .gender(let value): return value.rawValue
+        case .gender(let value): return "\(value.rawValue)"
         case .weight(let value): return "\(value)"
         case .height(let value): return "\(value)"
         
@@ -51,9 +43,11 @@ enum Parameter {
 class ParameterViewData {
     var type: Parameter
     var isFilled: Bool
+    var additionalMessage: String?
     
-    init(type: Parameter) {
+    init(type: Parameter, additionalMessage: String? = nil) {
         self.type = type
         self.isFilled = false
+        self.additionalMessage = additionalMessage
     }
 }

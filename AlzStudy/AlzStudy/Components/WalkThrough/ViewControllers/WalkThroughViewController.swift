@@ -53,7 +53,7 @@ final class WalkThroughViewController: BaseViewController {
         viewModel.outputs.goToSetup
             .observeForControllerAction()
             .observeValues { [weak self] in
-                let setupVC = SetupViewController.instantiate()
+                let setupVC = AboutYouViewController.instantiate()
                 
                 self?.present(setupVC, animated: true)
             }

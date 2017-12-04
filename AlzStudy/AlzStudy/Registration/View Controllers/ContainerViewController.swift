@@ -151,10 +151,10 @@ extension ContainerViewController: ConsentViewControllerProtocol {
     }
     
     func didTapAgree() {
-        let registrationVC = RegistrationViewController.instantiate()
-        
-        registrationVC.delegate = self
-        swap(vc: registrationVC)
+//        let registrationVC = RegistrationViewController.instantiate()
+//
+//        registrationVC.delegate = self
+//        swap(vc: registrationVC)
     }
 }
 
@@ -166,12 +166,12 @@ extension ContainerViewController: MFMailComposeViewControllerDelegate {
     
 }
 
-extension ContainerViewController: RegistrationViewControllerProtocol {
-    
-    func didSignup() {
-        let setup = SetupViewController.instantiate()
-        
-        present(setup, animated: true, completion: nil)
-    }
-}
+//extension ContainerViewController: RegistrationViewControllerProtocol {
+//    
+//    func didSignup() {
+//        let setup = AboutYouViewController.instantiate()
+//        
+//        present(setup, animated: true, completion: nil)
+//    }
+//}
 

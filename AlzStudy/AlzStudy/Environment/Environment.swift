@@ -11,10 +11,13 @@ import Foundation
 struct Environment {
     
     let currentUser: User?
+    let currenUserProfile: CurrentUserProfile
         
     init(
-        currentUser: User? = nil ) {
+        currentUser: User? = nil,
+        currenUserProfile: CurrentUserProfile = CurrentUserProfile()) {
         
         self.currentUser = currentUser
+        self.currenUserProfile = currenUserProfile
     }
 }

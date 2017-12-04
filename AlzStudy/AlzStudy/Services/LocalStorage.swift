@@ -24,7 +24,6 @@ struct UserDefaultsLocalStorage: LocalStorageType {
     
     let userDefaults = UserDefaults.standard
     
-    
     func set(bool: Bool, forKey key: Key) {
         userDefaults.set(bool, forKey: key.rawValue)
     }

@@ -30,9 +30,8 @@
 		9969D8BE1FAF407300196C82 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9969D8BD1FAF407300196C82 /* QuestionViewController.swift */; };
 		9969D8C01FAF508500196C82 /* ConsentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9969D8BF1FAF508500196C82 /* ConsentViewController.swift */; };
 		9995B6881FAF7555000AAEFD /* Setup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9995B6871FAF7555000AAEFD /* Setup.storyboard */; };
-		9995B68A1FAF7571000AAEFD /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9995B6891FAF7571000AAEFD /* SetupViewController.swift */; };
-		9995B68E1FAF78DA000AAEFD /* SetupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9995B68D1FAF78DA000AAEFD /* SetupCell.swift */; };
-		9995B6901FAF79E0000AAEFD /* SetupDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9995B68F1FAF79E0000AAEFD /* SetupDataSource.swift */; };
+		9995B68A1FAF7571000AAEFD /* AboutYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9995B6891FAF7571000AAEFD /* AboutYouViewController.swift */; };
+		9995B68E1FAF78DA000AAEFD /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9995B68D1FAF78DA000AAEFD /* InfoCell.swift */; };
 		9995B6931FAF7B61000AAEFD /* ParameterViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9995B6921FAF7B61000AAEFD /* ParameterViewData.swift */; };
 		99A34EF41FB87B3700F33BCF /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A34EF31FB87B3700F33BCF /* Auth.swift */; };
 		99A34EF71FB8913400F33BCF /* WalkThroughViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A34EF61FB8913400F33BCF /* WalkThroughViewModel.swift */; };
@@ -45,7 +44,18 @@
 		99C1E6ED1FB85954008C79B9 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C1E6EC1FB85954008C79B9 /* Environment.swift */; };
 		99C1E6EF1FB8595D008C79B9 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C1E6EE1FB8595D008C79B9 /* AppEnvironment.swift */; };
 		99DBCEDA1FC1A17A004CA222 /* CardCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DBCED91FC1A17A004CA222 /* CardCellViewModel.swift */; };
-		99FD17C31FAF6FAE009D320A /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FD17C21FAF6FAE009D320A /* RegistrationViewController.swift */; };
+		99FD17C31FAF6FAE009D320A /* RegistrationViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FD17C21FAF6FAE009D320A /* RegistrationViewController2.swift */; };
+		B57B666D1FD47DBA00127B01 /* Today.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B57B666C1FD47DBA00127B01 /* Today.storyboard */; };
+		B59571821FCEC4D2005B7C11 /* AboutYouViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59571811FCEC4D2005B7C11 /* AboutYouViewModel.swift */; };
+		B59571841FCEC6BB005B7C11 /* InfoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59571831FCEC6BB005B7C11 /* InfoCellViewModel.swift */; };
+		B59571861FCEC7F9005B7C11 /* MapConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59571851FCEC7F9005B7C11 /* MapConst.swift */; };
+		B59571921FCECC6C005B7C11 /* AboutYouDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59571911FCECC6C005B7C11 /* AboutYouDataSource.swift */; };
+		B59571941FCECDB6005B7C11 /* AboutYouFormFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59571931FCECDB6005B7C11 /* AboutYouFormFactory.swift */; };
+		B5AAE2731FD4520A006C6435 /* ToolbarViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AAE2721FD4520A006C6435 /* ToolbarViewFactory.swift */; };
+		B5AAE2751FD45523006C6435 /* DatabaseGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AAE2741FD45523006C6435 /* DatabaseGateway.swift */; };
+		B5AAE2771FD455C0006C6435 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AAE2761FD455C0006C6435 /* CurrentUser.swift */; };
+		B5AAE2791FD46272006C6435 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AAE2781FD46272006C6435 /* RegistrationViewController.swift */; };
+		B5AAE27D1FD46592006C6435 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AAE27C1FD46592006C6435 /* RegistrationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,9 +113,8 @@
 		9969D8BD1FAF407300196C82 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		9969D8BF1FAF508500196C82 /* ConsentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentViewController.swift; sourceTree = "<group>"; };
 		9995B6871FAF7555000AAEFD /* Setup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setup.storyboard; sourceTree = "<group>"; };
-		9995B6891FAF7571000AAEFD /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
-		9995B68D1FAF78DA000AAEFD /* SetupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupCell.swift; sourceTree = "<group>"; };
-		9995B68F1FAF79E0000AAEFD /* SetupDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupDataSource.swift; sourceTree = "<group>"; };
+		9995B6891FAF7571000AAEFD /* AboutYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutYouViewController.swift; sourceTree = "<group>"; };
+		9995B68D1FAF78DA000AAEFD /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		9995B6921FAF7B61000AAEFD /* ParameterViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterViewData.swift; sourceTree = "<group>"; };
 		99A34EF31FB87B3700F33BCF /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		99A34EF61FB8913400F33BCF /* WalkThroughViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughViewModel.swift; sourceTree = "<group>"; };
@@ -118,7 +127,18 @@
 		99C1E6EC1FB85954008C79B9 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		99C1E6EE1FB8595D008C79B9 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		99DBCED91FC1A17A004CA222 /* CardCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellViewModel.swift; sourceTree = "<group>"; };
-		99FD17C21FAF6FAE009D320A /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		99FD17C21FAF6FAE009D320A /* RegistrationViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController2.swift; sourceTree = "<group>"; };
+		B57B666C1FD47DBA00127B01 /* Today.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Today.storyboard; sourceTree = "<group>"; };
+		B59571811FCEC4D2005B7C11 /* AboutYouViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutYouViewModel.swift; sourceTree = "<group>"; };
+		B59571831FCEC6BB005B7C11 /* InfoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCellViewModel.swift; sourceTree = "<group>"; };
+		B59571851FCEC7F9005B7C11 /* MapConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapConst.swift; sourceTree = "<group>"; };
+		B59571911FCECC6C005B7C11 /* AboutYouDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutYouDataSource.swift; sourceTree = "<group>"; };
+		B59571931FCECDB6005B7C11 /* AboutYouFormFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutYouFormFactory.swift; sourceTree = "<group>"; };
+		B5AAE2721FD4520A006C6435 /* ToolbarViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarViewFactory.swift; sourceTree = "<group>"; };
+		B5AAE2741FD45523006C6435 /* DatabaseGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseGateway.swift; sourceTree = "<group>"; };
+		B5AAE2761FD455C0006C6435 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		B5AAE2781FD46272006C6435 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		B5AAE27C1FD46592006C6435 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +195,7 @@
 		9919AFBD1FACEAD3008612A0 /* AlzStudy */ = {
 			isa = PBXGroup;
 			children = (
+				9969D8B71FAF3C7D00196C82 /* Registration */,
 				99C1E6E71FB8586B008C79B9 /* Environment */,
 				99C1E6BA1FB856A3008C79B9 /* ReactiveExtensions */,
 				9969D8B21FAF3AB900196C82 /* Services */,
@@ -218,8 +239,8 @@
 		9919AFE01FACEB1E008612A0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B57B666A1FD47D7700127B01 /* Main */,
 				9969D8831FAF1AD700196C82 /* WalkThrough */,
-				9969D8B71FAF3C7D00196C82 /* Registration */,
 				9995B6861FAF753D000AAEFD /* Setup */,
 			);
 			path = Components;
@@ -314,6 +335,8 @@
 				9969D8B31FAF3AC500196C82 /* LocalStorage.swift */,
 				99C1E6EA1FB858BC008C79B9 /* RootScreenService.swift */,
 				99A34EF31FB87B3700F33BCF /* Auth.swift */,
+				B5AAE2741FD45523006C6435 /* DatabaseGateway.swift */,
+				B5AAE2761FD455C0006C6435 /* CurrentUser.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -333,7 +356,7 @@
 				9969D8BA1FAF3DCB00196C82 /* ContainerViewController.swift */,
 				9969D8BD1FAF407300196C82 /* QuestionViewController.swift */,
 				9969D8BF1FAF508500196C82 /* ConsentViewController.swift */,
-				99FD17C21FAF6FAE009D320A /* RegistrationViewController.swift */,
+				99FD17C21FAF6FAE009D320A /* RegistrationViewController2.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -341,11 +364,12 @@
 		9995B6861FAF753D000AAEFD /* Setup */ = {
 			isa = PBXGroup;
 			children = (
+				B59571801FCEC4BA005B7C11 /* ViewModels */,
+				B595717F1FCEC4B4005B7C11 /* DataSources */,
 				9995B6911FAF7A7D000AAEFD /* Models */,
 				9995B68C1FAF7874000AAEFD /* ViewControllers */,
 				9995B68B1FAF7870000AAEFD /* Views */,
 				9995B6871FAF7555000AAEFD /* Setup.storyboard */,
-				9995B68F1FAF79E0000AAEFD /* SetupDataSource.swift */,
 			);
 			path = Setup;
 			sourceTree = "<group>";
@@ -353,7 +377,8 @@
 		9995B68B1FAF7870000AAEFD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9995B68D1FAF78DA000AAEFD /* SetupCell.swift */,
+				9995B68D1FAF78DA000AAEFD /* InfoCell.swift */,
+				B5AAE2721FD4520A006C6435 /* ToolbarViewFactory.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -361,7 +386,8 @@
 		9995B68C1FAF7874000AAEFD /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9995B6891FAF7571000AAEFD /* SetupViewController.swift */,
+				9995B6891FAF7571000AAEFD /* AboutYouViewController.swift */,
+				B5AAE2781FD46272006C6435 /* RegistrationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -396,6 +422,7 @@
 			isa = PBXGroup;
 			children = (
 				99C1E6BB1FB856B6008C79B9 /* ObserveForUI.swift */,
+				B59571851FCEC7F9005B7C11 /* MapConst.swift */,
 			);
 			path = ReactiveExtensions;
 			sourceTree = "<group>";
@@ -407,6 +434,41 @@
 				99C1E6EE1FB8595D008C79B9 /* AppEnvironment.swift */,
 			);
 			path = Environment;
+			sourceTree = "<group>";
+		};
+		B57B666A1FD47D7700127B01 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B57B666B1FD47D8100127B01 /* Today */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B57B666B1FD47D8100127B01 /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				B57B666C1FD47DBA00127B01 /* Today.storyboard */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
+		B595717F1FCEC4B4005B7C11 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				B59571911FCECC6C005B7C11 /* AboutYouDataSource.swift */,
+				B59571931FCECDB6005B7C11 /* AboutYouFormFactory.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		B59571801FCEC4BA005B7C11 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B59571831FCEC6BB005B7C11 /* InfoCellViewModel.swift */,
+				B59571811FCEC4D2005B7C11 /* AboutYouViewModel.swift */,
+				B5AAE27C1FD46592006C6435 /* RegistrationViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		D4A815B38C7578700AC4B564 /* Frameworks */ = {
@@ -513,6 +575,7 @@
 				9969D8891FAF1B6A00196C82 /* WalkThrough.storyboard in Resources */,
 				9919AFC91FACEAD4008612A0 /* LaunchScreen.storyboard in Resources */,
 				9919AFC61FACEAD4008612A0 /* Assets.xcassets in Resources */,
+				B57B666D1FD47DBA00127B01 /* Today.storyboard in Resources */,
 				9919AFC41FACEAD4008612A0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -533,13 +596,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlzStudy-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6264BFE0D7C3834E5254197B /* [CP] Embed Pods Frameworks */ = {
@@ -593,9 +659,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AlzStudy/Pods-AlzStudy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -608,13 +685,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlzStudyTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -626,17 +706,25 @@
 			files = (
 				99A34EFE1FB8954A00F33BCF /* ValueCellDataSource.swift in Sources */,
 				99C1E6EB1FB858BC008C79B9 /* RootScreenService.swift in Sources */,
+				B5AAE2791FD46272006C6435 /* RegistrationViewController.swift in Sources */,
 				9969D8B41FAF3AC500196C82 /* LocalStorage.swift in Sources */,
+				B5AAE2751FD45523006C6435 /* DatabaseGateway.swift in Sources */,
+				B59571941FCECDB6005B7C11 /* AboutYouFormFactory.swift in Sources */,
+				B59571861FCEC7F9005B7C11 /* MapConst.swift in Sources */,
 				99C1E6BC1FB856B6008C79B9 /* ObserveForUI.swift in Sources */,
+				B5AAE2771FD455C0006C6435 /* CurrentUser.swift in Sources */,
 				99A34EFC1FB894C200F33BCF /* CardsFactory.swift in Sources */,
+				B5AAE2731FD4520A006C6435 /* ToolbarViewFactory.swift in Sources */,
 				99C1E6EF1FB8595D008C79B9 /* AppEnvironment.swift in Sources */,
 				9969D8BE1FAF407300196C82 /* QuestionViewController.swift in Sources */,
 				9969D8BB1FAF3DCB00196C82 /* ContainerViewController.swift in Sources */,
 				9969D8901FAF1BC800196C82 /* Protocols.swift in Sources */,
 				9919AFBF1FACEAD4008612A0 /* AppDelegate.swift in Sources */,
+				B59571841FCEC6BB005B7C11 /* InfoCellViewModel.swift in Sources */,
 				99C1E6ED1FB85954008C79B9 /* Environment.swift in Sources */,
 				9969D8871FAF1B1900196C82 /* CardsDataSource.swift in Sources */,
-				99FD17C31FAF6FAE009D320A /* RegistrationViewController.swift in Sources */,
+				B59571821FCEC4D2005B7C11 /* AboutYouViewModel.swift in Sources */,
+				99FD17C31FAF6FAE009D320A /* RegistrationViewController2.swift in Sources */,
 				9995B6931FAF7B61000AAEFD /* ParameterViewData.swift in Sources */,
 				9969D8C01FAF508500196C82 /* ConsentViewController.swift in Sources */,
 				99A34EFA1FB8925200F33BCF /* BaseViewController.swift in Sources */,
@@ -644,15 +732,16 @@
 				9969D8971FAF243800196C82 /* CardViewData.swift in Sources */,
 				9969D8AF1FAF2E9500196C82 /* UIColor.swift in Sources */,
 				99A34F001FB8956200F33BCF /* ValueCell.swift in Sources */,
-				9995B6901FAF79E0000AAEFD /* SetupDataSource.swift in Sources */,
 				9969D8941FAF235100196C82 /* CollectionView+Extensions.swift in Sources */,
 				9969D8851FAF1AEB00196C82 /* WalkThroughViewController.swift in Sources */,
+				B5AAE27D1FD46592006C6435 /* RegistrationViewModel.swift in Sources */,
 				9969D8B11FAF2EE900196C82 /* Theme.swift in Sources */,
 				99A34EF71FB8913400F33BCF /* WalkThroughViewModel.swift in Sources */,
 				9969D89D1FAF25A100196C82 /* CardViewCell.swift in Sources */,
-				9995B68E1FAF78DA000AAEFD /* SetupCell.swift in Sources */,
-				9995B68A1FAF7571000AAEFD /* SetupViewController.swift in Sources */,
+				9995B68E1FAF78DA000AAEFD /* InfoCell.swift in Sources */,
+				9995B68A1FAF7571000AAEFD /* AboutYouViewController.swift in Sources */,
 				9969D89F1FAF27CE00196C82 /* Storyboard.swift in Sources */,
+				B59571921FCECC6C005B7C11 /* AboutYouDataSource.swift in Sources */,
 				99A34EF41FB87B3700F33BCF /* Auth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
