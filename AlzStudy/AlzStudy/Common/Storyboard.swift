@@ -14,6 +14,8 @@ enum Storyboard: String {
     case WalkThrough
     case Registration
     case Setup
+    case Today
+    case Root
     
     
     func instantiate<T: UIViewController>() -> T {

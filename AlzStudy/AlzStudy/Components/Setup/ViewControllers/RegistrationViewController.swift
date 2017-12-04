@@ -38,15 +38,13 @@ final class RegistrationViewController: BaseViewController {
     }
     
     override var canBecomeFirstResponder: Bool { return false }
-    
-    
     override var inputAccessoryView: UIView? { return nil }
     
     
     // MARK: - IBActions
     
     @IBAction func registerButtonTapped(_ sender: UIButton) {
-        
+        self.viewModel.inputs.registerButtonTapped()
     }
     
     // MARK: - Public methods
@@ -66,7 +64,9 @@ final class RegistrationViewController: BaseViewController {
         self.viewModel.outputs.signIn
             .observeForControllerAction()
             .observeValues { [weak self] in
-                print("registered")
+                let todayVC = TodayViewController.instantiate()
+                
+                self?.present(todayVC, animated: true)
             }
     }
     

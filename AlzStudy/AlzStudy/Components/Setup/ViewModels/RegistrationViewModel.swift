@@ -67,6 +67,16 @@ final class RegistrationViewModel: RegistrationViewModelOutputs, RegistrationVie
         
         signIn = registerTappedProperty.signal
         
+        let _ = Signal.combineLatest(name, email, password)
+            .takeWhen(signIn)
+            .observeValues {
+                let user = User(name: $0, email: $1, password: $2)
+                
+                AppEnvironment.pushEnvironment(currentUser: user)
+                
+                let archived = NSKeyedArchiver.archivedData(withRootObject: user)
+                UserDefaults.standard.set(archived, forKey: "user")
+            }
     }
     
     

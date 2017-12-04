@@ -20,12 +20,15 @@ final class RootScreenInitService: NSObject, UIApplicationDelegate {
         
 //        AppearanceConfigurator.configureGlobalAppearance()
         
-        if AppEnvironment.current.currentUser == nil {
+        if !Auth().isAuthenticated {
             let walkThrough = WalkThroughViewController.instantiate()
             
             mainWindow?.rootViewController = walkThrough
         } else {
             // TODO: navigate to
+            let today = TodayViewController.instantiate()
+
+            mainWindow?.rootViewController = today
         }
         
 

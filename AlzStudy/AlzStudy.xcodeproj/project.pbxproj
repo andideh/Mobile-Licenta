@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10C845BF280091AAAC1D8A60 /* Pods_AlzStudyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A36C69DE0643E3B52F23FCB /* Pods_AlzStudyTests.framework */; };
-		9006B2C137E5BFA4C07B20EE /* Pods_AlzStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F7C93C672AAA42F8144BE6A /* Pods_AlzStudy.framework */; };
+		26FA3CD7C925E38476A6126E /* Pods_AlzStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBAC744FD5FFE42460BD6E0 /* Pods_AlzStudy.framework */; };
 		9919AFBF1FACEAD4008612A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9919AFBE1FACEAD4008612A0 /* AppDelegate.swift */; };
 		9919AFC41FACEAD4008612A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9919AFC21FACEAD4008612A0 /* Main.storyboard */; };
 		9919AFC61FACEAD4008612A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9919AFC51FACEAD4008612A0 /* Assets.xcassets */; };
@@ -39,10 +38,24 @@
 		99A34EFC1FB894C200F33BCF /* CardsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A34EFB1FB894C200F33BCF /* CardsFactory.swift */; };
 		99A34EFE1FB8954A00F33BCF /* ValueCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A34EFD1FB8954A00F33BCF /* ValueCellDataSource.swift */; };
 		99A34F001FB8956200F33BCF /* ValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A34EFF1FB8956200F33BCF /* ValueCell.swift */; };
+		99B449FF1FD5C3F7009821C1 /* TakeWhen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B449FE1FD5C3F7009821C1 /* TakeWhen.swift */; };
+		99B44A011FD5C4C1009821C1 /* WithLatestFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B44A001FD5C4C1009821C1 /* WithLatestFrom.swift */; };
+		99B44A031FD5C6CB009821C1 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B44A021FD5C6CB009821C1 /* TodayViewController.swift */; };
 		99C1E6BC1FB856B6008C79B9 /* ObserveForUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C1E6BB1FB856B6008C79B9 /* ObserveForUI.swift */; };
 		99C1E6EB1FB858BC008C79B9 /* RootScreenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C1E6EA1FB858BC008C79B9 /* RootScreenService.swift */; };
 		99C1E6ED1FB85954008C79B9 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C1E6EC1FB85954008C79B9 /* Environment.swift */; };
 		99C1E6EF1FB8595D008C79B9 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C1E6EE1FB8595D008C79B9 /* AppEnvironment.swift */; };
+		99C5E0831FD5CE7C00CEF351 /* PNGenericChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C5E0781FD5CE7B00CEF351 /* PNGenericChart.swift */; };
+		99C5E0841FD5CE7C00CEF351 /* PNBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C5E0791FD5CE7B00CEF351 /* PNBarChart.swift */; };
+		99C5E0851FD5CE7C00CEF351 /* PNLineChartDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C5E07A1FD5CE7B00CEF351 /* PNLineChartDataItem.swift */; };
+		99C5E0861FD5CE7C00CEF351 /* PNBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C5E07B1FD5CE7B00CEF351 /* PNBar.swift */; };
+		99C5E0871FD5CE7C00CEF351 /* PNPieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C5E07C1FD5CE7B00CEF351 /* PNPieChart.swift */; };
+		99C5E0881FD5CE7C00CEF351 /* PNPieChartDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C5E07D1FD5CE7C00CEF351 /* PNPieChartDataItem.swift */; };
+		99C5E0891FD5CE7C00CEF351 /* PNChartLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C5E07E1FD5CE7C00CEF351 /* PNChartLabel.swift */; };
+		99C5E08A1FD5CE7C00CEF351 /* PNValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C5E07F1FD5CE7C00CEF351 /* PNValue.swift */; };
+		99C5E08B1FD5CE7C00CEF351 /* PNLineChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C5E0801FD5CE7C00CEF351 /* PNLineChartData.swift */; };
+		99C5E08C1FD5CE7C00CEF351 /* PNColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C5E0811FD5CE7C00CEF351 /* PNColor.swift */; };
+		99C5E08D1FD5CE7C00CEF351 /* PNLineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C5E0821FD5CE7C00CEF351 /* PNLineChart.swift */; };
 		99DBCEDA1FC1A17A004CA222 /* CardCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DBCED91FC1A17A004CA222 /* CardCellViewModel.swift */; };
 		99FD17C31FAF6FAE009D320A /* RegistrationViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FD17C21FAF6FAE009D320A /* RegistrationViewController2.swift */; };
 		B57B666D1FD47DBA00127B01 /* Today.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B57B666C1FD47DBA00127B01 /* Today.storyboard */; };
@@ -56,6 +69,7 @@
 		B5AAE2771FD455C0006C6435 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AAE2761FD455C0006C6435 /* CurrentUser.swift */; };
 		B5AAE2791FD46272006C6435 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AAE2781FD46272006C6435 /* RegistrationViewController.swift */; };
 		B5AAE27D1FD46592006C6435 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AAE27C1FD46592006C6435 /* RegistrationViewModel.swift */; };
+		ED729C312215BBEA6939CCF8 /* Pods_AlzStudyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0BBC8C436EAD210AC7E7EE /* Pods_AlzStudyTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,12 +96,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		042FE5E8F51B1DE42F9DC3C2 /* Pods-AlzStudyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlzStudyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlzStudyTests/Pods-AlzStudyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		137109A1759805FA8B7D41E7 /* Pods-AlzStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlzStudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlzStudy/Pods-AlzStudy.debug.xcconfig"; sourceTree = "<group>"; };
-		2A36C69DE0643E3B52F23FCB /* Pods_AlzStudyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlzStudyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2DD9EA107A6E8CFCE58C14C6 /* Pods-AlzStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlzStudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlzStudy/Pods-AlzStudy.release.xcconfig"; sourceTree = "<group>"; };
-		2F7C93C672AAA42F8144BE6A /* Pods_AlzStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlzStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		68C6D68DD5B9397E3D28CE07 /* Pods-AlzStudyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlzStudyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlzStudyTests/Pods-AlzStudyTests.release.xcconfig"; sourceTree = "<group>"; };
+		14734DB7A59B6F2754A49BF9 /* Pods-AlzStudyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlzStudyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlzStudyTests/Pods-AlzStudyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1F75D17A2FF78397B3A74FC1 /* Pods-AlzStudyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlzStudyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlzStudyTests/Pods-AlzStudyTests.release.xcconfig"; sourceTree = "<group>"; };
+		3EBAC744FD5FFE42460BD6E0 /* Pods_AlzStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlzStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66133CC350436A078D1C5CB9 /* Pods-AlzStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlzStudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlzStudy/Pods-AlzStudy.release.xcconfig"; sourceTree = "<group>"; };
 		9919AFBB1FACEAD3008612A0 /* AlzStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlzStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9919AFBE1FACEAD4008612A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9919AFC31FACEAD4008612A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -122,10 +134,24 @@
 		99A34EFB1FB894C200F33BCF /* CardsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsFactory.swift; sourceTree = "<group>"; };
 		99A34EFD1FB8954A00F33BCF /* ValueCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueCellDataSource.swift; sourceTree = "<group>"; };
 		99A34EFF1FB8956200F33BCF /* ValueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueCell.swift; sourceTree = "<group>"; };
+		99B449FE1FD5C3F7009821C1 /* TakeWhen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeWhen.swift; sourceTree = "<group>"; };
+		99B44A001FD5C4C1009821C1 /* WithLatestFrom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithLatestFrom.swift; sourceTree = "<group>"; };
+		99B44A021FD5C6CB009821C1 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		99C1E6BB1FB856B6008C79B9 /* ObserveForUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserveForUI.swift; sourceTree = "<group>"; };
 		99C1E6EA1FB858BC008C79B9 /* RootScreenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreenService.swift; sourceTree = "<group>"; };
 		99C1E6EC1FB85954008C79B9 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		99C1E6EE1FB8595D008C79B9 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		99C5E0781FD5CE7B00CEF351 /* PNGenericChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNGenericChart.swift; sourceTree = "<group>"; };
+		99C5E0791FD5CE7B00CEF351 /* PNBarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNBarChart.swift; sourceTree = "<group>"; };
+		99C5E07A1FD5CE7B00CEF351 /* PNLineChartDataItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNLineChartDataItem.swift; sourceTree = "<group>"; };
+		99C5E07B1FD5CE7B00CEF351 /* PNBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNBar.swift; sourceTree = "<group>"; };
+		99C5E07C1FD5CE7B00CEF351 /* PNPieChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNPieChart.swift; sourceTree = "<group>"; };
+		99C5E07D1FD5CE7C00CEF351 /* PNPieChartDataItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNPieChartDataItem.swift; sourceTree = "<group>"; };
+		99C5E07E1FD5CE7C00CEF351 /* PNChartLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNChartLabel.swift; sourceTree = "<group>"; };
+		99C5E07F1FD5CE7C00CEF351 /* PNValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNValue.swift; sourceTree = "<group>"; };
+		99C5E0801FD5CE7C00CEF351 /* PNLineChartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNLineChartData.swift; sourceTree = "<group>"; };
+		99C5E0811FD5CE7C00CEF351 /* PNColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNColor.swift; sourceTree = "<group>"; };
+		99C5E0821FD5CE7C00CEF351 /* PNLineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNLineChart.swift; sourceTree = "<group>"; };
 		99DBCED91FC1A17A004CA222 /* CardCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellViewModel.swift; sourceTree = "<group>"; };
 		99FD17C21FAF6FAE009D320A /* RegistrationViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController2.swift; sourceTree = "<group>"; };
 		B57B666C1FD47DBA00127B01 /* Today.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Today.storyboard; sourceTree = "<group>"; };
@@ -139,6 +165,8 @@
 		B5AAE2761FD455C0006C6435 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		B5AAE2781FD46272006C6435 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		B5AAE27C1FD46592006C6435 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		CA0BBC8C436EAD210AC7E7EE /* Pods_AlzStudyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlzStudyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D45208CDADD2977D10B578CD /* Pods-AlzStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlzStudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlzStudy/Pods-AlzStudy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9006B2C137E5BFA4C07B20EE /* Pods_AlzStudy.framework in Frameworks */,
+				26FA3CD7C925E38476A6126E /* Pods_AlzStudy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,32 +182,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10C845BF280091AAAC1D8A60 /* Pods_AlzStudyTests.framework in Frameworks */,
+				ED729C312215BBEA6939CCF8 /* Pods_AlzStudyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		014EE6A4D4A7B60CC21AAA05 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				137109A1759805FA8B7D41E7 /* Pods-AlzStudy.debug.xcconfig */,
-				2DD9EA107A6E8CFCE58C14C6 /* Pods-AlzStudy.release.xcconfig */,
-				042FE5E8F51B1DE42F9DC3C2 /* Pods-AlzStudyTests.debug.xcconfig */,
-				68C6D68DD5B9397E3D28CE07 /* Pods-AlzStudyTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		9919AFB21FACEAD3008612A0 = {
 			isa = PBXGroup;
 			children = (
 				9919AFBD1FACEAD3008612A0 /* AlzStudy */,
 				9919AFD21FACEAD4008612A0 /* AlzStudyTests */,
 				9919AFBC1FACEAD3008612A0 /* Products */,
-				014EE6A4D4A7B60CC21AAA05 /* Pods */,
-				D4A815B38C7578700AC4B564 /* Frameworks */,
+				B2B91D4B59F98D6398679A59 /* Pods */,
+				FFC8491F70BAC6E79E13D3D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,6 +212,7 @@
 		9919AFBD1FACEAD3008612A0 /* AlzStudy */ = {
 			isa = PBXGroup;
 			children = (
+				99C5E0771FD5CE6800CEF351 /* Chart */,
 				9969D8B71FAF3C7D00196C82 /* Registration */,
 				99C1E6E71FB8586B008C79B9 /* Environment */,
 				99C1E6BA1FB856A3008C79B9 /* ReactiveExtensions */,
@@ -239,7 +257,7 @@
 		9919AFE01FACEB1E008612A0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				B57B666A1FD47D7700127B01 /* Main */,
+				B57B666A1FD47D7700127B01 /* Root */,
 				9969D8831FAF1AD700196C82 /* WalkThrough */,
 				9995B6861FAF753D000AAEFD /* Setup */,
 			);
@@ -423,6 +441,8 @@
 			children = (
 				99C1E6BB1FB856B6008C79B9 /* ObserveForUI.swift */,
 				B59571851FCEC7F9005B7C11 /* MapConst.swift */,
+				99B449FE1FD5C3F7009821C1 /* TakeWhen.swift */,
+				99B44A001FD5C4C1009821C1 /* WithLatestFrom.swift */,
 			);
 			path = ReactiveExtensions;
 			sourceTree = "<group>";
@@ -436,18 +456,48 @@
 			path = Environment;
 			sourceTree = "<group>";
 		};
-		B57B666A1FD47D7700127B01 /* Main */ = {
+		99C5E0771FD5CE6800CEF351 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				99C5E07B1FD5CE7B00CEF351 /* PNBar.swift */,
+				99C5E0791FD5CE7B00CEF351 /* PNBarChart.swift */,
+				99C5E07E1FD5CE7C00CEF351 /* PNChartLabel.swift */,
+				99C5E0811FD5CE7C00CEF351 /* PNColor.swift */,
+				99C5E0781FD5CE7B00CEF351 /* PNGenericChart.swift */,
+				99C5E0821FD5CE7C00CEF351 /* PNLineChart.swift */,
+				99C5E0801FD5CE7C00CEF351 /* PNLineChartData.swift */,
+				99C5E07A1FD5CE7B00CEF351 /* PNLineChartDataItem.swift */,
+				99C5E07C1FD5CE7B00CEF351 /* PNPieChart.swift */,
+				99C5E07D1FD5CE7C00CEF351 /* PNPieChartDataItem.swift */,
+				99C5E07F1FD5CE7C00CEF351 /* PNValue.swift */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
+		B2B91D4B59F98D6398679A59 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D45208CDADD2977D10B578CD /* Pods-AlzStudy.debug.xcconfig */,
+				66133CC350436A078D1C5CB9 /* Pods-AlzStudy.release.xcconfig */,
+				14734DB7A59B6F2754A49BF9 /* Pods-AlzStudyTests.debug.xcconfig */,
+				1F75D17A2FF78397B3A74FC1 /* Pods-AlzStudyTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B57B666A1FD47D7700127B01 /* Root */ = {
 			isa = PBXGroup;
 			children = (
 				B57B666B1FD47D8100127B01 /* Today */,
 			);
-			path = Main;
+			path = Root;
 			sourceTree = "<group>";
 		};
 		B57B666B1FD47D8100127B01 /* Today */ = {
 			isa = PBXGroup;
 			children = (
 				B57B666C1FD47DBA00127B01 /* Today.storyboard */,
+				99B44A021FD5C6CB009821C1 /* TodayViewController.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -471,11 +521,11 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		D4A815B38C7578700AC4B564 /* Frameworks */ = {
+		FFC8491F70BAC6E79E13D3D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2F7C93C672AAA42F8144BE6A /* Pods_AlzStudy.framework */,
-				2A36C69DE0643E3B52F23FCB /* Pods_AlzStudyTests.framework */,
+				3EBAC744FD5FFE42460BD6E0 /* Pods_AlzStudy.framework */,
+				CA0BBC8C436EAD210AC7E7EE /* Pods_AlzStudyTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -487,13 +537,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9919AFD81FACEAD4008612A0 /* Build configuration list for PBXNativeTarget "AlzStudy" */;
 			buildPhases = (
-				29300242CBF0E8A56D660639 /* [CP] Check Pods Manifest.lock */,
+				86D36ED7114015A520A69154 /* [CP] Check Pods Manifest.lock */,
 				9919AFB71FACEAD3008612A0 /* Sources */,
 				9919AFB81FACEAD3008612A0 /* Frameworks */,
 				9919AFB91FACEAD3008612A0 /* Resources */,
-				9B001134DBD6880F9A29A777 /* [CP] Embed Pods Frameworks */,
-				694AABB55B7F7D0D30A402E2 /* [CP] Copy Pods Resources */,
 				99C1E55E1FB85377008C79B9 /* Embed Frameworks */,
+				7784BA0BA24CD5CAF235A919 /* [CP] Embed Pods Frameworks */,
+				C37F49F88152E9428CEEA0F1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -508,12 +558,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9919AFDB1FACEAD4008612A0 /* Build configuration list for PBXNativeTarget "AlzStudyTests" */;
 			buildPhases = (
-				DB3FACA21EA8C6AF595602AE /* [CP] Check Pods Manifest.lock */,
+				9907768E22BD8EC0EDE87033 /* [CP] Check Pods Manifest.lock */,
 				9919AFCB1FACEAD4008612A0 /* Sources */,
 				9919AFCC1FACEAD4008612A0 /* Frameworks */,
 				9919AFCD1FACEAD4008612A0 /* Resources */,
-				6264BFE0D7C3834E5254197B /* [CP] Embed Pods Frameworks */,
-				86C7E853A477DFA127D23613 /* [CP] Copy Pods Resources */,
+				4FA17BC02ED3BA5617895CB4 /* [CP] Embed Pods Frameworks */,
+				4F905C7A28D6FB67C7FF26C4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -590,55 +640,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		29300242CBF0E8A56D660639 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AlzStudy-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6264BFE0D7C3834E5254197B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AlzStudyTests/Pods-AlzStudyTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		694AABB55B7F7D0D30A402E2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AlzStudy/Pods-AlzStudy-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		86C7E853A477DFA127D23613 /* [CP] Copy Pods Resources */ = {
+		4F905C7A28D6FB67C7FF26C4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -653,48 +655,79 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AlzStudyTests/Pods-AlzStudyTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9B001134DBD6880F9A29A777 /* [CP] Embed Pods Frameworks */ = {
+		4FA17BC02ED3BA5617895CB4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AlzStudy/Pods-AlzStudy-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AlzStudyTests/Pods-AlzStudyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7784BA0BA24CD5CAF235A919 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AlzStudy/Pods-AlzStudy-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DB3FACA21EA8C6AF595602AE /* [CP] Check Pods Manifest.lock */ = {
+		86D36ED7114015A520A69154 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AlzStudyTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9907768E22BD8EC0EDE87033 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C37F49F88152E9428CEEA0F1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AlzStudy/Pods-AlzStudy-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -706,11 +739,16 @@
 			files = (
 				99A34EFE1FB8954A00F33BCF /* ValueCellDataSource.swift in Sources */,
 				99C1E6EB1FB858BC008C79B9 /* RootScreenService.swift in Sources */,
+				99C5E0831FD5CE7C00CEF351 /* PNGenericChart.swift in Sources */,
 				B5AAE2791FD46272006C6435 /* RegistrationViewController.swift in Sources */,
 				9969D8B41FAF3AC500196C82 /* LocalStorage.swift in Sources */,
 				B5AAE2751FD45523006C6435 /* DatabaseGateway.swift in Sources */,
+				99B449FF1FD5C3F7009821C1 /* TakeWhen.swift in Sources */,
 				B59571941FCECDB6005B7C11 /* AboutYouFormFactory.swift in Sources */,
+				99C5E08B1FD5CE7C00CEF351 /* PNLineChartData.swift in Sources */,
 				B59571861FCEC7F9005B7C11 /* MapConst.swift in Sources */,
+				99C5E08A1FD5CE7C00CEF351 /* PNValue.swift in Sources */,
+				99B44A031FD5C6CB009821C1 /* TodayViewController.swift in Sources */,
 				99C1E6BC1FB856B6008C79B9 /* ObserveForUI.swift in Sources */,
 				B5AAE2771FD455C0006C6435 /* CurrentUser.swift in Sources */,
 				99A34EFC1FB894C200F33BCF /* CardsFactory.swift in Sources */,
@@ -721,26 +759,35 @@
 				9969D8901FAF1BC800196C82 /* Protocols.swift in Sources */,
 				9919AFBF1FACEAD4008612A0 /* AppDelegate.swift in Sources */,
 				B59571841FCEC6BB005B7C11 /* InfoCellViewModel.swift in Sources */,
+				99C5E0891FD5CE7C00CEF351 /* PNChartLabel.swift in Sources */,
 				99C1E6ED1FB85954008C79B9 /* Environment.swift in Sources */,
 				9969D8871FAF1B1900196C82 /* CardsDataSource.swift in Sources */,
 				B59571821FCEC4D2005B7C11 /* AboutYouViewModel.swift in Sources */,
+				99C5E0851FD5CE7C00CEF351 /* PNLineChartDataItem.swift in Sources */,
 				99FD17C31FAF6FAE009D320A /* RegistrationViewController2.swift in Sources */,
+				99C5E0841FD5CE7C00CEF351 /* PNBarChart.swift in Sources */,
+				99C5E0881FD5CE7C00CEF351 /* PNPieChartDataItem.swift in Sources */,
+				99B44A011FD5C4C1009821C1 /* WithLatestFrom.swift in Sources */,
 				9995B6931FAF7B61000AAEFD /* ParameterViewData.swift in Sources */,
 				9969D8C01FAF508500196C82 /* ConsentViewController.swift in Sources */,
 				99A34EFA1FB8925200F33BCF /* BaseViewController.swift in Sources */,
 				99DBCEDA1FC1A17A004CA222 /* CardCellViewModel.swift in Sources */,
 				9969D8971FAF243800196C82 /* CardViewData.swift in Sources */,
+				99C5E08D1FD5CE7C00CEF351 /* PNLineChart.swift in Sources */,
 				9969D8AF1FAF2E9500196C82 /* UIColor.swift in Sources */,
+				99C5E08C1FD5CE7C00CEF351 /* PNColor.swift in Sources */,
 				99A34F001FB8956200F33BCF /* ValueCell.swift in Sources */,
 				9969D8941FAF235100196C82 /* CollectionView+Extensions.swift in Sources */,
 				9969D8851FAF1AEB00196C82 /* WalkThroughViewController.swift in Sources */,
 				B5AAE27D1FD46592006C6435 /* RegistrationViewModel.swift in Sources */,
 				9969D8B11FAF2EE900196C82 /* Theme.swift in Sources */,
 				99A34EF71FB8913400F33BCF /* WalkThroughViewModel.swift in Sources */,
+				99C5E0861FD5CE7C00CEF351 /* PNBar.swift in Sources */,
 				9969D89D1FAF25A100196C82 /* CardViewCell.swift in Sources */,
 				9995B68E1FAF78DA000AAEFD /* InfoCell.swift in Sources */,
 				9995B68A1FAF7571000AAEFD /* AboutYouViewController.swift in Sources */,
 				9969D89F1FAF27CE00196C82 /* Storyboard.swift in Sources */,
+				99C5E0871FD5CE7C00CEF351 /* PNPieChart.swift in Sources */,
 				B59571921FCECC6C005B7C11 /* AboutYouDataSource.swift in Sources */,
 				99A34EF41FB87B3700F33BCF /* Auth.swift in Sources */,
 			);
@@ -893,7 +940,7 @@
 		};
 		9919AFD91FACEAD4008612A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 137109A1759805FA8B7D41E7 /* Pods-AlzStudy.debug.xcconfig */;
+			baseConfigurationReference = D45208CDADD2977D10B578CD /* Pods-AlzStudy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -909,7 +956,7 @@
 		};
 		9919AFDA1FACEAD4008612A0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2DD9EA107A6E8CFCE58C14C6 /* Pods-AlzStudy.release.xcconfig */;
+			baseConfigurationReference = 66133CC350436A078D1C5CB9 /* Pods-AlzStudy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -925,7 +972,7 @@
 		};
 		9919AFDC1FACEAD4008612A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 042FE5E8F51B1DE42F9DC3C2 /* Pods-AlzStudyTests.debug.xcconfig */;
+			baseConfigurationReference = 14734DB7A59B6F2754A49BF9 /* Pods-AlzStudyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -943,7 +990,7 @@
 		};
 		9919AFDD1FACEAD4008612A0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 68C6D68DD5B9397E3D28CE07 /* Pods-AlzStudyTests.release.xcconfig */;
+			baseConfigurationReference = 1F75D17A2FF78397B3A74FC1 /* Pods-AlzStudyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

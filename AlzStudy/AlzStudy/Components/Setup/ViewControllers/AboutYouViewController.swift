@@ -116,6 +116,12 @@ final class AboutYouViewController: BaseViewController {
         return toolbar
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.isSelecting = false
+    }
+    
     // MARK: - IBActions
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
@@ -148,6 +154,8 @@ final class AboutYouViewController: BaseViewController {
             .observeForControllerAction()
             .observeValues { [weak self] in
                 let registrationVC = RegistrationViewController.instantiate()
+                
+                registrationVC.modalTransitionStyle = .crossDissolve
                 
                 self?.present(registrationVC, animated: true, completion: nil)
             }
