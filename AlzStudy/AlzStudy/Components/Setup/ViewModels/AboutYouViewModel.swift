@@ -17,7 +17,7 @@ protocol AboutYouViewModelInputs {
     func viewDidLoad()
     func nextButtonTapped()
     func didCompleteInputForm()
-    func didSelect(value: Any, forItemAtIndex index: Int)
+    func didSelect(value: Any, for item: AboutYouData)
 }
 
 protocol AboutYouViewModelOutputs {
@@ -59,35 +59,32 @@ final class AboutYouViewModel: AboutYouViewModelType, AboutYouViewModelInputs, A
         itemSelectionProperty.signal
             .skipNil()
             .observeValues { tuple in
-                switch tuple.index {
+                switch tuple.item {
                 // age
-                case 0:
+                case .age:
                     let ageValue = tuple.value as! Int
                     
                     AppEnvironment.current.currenUserProfile.age = ageValue
                     
                 // gender
-                case 1:
+                case .gender:
                     let genderValue = tuple.value as! Gender
                     
                     AppEnvironment.current.currenUserProfile.gender = genderValue
                     
                 // height
-                case 2:
+                case .height:
                     let heightValue = tuple.value as! Int
                     
                     AppEnvironment.current.currenUserProfile.height = heightValue
                     
                 // weight
-                case 3:
+                case .weight:
                     let weightValue = tuple.value as! Int
                     
                     AppEnvironment.current.currenUserProfile.weight = weightValue
-                    
-                    
-                default: break
-                }
             }
+        }
         
         goToRegistration = nextButtonTappedProperty.signal
 
@@ -101,9 +98,9 @@ final class AboutYouViewModel: AboutYouViewModelType, AboutYouViewModelInputs, A
          
     }
 
-    private let itemSelectionProperty: MutableProperty<(value: Any, index: Int)?> = MutableProperty(nil)
-    func didSelect(value: Any, forItemAtIndex index: Int) {
-        let tuple = (value, index)
+    private let itemSelectionProperty: MutableProperty<(value: Any, item: AboutYouData)?> = MutableProperty(nil)
+    func didSelect(value: Any, for item: AboutYouData) {
+        let tuple = (value, item)
         
         itemSelectionProperty.value = tuple
     }

@@ -84,13 +84,6 @@ extension WalkThroughViewController: UICollectionViewDelegate {
             (cell as! CardViewCell).animateJoinButton()
         }
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard indexPath.item == dataSource.elementsIn(section: 0) - 1 else { return }
-        
-        viewModel.inputs.joinTapped()
-    }
-
 }
 
 extension WalkThroughViewController: UICollectionViewDelegateFlowLayout {
@@ -100,5 +93,12 @@ extension WalkThroughViewController: UICollectionViewDelegateFlowLayout {
         return collectionView.bounds.size
     }
 
+}
+
+extension WalkThroughViewController: JoinButtonResponder {
+    
+    func joinButtonTapped() {
+        self.viewModel.inputs.joinTapped()
+    }
 }
 

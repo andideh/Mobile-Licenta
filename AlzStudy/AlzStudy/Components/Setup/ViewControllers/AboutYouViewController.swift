@@ -54,33 +54,13 @@ final class AboutYouViewController: BaseViewController {
     private let dataSource = AboutYouDataSource()
     private let viewModel: AboutYouViewModelType = AboutYouViewModel()
   
-    private lazy var ageData: [Int] = {
-        var data: [Int] = []
-        for i in (18...99) {
-            data.append(i)
-        }
-        return data
-    }()
+    private let ageData: [Int] = AboutYouData.age.values as! [Int]
     
-    private lazy var weightData: [Int] = {
-        var data: [Int] = []
-        for i in (40...200) {
-            data.append(i)
-        }
-        return data
-    }()
+    private let weightData: [Int] = AboutYouData.weight.values as! [Int]
     
-    private lazy var heightData: [Int] = {
-        var data: [Int] = []
-        for i in (130...200) {
-            data.append(i)
-        }
-        return data
-    }()
+    private let heightData: [Int] = AboutYouData.height.values as! [Int]
     
-    private lazy var genderData: [String] = {
-        return ["Female", "Male"]
-    }()
+    private let genderData: [String] = AboutYouData.gender.values as! [String]
     
     private var isSelecting: Bool = false
     
@@ -218,21 +198,28 @@ extension AboutYouViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         if (pickerView === self.agePicker) {
             value = Int(self.ageData[row])
             
+            self.viewModel.inputs.didSelect(value: value, for: .age)
+            
         } else if (pickerView === self.weightPicker) {
             value = Int(self.weightData[row])
+            
+            self.viewModel.inputs.didSelect(value: value, for: .weight)
             
         } else if (pickerView === self.heightPicker) {
             value = Int(self.heightData[row])
             
+            self.viewModel.inputs.didSelect(value: value, for: .height)
+            
         } else  if (pickerView === self.genderPicker) {
             value = Gender(rawValue: row)!
+            
+            self.viewModel.inputs.didSelect(value: value, for: .gender)
             
         } else {
             fatalError()
         }
         
-        self.viewModel.inputs.didSelect(value: value, forItemAtIndex: self.currentItemIndex)  
-       
+     
     }
     
     

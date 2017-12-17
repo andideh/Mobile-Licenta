@@ -12,6 +12,7 @@ enum Gender: Int {
     case male
     case female
 }
+
 enum Parameter {
     case height(Int)
     case age(Int)

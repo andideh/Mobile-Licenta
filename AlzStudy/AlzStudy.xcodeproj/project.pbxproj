@@ -13,6 +13,9 @@
 		9919AFC61FACEAD4008612A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9919AFC51FACEAD4008612A0 /* Assets.xcassets */; };
 		9919AFC91FACEAD4008612A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9919AFC71FACEAD4008612A0 /* LaunchScreen.storyboard */; };
 		9919AFD41FACEAD4008612A0 /* AlzStudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9919AFD31FACEAD4008612A0 /* AlzStudyTests.swift */; };
+		995C3CE81FDE7B8100D2FD38 /* JoinButtonResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995C3CE71FDE7B8100D2FD38 /* JoinButtonResponder.swift */; };
+		995C3CEA1FDE7CF400D2FD38 /* HelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995C3CE91FDE7CF300D2FD38 /* HelperMethods.swift */; };
+		995C3CEC1FDE7FD700D2FD38 /* AboutYouData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995C3CEB1FDE7FD700D2FD38 /* AboutYouData.swift */; };
 		9969D8851FAF1AEB00196C82 /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9969D8841FAF1AEB00196C82 /* WalkThroughViewController.swift */; };
 		9969D8871FAF1B1900196C82 /* CardsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9969D8861FAF1B1900196C82 /* CardsDataSource.swift */; };
 		9969D8891FAF1B6A00196C82 /* WalkThrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9969D8881FAF1B6A00196C82 /* WalkThrough.storyboard */; };
@@ -109,6 +112,9 @@
 		9919AFCF1FACEAD4008612A0 /* AlzStudyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlzStudyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9919AFD31FACEAD4008612A0 /* AlzStudyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlzStudyTests.swift; sourceTree = "<group>"; };
 		9919AFD51FACEAD4008612A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		995C3CE71FDE7B8100D2FD38 /* JoinButtonResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinButtonResponder.swift; sourceTree = "<group>"; };
+		995C3CE91FDE7CF300D2FD38 /* HelperMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperMethods.swift; sourceTree = "<group>"; };
+		995C3CEB1FDE7FD700D2FD38 /* AboutYouData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutYouData.swift; sourceTree = "<group>"; };
 		9969D8841FAF1AEB00196C82 /* WalkThroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
 		9969D8861FAF1B1900196C82 /* CardsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsDataSource.swift; sourceTree = "<group>"; };
 		9969D8881FAF1B6A00196C82 /* WalkThrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalkThrough.storyboard; sourceTree = "<group>"; };
@@ -273,6 +279,7 @@
 				9969D89E1FAF27CE00196C82 /* Storyboard.swift */,
 				9969D8B01FAF2EE900196C82 /* Theme.swift */,
 				99A34EF91FB8925200F33BCF /* BaseViewController.swift */,
+				995C3CE91FDE7CF300D2FD38 /* HelperMethods.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -293,6 +300,7 @@
 				9969D88B1FAF1B8600196C82 /* ViewControllers */,
 				9969D88A1FAF1B8100196C82 /* Views */,
 				9969D8881FAF1B6A00196C82 /* WalkThrough.storyboard */,
+				995C3CE71FDE7B8100D2FD38 /* JoinButtonResponder.swift */,
 			);
 			path = WalkThrough;
 			sourceTree = "<group>";
@@ -414,6 +422,7 @@
 			isa = PBXGroup;
 			children = (
 				9995B6921FAF7B61000AAEFD /* ParameterViewData.swift */,
+				995C3CEB1FDE7FD700D2FD38 /* AboutYouData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -760,13 +769,16 @@
 				9919AFBF1FACEAD4008612A0 /* AppDelegate.swift in Sources */,
 				B59571841FCEC6BB005B7C11 /* InfoCellViewModel.swift in Sources */,
 				99C5E0891FD5CE7C00CEF351 /* PNChartLabel.swift in Sources */,
+				995C3CEC1FDE7FD700D2FD38 /* AboutYouData.swift in Sources */,
 				99C1E6ED1FB85954008C79B9 /* Environment.swift in Sources */,
 				9969D8871FAF1B1900196C82 /* CardsDataSource.swift in Sources */,
 				B59571821FCEC4D2005B7C11 /* AboutYouViewModel.swift in Sources */,
 				99C5E0851FD5CE7C00CEF351 /* PNLineChartDataItem.swift in Sources */,
+				995C3CEA1FDE7CF400D2FD38 /* HelperMethods.swift in Sources */,
 				99FD17C31FAF6FAE009D320A /* RegistrationViewController2.swift in Sources */,
 				99C5E0841FD5CE7C00CEF351 /* PNBarChart.swift in Sources */,
 				99C5E0881FD5CE7C00CEF351 /* PNPieChartDataItem.swift in Sources */,
+				995C3CE81FDE7B8100D2FD38 /* JoinButtonResponder.swift in Sources */,
 				99B44A011FD5C4C1009821C1 /* WithLatestFrom.swift in Sources */,
 				9995B6931FAF7B61000AAEFD /* ParameterViewData.swift in Sources */,
 				9969D8C01FAF508500196C82 /* ConsentViewController.swift in Sources */,

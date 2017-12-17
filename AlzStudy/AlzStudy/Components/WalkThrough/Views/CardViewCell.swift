@@ -29,7 +29,6 @@ final class CardViewCell: UICollectionViewCell, ValueCell {
     func animateJoinButton() {
         guard joinButton.alpha == 0.0 else { return }
         
-        joinButton.isEnabled = false
         joinButton.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
         
         UIView.animate(withDuration: 0.5, delay: 0.6, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
@@ -83,8 +82,9 @@ final class CardViewCell: UICollectionViewCell, ValueCell {
     }
     
     @IBAction func joinButtonTapped(_ sender: UIButton) {
-        // Here should use first responder
+        let responder: JoinButtonResponder? = findResponder()
         
+        responder?.joinButtonTapped()
     }
 }
 
