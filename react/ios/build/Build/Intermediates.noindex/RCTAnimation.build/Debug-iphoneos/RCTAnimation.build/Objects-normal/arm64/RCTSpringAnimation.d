@@ -1,0 +1,19 @@
+dependencies: \
+  /Users/AndiD/Documents/buylist-master/react/node_modules/react-native/Libraries/NativeAnimation/Drivers/RCTSpringAnimation.m \
+  /Users/AndiD/Documents/buylist-master/react/node_modules/react-native/Libraries/NativeAnimation/Drivers/RCTSpringAnimation.h \
+  /Users/AndiD/Documents/buylist-master/react/node_modules/react-native/Libraries/NativeAnimation/Drivers/RCTAnimationDriver.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphoneos/include/React/RCTBridgeModule.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphoneos/include/React/RCTDefines.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphoneos/include/React/RCTConvert.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphoneos/include/React/RCTAnimationType.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphoneos/include/React/RCTBorderStyle.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphoneos/include/React/RCTLog.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphoneos/include/React/RCTAssert.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphoneos/include/React/RCTUtils.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphoneos/include/React/RCTPointerEvents.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphoneos/include/React/RCTTextDecorationLineType.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphoneos/include/yoga/Yoga.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphoneos/include/yoga/YGEnums.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphoneos/include/yoga/YGMacros.h \
+  /Users/AndiD/Documents/buylist-master/react/node_modules/react-native/Libraries/NativeAnimation/Nodes/RCTValueAnimatedNode.h \
+  /Users/AndiD/Documents/buylist-master/react/node_modules/react-native/Libraries/NativeAnimation/Nodes/RCTAnimatedNode.h

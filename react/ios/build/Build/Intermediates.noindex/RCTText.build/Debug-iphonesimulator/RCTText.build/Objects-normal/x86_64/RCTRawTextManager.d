@@ -1,0 +1,28 @@
+dependencies: \
+  /Users/AndiD/Documents/buylist-master/react/node_modules/react-native/Libraries/Text/RCTRawTextManager.m \
+  /Users/AndiD/Documents/buylist-master/react/node_modules/react-native/Libraries/Text/RCTRawTextManager.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTViewManager.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTConvert.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAnimationType.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBorderStyle.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTPointerEvents.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTTextDecorationLineType.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTEventDispatcher.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphonesimulator/include/React/UIView+React.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTComponent.h \
+  /Users/AndiD/Documents/buylist-master/react/node_modules/react-native/Libraries/Text/RCTShadowRawText.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTShadowView.h \
+  /Users/AndiD/Documents/buylist-master/react/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h
