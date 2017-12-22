@@ -30,9 +30,7 @@ final class RootScreenInitService: NSObject, UIApplicationDelegate {
 
             mainWindow?.rootViewController = today
         }
-        
-
-            
+                    
         mainWindow?.makeKeyAndVisible()
         
         return true

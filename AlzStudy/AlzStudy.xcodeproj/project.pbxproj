@@ -31,6 +31,8 @@
 		9969D8BB1FAF3DCB00196C82 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9969D8BA1FAF3DCB00196C82 /* ContainerViewController.swift */; };
 		9969D8BE1FAF407300196C82 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9969D8BD1FAF407300196C82 /* QuestionViewController.swift */; };
 		9969D8C01FAF508500196C82 /* ConsentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9969D8BF1FAF508500196C82 /* ConsentViewController.swift */; };
+		9992E3E81FED3CE900DF3F3E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9992E3E71FED3CE900DF3F3E /* GoogleService-Info.plist */; };
+		9992E3EA1FED3D6600DF3F3E /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9992E3E91FED3D6600DF3F3E /* FirebaseService.swift */; };
 		9995B6881FAF7555000AAEFD /* Setup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9995B6871FAF7555000AAEFD /* Setup.storyboard */; };
 		9995B68A1FAF7571000AAEFD /* AboutYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9995B6891FAF7571000AAEFD /* AboutYouViewController.swift */; };
 		9995B68E1FAF78DA000AAEFD /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9995B68D1FAF78DA000AAEFD /* InfoCell.swift */; };
@@ -130,6 +132,8 @@
 		9969D8BA1FAF3DCB00196C82 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		9969D8BD1FAF407300196C82 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		9969D8BF1FAF508500196C82 /* ConsentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentViewController.swift; sourceTree = "<group>"; };
+		9992E3E71FED3CE900DF3F3E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9992E3E91FED3D6600DF3F3E /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		9995B6871FAF7555000AAEFD /* Setup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setup.storyboard; sourceTree = "<group>"; };
 		9995B6891FAF7571000AAEFD /* AboutYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutYouViewController.swift; sourceTree = "<group>"; };
 		9995B68D1FAF78DA000AAEFD /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
@@ -247,6 +251,7 @@
 			children = (
 				9919AFBE1FACEAD4008612A0 /* AppDelegate.swift */,
 				9919AFCA1FACEAD4008612A0 /* Info.plist */,
+				9992E3E71FED3CE900DF3F3E /* GoogleService-Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -363,6 +368,7 @@
 				99A34EF31FB87B3700F33BCF /* Auth.swift */,
 				B5AAE2741FD45523006C6435 /* DatabaseGateway.swift */,
 				B5AAE2761FD455C0006C6435 /* CurrentUser.swift */,
+				9992E3E91FED3D6600DF3F3E /* FirebaseService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -630,6 +636,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9995B6881FAF7555000AAEFD /* Setup.storyboard in Resources */,
+				9992E3E81FED3CE900DF3F3E /* GoogleService-Info.plist in Resources */,
 				9969D8B91FAF3CA900196C82 /* Registration.storyboard in Resources */,
 				9969D8891FAF1B6A00196C82 /* WalkThrough.storyboard in Resources */,
 				9919AFC91FACEAD4008612A0 /* LaunchScreen.storyboard in Resources */,
@@ -765,6 +772,7 @@
 				99C1E6EF1FB8595D008C79B9 /* AppEnvironment.swift in Sources */,
 				9969D8BE1FAF407300196C82 /* QuestionViewController.swift in Sources */,
 				9969D8BB1FAF3DCB00196C82 /* ContainerViewController.swift in Sources */,
+				9992E3EA1FED3D6600DF3F3E /* FirebaseService.swift in Sources */,
 				9969D8901FAF1BC800196C82 /* Protocols.swift in Sources */,
 				9919AFBF1FACEAD4008612A0 /* AppDelegate.swift in Sources */,
 				B59571841FCEC6BB005B7C11 /* InfoCellViewModel.swift in Sources */,
