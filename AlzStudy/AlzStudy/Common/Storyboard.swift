@@ -14,14 +14,21 @@ enum Storyboard: String {
     case WalkThrough
     case Registration
     case Setup
-    case Today
     case Root
-    
+    case Today
+    case Activities
+    case Numbers
     
     func instantiate<T: UIViewController>() -> T {
         let storyboard = UIStoryboard(name: self.rawValue, bundle: nil)
         let identifier = String(describing: T.self)
         
         return storyboard.instantiateViewController(withIdentifier: identifier) as! T
+    }
+    
+    func instantiateInitial<T: UIViewController>() -> T {
+        let storyboard = UIStoryboard(name: self.rawValue, bundle: nil)
+        
+        return storyboard.instantiateInitialViewController() as! T
     }
 }

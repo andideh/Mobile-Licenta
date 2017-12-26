@@ -8,19 +8,12 @@
 
 import UIKit
 
-extension UIResponder {
-    
-    func findResponder<T>() -> T? {
-        var responder: UIResponder! = self
-        
-        while responder != nil {
-            if let responder = responder as? T {
-                return responder
-            }
-            
-            responder = responder.next
-        }
-        
-        return nil
-    }
+
+func Build<T>(_ value: T, block: (T) -> Void) -> T {
+    block(value)
+    return value
+}
+
+func after(_ sec: Double, block: @escaping  VoidBlock) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + sec, execute: block)
 }

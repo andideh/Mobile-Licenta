@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GujaratiSangamMN.ttc">
+            <string>GujaratiSangamMN</string>
+            <string>GujaratiSangamMN-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Numbers View Controller-->
+        <scene sceneID="Rjk-pl-FlF">
+            <objects>
+                <viewController storyboardIdentifier="NumbersViewController" id="A7d-k1-8v1" customClass="NumbersViewController" customModule="AlzStudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zOg-O7-4MW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Numbers Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTq-q6-uNK">
+                                <rect key="frame" x="12" y="92" width="351" height="27"/>
+                                <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="19"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will be given a sequence of numbers.  You will have 5s to memorize it and then try to rewrite it in the text field below" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESB-Td-gwp">
+                                <rect key="frame" x="12" y="127" width="351" height="55"/>
+                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="1 2 4 5 6 7 8 9" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlI-MX-9yb">
+                                <rect key="frame" x="12" y="206" width="351" height="37"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="Vww-vT-2SR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYy-q6-3Qu" customClass="RoundedBorderButton" customModule="AlzStudy" customModuleProvider="target">
+                                <rect key="frame" x="28.5" y="603" width="318.5" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="PnX-4f-fAR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="15"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneButtonTapped:" destination="A7d-k1-8v1" eventType="touchUpInside" id="1ZE-gt-4qe"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7gy-Mt-SCw">
+                                <rect key="frame" x="12" y="202" width="351" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="uiO-jd-ycp"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bvn-2Z-7AK" customClass="TrialsView" customModule="AlzStudy" customModuleProvider="target">
+                                <rect key="frame" x="12" y="28" width="351" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="rbH-bX-mXX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rYy-q6-3Qu" firstAttribute="centerX" secondItem="zOg-O7-4MW" secondAttribute="centerX" id="23s-Bj-WZq"/>
+                            <constraint firstItem="7gy-Mt-SCw" firstAttribute="centerY" secondItem="xlI-MX-9yb" secondAttribute="centerY" id="4D0-ao-I1m"/>
+                            <constraint firstItem="xlI-MX-9yb" firstAttribute="trailing" secondItem="ESB-Td-gwp" secondAttribute="trailing" id="EBu-Tx-yWe"/>
+                            <constraint firstItem="ESB-Td-gwp" firstAttribute="trailing" secondItem="lTq-q6-uNK" secondAttribute="trailing" id="H3d-lt-aGl"/>
+                            <constraint firstItem="7gy-Mt-SCw" firstAttribute="centerX" secondItem="zOg-O7-4MW" secondAttribute="centerX" id="JqZ-pT-lTT"/>
+                            <constraint firstItem="Rn5-mi-3Df" firstAttribute="bottom" secondItem="rYy-q6-3Qu" secondAttribute="bottom" constant="20" id="MI9-u9-7GQ"/>
+                            <constraint firstItem="lTq-q6-uNK" firstAttribute="top" secondItem="Bvn-2Z-7AK" secondAttribute="bottom" constant="20" id="OG7-8c-fsO"/>
+                            <constraint firstItem="Bvn-2Z-7AK" firstAttribute="top" secondItem="Rn5-mi-3Df" secondAttribute="top" constant="8" id="W2y-Qf-6TJ"/>
+                            <constraint firstItem="7gy-Mt-SCw" firstAttribute="width" secondItem="xlI-MX-9yb" secondAttribute="width" id="WIC-3s-x4C"/>
+                            <constraint firstItem="Bvn-2Z-7AK" firstAttribute="leading" secondItem="lTq-q6-uNK" secondAttribute="leading" id="Wnx-IZ-YkJ"/>
+                            <constraint firstItem="rYy-q6-3Qu" firstAttribute="width" secondItem="zOg-O7-4MW" secondAttribute="width" multiplier="0.85" id="avh-nI-f8s"/>
+                            <constraint firstItem="xlI-MX-9yb" firstAttribute="top" secondItem="ESB-Td-gwp" secondAttribute="bottom" constant="24" id="bdI-l6-Uw8"/>
+                            <constraint firstItem="ESB-Td-gwp" firstAttribute="leading" secondItem="lTq-q6-uNK" secondAttribute="leading" id="bzx-Z2-XxD"/>
+                            <constraint firstItem="xlI-MX-9yb" firstAttribute="leading" secondItem="ESB-Td-gwp" secondAttribute="leading" id="j0p-46-lm2"/>
+                            <constraint firstItem="lTq-q6-uNK" firstAttribute="leading" secondItem="Rn5-mi-3Df" secondAttribute="leading" constant="12" id="lzB-pH-AtY"/>
+                            <constraint firstItem="Rn5-mi-3Df" firstAttribute="trailing" secondItem="lTq-q6-uNK" secondAttribute="trailing" constant="12" id="mDt-Ww-H6c"/>
+                            <constraint firstItem="ESB-Td-gwp" firstAttribute="top" secondItem="lTq-q6-uNK" secondAttribute="bottom" constant="8" id="mzQ-aX-w6v"/>
+                            <constraint firstItem="Bvn-2Z-7AK" firstAttribute="trailing" secondItem="lTq-q6-uNK" secondAttribute="trailing" id="nij-yZ-mgw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Rn5-mi-3Df"/>
+                    </view>
+                    <connections>
+                        <outlet property="doneButton" destination="rYy-q6-3Qu" id="Ctx-5t-A41"/>
+                        <outlet property="doneButtonBottomConstraint" destination="MI9-u9-7GQ" id="DBD-H3-41U"/>
+                        <outlet property="inputTextField" destination="7gy-Mt-SCw" id="mkQ-97-Sgk"/>
+                        <outlet property="textView" destination="xlI-MX-9yb" id="onG-Ow-8fb"/>
+                        <outlet property="trialsView" destination="Bvn-2Z-7AK" id="Mew-s0-UOD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a5E-SJ-ZHo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="568.79999999999995" y="225.33733133433284"/>
+        </scene>
+    </scenes>
+</document>

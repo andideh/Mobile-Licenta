@@ -26,9 +26,10 @@ final class RootScreenInitService: NSObject, UIApplicationDelegate {
             mainWindow?.rootViewController = walkThrough
         } else {
             // TODO: navigate to
-            let today = TodayViewController.instantiate()
 
-            mainWindow?.rootViewController = today
+            let activitesVC = ActivitiesViewController.instantiate()
+            
+            mainWindow?.rootViewController = activitesVC
         }
                     
         mainWindow?.makeKeyAndVisible()
