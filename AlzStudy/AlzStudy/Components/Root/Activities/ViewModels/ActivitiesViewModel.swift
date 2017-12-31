@@ -9,6 +9,7 @@
 import UIKit
 import ReactiveSwift
 import Result
+import Firebase
 
 
 protocol ActivitiesViewModelInputs {
@@ -43,13 +44,21 @@ final class ActivitiesViewModel: ActivitiesViewModelType, ActivitiesViewModelInp
         let todayTask = self.viewLoadedProperty.signal
             .take(first: 1)
             .flatMap(.latest) {
-                return AppEnvironment.current.service.fetchTodayTask().materialize()
+                return AppEnvironment.current.service.fetchTodayTask()
             }
+            .flatMapError { (error: ASError) -> SignalProducer<DailyTask, ASError> in
+                if case .noTodayTask = error {
+                    return AppEnvironment.current.service.createTodayTask()
+                }
+                
+                return .init(error: error)
+            }
+            .materialize()
+        
         
         self.loadTodayTasks = todayTask.values()
             .map { $0.tests.map { TaskCellViewData(type: $0.type, isDone: $0.isDone) } }
-        
-        
+                
         let yesterdayTask = self.viewLoadedProperty.signal
             .take(first: 1)
             .flatMap(.latest) {
@@ -60,7 +69,7 @@ final class ActivitiesViewModel: ActivitiesViewModelType, ActivitiesViewModelInp
             .map { $0.tests.map { TaskCellViewData(type: $0.type, isDone: $0.isDone) } }
         
         self.goToTest = self.selectedItemProperty.signal.combineLatest(with: todayTask.values())
-            .filter { $0.0?.section == .some(1) } // make only today's tasks selectable
+            .filter { $0.0?.section == .some(1) && !$0.1.tests[$0.0!.item].isDone } // make only today's tasks selectable + those which are not already done
             .map { $0.1.tests[$0.0!.item] }
     }
     

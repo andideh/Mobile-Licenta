@@ -23,7 +23,7 @@ final class RootScreenInitService: NSObject, UIApplicationDelegate {
         if Auth.auth().currentUser != nil {
             rootVC = ActivitiesViewController.instantiate()
         } else {
-            rootVC = RegistrationViewController.instantiate()
+            rootVC = WalkThroughViewController.instantiate()
         }
     
         mainWindow?.rootViewController = rootVC

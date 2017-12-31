@@ -18,7 +18,7 @@ struct Environment {
     init(
         currentUser: User? = nil,
         currentUserProfile: CurrentUserProfile = CurrentUserProfile(),
-        service: ServiceType = MockService()) {
+        service: ServiceType = NetworkService()) {
         
         self.currentUser = currentUser
         self.currentUserProfile = currentUserProfile

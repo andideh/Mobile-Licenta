@@ -43,13 +43,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYy-q6-3Qu" customClass="RoundedBorderButton" customModule="AlzStudy" customModuleProvider="target">
-                                <rect key="frame" x="0.5" y="603" width="375" height="64"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYy-q6-3Qu">
+                                <rect key="frame" x="0.5" y="612" width="375" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="PnX-4f-fAR"/>
+                                    <constraint firstAttribute="height" constant="55" id="PnX-4f-fAR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="15"/>
-                                <state key="normal" title="Done"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="doneButtonTapped:" destination="A7d-k1-8v1" eventType="touchUpInside" id="1ZE-gt-4qe"/>
                                 </connections>
@@ -95,7 +97,7 @@
                         <viewLayoutGuide key="safeArea" id="Rn5-mi-3Df"/>
                     </view>
                     <connections>
-                        <outlet property="doneButton" destination="rYy-q6-3Qu" id="Ctx-5t-A41"/>
+                        <outlet property="doneButton" destination="rYy-q6-3Qu" id="I7S-VL-gDa"/>
                         <outlet property="doneButtonBottomConstraint" destination="MI9-u9-7GQ" id="DBD-H3-41U"/>
                         <outlet property="inputTextField" destination="7gy-Mt-SCw" id="mkQ-97-Sgk"/>
                         <outlet property="textView" destination="xlI-MX-9yb" id="onG-Ow-8fb"/>

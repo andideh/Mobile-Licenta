@@ -115,7 +115,13 @@ final class NumbersTaskViewModel: NumbersTaskViewModelType, NumbersTaskViewModel
         
         self.stopTimer = testIsDone.ignoreValues()
         
-        self.closeScreen = testIsDone.ignoreValues()
+        self.closeScreen = testIsDone.flatMap(.latest) {
+                return AppEnvironment.current.service.update(test: $0)
+            }
+            .materialize()
+            .values()
+            .ignoreValues()
+    
     }
     
     

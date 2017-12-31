@@ -15,19 +15,68 @@ let scheduler = QueueScheduler(qos: .default, name: "com.andi.alzstudy")
 
 extension Firebase.Auth {
     
-    func createUser(email: String, password: String) -> SignalProducer<Firebase.User, NSError> {
-        return SignalProducer<Firebase.User, NSError> { obs, _ in
+    func createUser(email: String, password: String) -> SignalProducer<Firebase.User, ASError> {
+        return SignalProducer<Firebase.User, ASError> { obs, _ in
             self.createUser(withEmail: email, password: password, completion: { user, error in
                 if let user = user {
                     obs.send(value: user)
                     obs.sendCompleted()
-                } else if let error = error {
-                    obs.send(error: error as NSError)
+                } else if error != nil {
+                    print("FirebaseError: \(error!)")
+                    obs.send(error: .firebaseError)
                 } else {
                     obs.sendCompleted()
                 }
             })
         }
         .start(on: scheduler)
+    }
+}
+
+extension DatabaseReference {
+    
+    func setValue(_ value: Any?) -> SignalProducer<DatabaseReference, ASError> {
+        return SignalProducer<DatabaseReference, ASError> { obs, _ in
+            self.setValue(value, withCompletionBlock: { error, ref in
+                if error != nil {
+                    print("FirebaseError: \(error!)")
+                    obs.send(error: .firebaseError)
+                } else {
+                    obs.send(value: ref)
+                    obs.sendCompleted()
+                }
+            })
+        }
+    }
+    
+    func updateChildValues(_ values: [String: Any]) -> SignalProducer<DatabaseReference, ASError> {
+        return SignalProducer<DatabaseReference, ASError> { obs, _ in
+            self.updateChildValues(values, withCompletionBlock: { error, ref in
+                if error != nil {
+                    print("FirebaseError: \(error!)")
+                    obs.send(error: .firebaseError)
+                } else {
+                    obs.send(value: ref)
+                    obs.sendCompleted()
+                }
+            })
+        }
+    }
+    
+    func observeSingleEvent(of type: DataEventType) -> SignalProducer<DataSnapshot, NoError> {
+        return SignalProducer<DataSnapshot, NoError> { obs, _ in
+            self.observeSingleEvent(of: type, with: { snapshot in
+                obs.send(value: snapshot)
+                obs.sendCompleted()
+            })
+        }
+    }
+    
+    func observeEvent(of type: DataEventType) -> SignalProducer<DataSnapshot, NoError> {
+        return SignalProducer<DataSnapshot, NoError> { obs, _ in
+            self.observe(type, with: { snapshot in
+                obs.send(value: snapshot)
+            })
+        }
     }
 }

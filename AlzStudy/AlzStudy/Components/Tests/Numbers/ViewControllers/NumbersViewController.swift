@@ -15,7 +15,7 @@ final class NumbersViewController: BaseViewController {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var trialsView: TrialsView!
-    @IBOutlet weak var doneButton: RoundedBorderButton!
+    @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var doneButtonBottomConstraint: NSLayoutConstraint!
     
     // MARK: - Public properties
@@ -90,8 +90,7 @@ final class NumbersViewController: BaseViewController {
                 
                 let color: UIColor = $0 ? Theme.mainColor : .lightGray
                
-                self?.doneButton.borderColor = color
-                self?.doneButton.setTitleColor(color, for: .normal)
+                self?.doneButton.backgroundColor = color
             }
         
         self.viewModel.outputs.stopTimer
@@ -122,7 +121,7 @@ final class NumbersViewController: BaseViewController {
                 guard let `self` = self else { return }
                 
                 UIView.animate(withDuration: change.duration, delay: 0.0, options: change.options, animations: {
-                    self.doneButtonBottomConstraint.constant = max(20, change.frame.height)
+                    self.doneButtonBottomConstraint.constant = change.frame.height
                     self.view.layoutIfNeeded()
                 })
             }

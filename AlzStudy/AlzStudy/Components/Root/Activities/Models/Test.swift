@@ -26,6 +26,15 @@ struct Test {
         self.trialsLeft = trialsLeft
         self.isDone = isDone
     }
+    
+    init(with json: [String:Any]) {
+        let taskType = json["type"] as! Int
+        
+        self.type = TaskType(rawValue: taskType)!
+        self.nrOfTrials = json["nrOfTrials"] as! Float
+        self.trialsLeft = json["trialsLeft"] as! Float
+        self.isDone = json["isDone"] as! Bool
+    }
 
     func decrementedTrialsLeft() -> Test {
         return Test(type: self.type, nrOfTrials: self.nrOfTrials, trialsLeft: self.trialsLeft - 1.0, isDone: self.isDone)
@@ -37,6 +46,18 @@ struct Test {
     
     func markedAsFailed() -> Test {
         return Test(type: self.type, nrOfTrials: self.nrOfTrials, trialsLeft: 0, isDone: true)
+    }
+}
+
+extension Test {
+    
+    func toJSON() -> [String:Any] {
+        return [
+            "type":self.type.rawValue,
+            "nrOfTrials":self.nrOfTrials,
+            "trialsLeft":self.trialsLeft,
+            "isDone":self.isDone
+        ]
     }
 }
 

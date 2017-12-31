@@ -11,6 +11,7 @@ import Foundation
 
 enum ASError: Error {
     
+    case firebaseError
     case noTodayTask
     case jsonParseError
 }

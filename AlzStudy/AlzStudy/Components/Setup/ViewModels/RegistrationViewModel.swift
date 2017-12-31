@@ -9,6 +9,7 @@
 import Foundation
 import ReactiveSwift
 import Result
+import Firebase
 
 protocol RegistrationViewModelInputs {
     
@@ -63,11 +64,26 @@ final class RegistrationViewModel: RegistrationViewModelOutputs, RegistrationVie
         let userCreation = Signal.combineLatest(email, password)
             .takeWhen(registerTappedProperty.signal)
             .take(first: 1)
-            .flatMapLatest {
-                AppEnvironment.current.service.login(email: $0.0, password: $0.1).materialize()
+            .flatMap(.latest) {
+                AppEnvironment.current.service.login(email: $0.0, password: $0.1)
             }
         
-        self.signIn = userCreation.values().ignoreValues()
+        // store the newly created user in db
+        let storeUser = userCreation.flatMap(.latest) {
+            AppEnvironment.current.service.store(newUser: $0)
+        }
+        
+        // update user profile
+        let profileUpdate = userCreation.flatMap(.latest) { (user: Firebase.User) -> SignalProducer<DatabaseReference, ASError> in
+            let userProfile = AppEnvironment.current.currentUserProfile
+            
+            return AppEnvironment.current.service.update(userProfile: userProfile, uid: user.uid)
+        }
+        
+        self.signIn = Signal.combineLatest(userCreation, storeUser, profileUpdate)
+            .materialize()
+            .values()
+            .ignoreValues()
     }
     
     

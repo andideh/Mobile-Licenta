@@ -47,7 +47,7 @@
 		99B44A031FD5C6CB009821C1 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B44A021FD5C6CB009821C1 /* TodayViewController.swift */; };
 		99B729141FF8F30A008A3E11 /* Firebase+Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B729131FF8F30A008A3E11 /* Firebase+Reactive.swift */; };
 		99B729161FF8F44D008A3E11 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 99B729151FF8F44D008A3E11 /* GoogleService-Info.plist */; };
-		99B729181FF8FA89008A3E11 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B729171FF8FA89008A3E11 /* APIService.swift */; };
+		99B729181FF8FA89008A3E11 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B729171FF8FA89008A3E11 /* NetworkService.swift */; };
 		99B7291A1FF90093008A3E11 /* FlatMapLatest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B729191FF90093008A3E11 /* FlatMapLatest.swift */; };
 		99C1E6BC1FB856B6008C79B9 /* ObserveForUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C1E6BB1FB856B6008C79B9 /* ObserveForUI.swift */; };
 		99C1E6EB1FB858BC008C79B9 /* RootScreenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C1E6EA1FB858BC008C79B9 /* RootScreenService.swift */; };
@@ -99,7 +99,7 @@
 		B59571941FCECDB6005B7C11 /* AboutYouFormFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59571931FCECDB6005B7C11 /* AboutYouFormFactory.swift */; };
 		B5AAE2731FD4520A006C6435 /* ToolbarViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AAE2721FD4520A006C6435 /* ToolbarViewFactory.swift */; };
 		B5AAE2751FD45523006C6435 /* DatabaseGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AAE2741FD45523006C6435 /* DatabaseGateway.swift */; };
-		B5AAE2771FD455C0006C6435 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AAE2761FD455C0006C6435 /* CurrentUser.swift */; };
+		B5AAE2771FD455C0006C6435 /* CurrentUserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AAE2761FD455C0006C6435 /* CurrentUserProfile.swift */; };
 		B5AAE2791FD46272006C6435 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AAE2781FD46272006C6435 /* RegistrationViewController.swift */; };
 		B5AAE27D1FD46592006C6435 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AAE27C1FD46592006C6435 /* RegistrationViewModel.swift */; };
 		B5F41E1D1FF786B800C2FB6F /* ASError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F41E1C1FF786B800C2FB6F /* ASError.swift */; };
@@ -179,7 +179,7 @@
 		99B44A021FD5C6CB009821C1 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		99B729131FF8F30A008A3E11 /* Firebase+Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Reactive.swift"; sourceTree = "<group>"; };
 		99B729151FF8F44D008A3E11 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		99B729171FF8FA89008A3E11 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIService.swift; path = AlzStudy/Components/Root/Activities/Services/APIService.swift; sourceTree = SOURCE_ROOT; };
+		99B729171FF8FA89008A3E11 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkService.swift; path = AlzStudy/Components/Root/Activities/Services/NetworkService.swift; sourceTree = SOURCE_ROOT; };
 		99B729191FF90093008A3E11 /* FlatMapLatest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatMapLatest.swift; sourceTree = "<group>"; };
 		99C1E6BB1FB856B6008C79B9 /* ObserveForUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserveForUI.swift; sourceTree = "<group>"; };
 		99C1E6EA1FB858BC008C79B9 /* RootScreenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreenService.swift; sourceTree = "<group>"; };
@@ -231,7 +231,7 @@
 		B59571931FCECDB6005B7C11 /* AboutYouFormFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutYouFormFactory.swift; sourceTree = "<group>"; };
 		B5AAE2721FD4520A006C6435 /* ToolbarViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarViewFactory.swift; sourceTree = "<group>"; };
 		B5AAE2741FD45523006C6435 /* DatabaseGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseGateway.swift; sourceTree = "<group>"; };
-		B5AAE2761FD455C0006C6435 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		B5AAE2761FD455C0006C6435 /* CurrentUserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfile.swift; sourceTree = "<group>"; };
 		B5AAE2781FD46272006C6435 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		B5AAE27C1FD46592006C6435 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		B5F41E1C1FF786B800C2FB6F /* ASError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASError.swift; sourceTree = "<group>"; };
@@ -440,13 +440,13 @@
 		9969D8B21FAF3AB900196C82 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				99B729171FF8FA89008A3E11 /* APIService.swift */,
+				99B729171FF8FA89008A3E11 /* NetworkService.swift */,
 				99253BC01FF8EF1D003688E0 /* FirebaseConfigService.swift */,
 				9969D8B31FAF3AC500196C82 /* LocalStorage.swift */,
 				99C1E6EA1FB858BC008C79B9 /* RootScreenService.swift */,
 				99A34EF31FB87B3700F33BCF /* User.swift */,
 				B5AAE2741FD45523006C6435 /* DatabaseGateway.swift */,
-				B5AAE2761FD455C0006C6435 /* CurrentUser.swift */,
+				B5AAE2761FD455C0006C6435 /* CurrentUserProfile.swift */,
 				B50381691FEFAD12003265B9 /* AppearanceService.swift */,
 				B50381941FF2A640003265B9 /* Keyboard.swift */,
 				B503819B1FF4FCCE003265B9 /* LocalNotificationsService.swift */,
@@ -931,9 +931,22 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AlzStudy/Pods-AlzStudy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -946,13 +959,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlzStudy-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9907768E22BD8EC0EDE87033 /* [CP] Check Pods Manifest.lock */ = {
@@ -961,13 +977,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlzStudyTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C37F49F88152E9428CEEA0F1 /* [CP] Copy Pods Resources */ = {
@@ -1010,7 +1029,7 @@
 				99B44A031FD5C6CB009821C1 /* TodayViewController.swift in Sources */,
 				B51F12201FEEBD8400130DEB /* TaskCell.swift in Sources */,
 				99C1E6BC1FB856B6008C79B9 /* ObserveForUI.swift in Sources */,
-				B5AAE2771FD455C0006C6435 /* CurrentUser.swift in Sources */,
+				B5AAE2771FD455C0006C6435 /* CurrentUserProfile.swift in Sources */,
 				99A34EFC1FB894C200F33BCF /* CardsFactory.swift in Sources */,
 				B5AAE2731FD4520A006C6435 /* ToolbarViewFactory.swift in Sources */,
 				99C1E6EF1FB8595D008C79B9 /* AppEnvironment.swift in Sources */,
@@ -1043,7 +1062,7 @@
 				B51F12131FEE82B800130DEB /* DailyTask.swift in Sources */,
 				B51F120F1FEE814400130DEB /* TaskType.swift in Sources */,
 				B5F41E291FF7887F00C2FB6F /* Values.swift in Sources */,
-				99B729181FF8FA89008A3E11 /* APIService.swift in Sources */,
+				99B729181FF8FA89008A3E11 /* NetworkService.swift in Sources */,
 				B50381931FF29AF5003265B9 /* RoundedBorderButton.swift in Sources */,
 				9995B6931FAF7B61000AAEFD /* ParameterViewData.swift in Sources */,
 				9969D8C01FAF508500196C82 /* ConsentViewController.swift in Sources */,
