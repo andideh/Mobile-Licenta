@@ -47,6 +47,7 @@ extension DatabaseReference {
                 }
             })
         }
+        .start(on: scheduler)
     }
     
     func updateChildValues(_ values: [String: Any]) -> SignalProducer<DatabaseReference, ASError> {
@@ -61,6 +62,7 @@ extension DatabaseReference {
                 }
             })
         }
+        .start(on: scheduler)
     }
     
     func observeSingleEvent(of type: DataEventType) -> SignalProducer<DataSnapshot, NoError> {
@@ -70,6 +72,8 @@ extension DatabaseReference {
                 obs.sendCompleted()
             })
         }
+        .start(on: scheduler)
+
     }
     
     func observeEvent(of type: DataEventType) -> SignalProducer<DataSnapshot, NoError> {
@@ -78,5 +82,7 @@ extension DatabaseReference {
                 obs.send(value: snapshot)
             })
         }
+        .start(on: scheduler)
+
     }
 }

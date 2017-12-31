@@ -11,10 +11,60 @@ import UIKit
 
 class TodayViewController: BaseViewController {
     
+    private let viewModel: TodayViewModelType = TodayViewModel()
+    
+    private lazy var chart: PNPieChart = {
+        let width = UIScreen.main.bounds.width * 0.8
+        let rect = CGRect(origin: .zero, size: CGSize(width: width, height: width))
+        let pieChart = PNPieChart(frame: rect, items: [])
+        
+        pieChart.descriptionTextColor = UIColor.white
+        pieChart.descriptionTextFont = UIFont(name: "Avenir-Medium", size: 14)!
+        
+        return pieChart
+    }()
+    
     
     static func instantiate() -> UINavigationController {
         return UIStoryboard(name: "Today", bundle: nil).instantiateInitialViewController() as! UINavigationController
     }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+        self.view.addSubview(chart)
+        self.viewModel.inputs.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        self.chart.center = self.view.center
+    }
+    
+    
+    override func bindViewModel() {
+        super.bindViewModel()
+        
+        self.viewModel.outputs.chartData
+            .observeForUI()
+            .observeValues {
+                let todoItem = PNPieChartDataItem(dateValue: CGFloat($0.todo), dateColor:  PNLightGreen, description: "To-do")
+                let doneItem = PNPieChartDataItem(dateValue: CGFloat($0.done), dateColor:  PNDeepGreen, description: "Done")
+                let items = [todoItem, doneItem]
+                
+                self.chart.items = items
+                self.chart.strokeChart()
+            }
+    }
+    
     
     
     

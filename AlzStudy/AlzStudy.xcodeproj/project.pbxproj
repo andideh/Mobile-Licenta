@@ -81,6 +81,10 @@
 		B50381991FF2B662003265B9 /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50381981FF2B662003265B9 /* UIAlertController.swift */; };
 		B503819C1FF4FCCE003265B9 /* LocalNotificationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503819B1FF4FCCE003265B9 /* LocalNotificationsService.swift */; };
 		B503819E1FF5218D003265B9 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503819D1FF5218D003265B9 /* ServiceProvider.swift */; };
+		B5181D341FF938B600F7F22A /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5181D331FF938B600F7F22A /* Root.storyboard */; };
+		B5181D3A1FF9390100F7F22A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5181D391FF9390100F7F22A /* RootViewController.swift */; };
+		B5181D3C1FF9394A00F7F22A /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5181D3B1FF9394A00F7F22A /* RootViewModel.swift */; };
+		B5181D3F1FF95DF900F7F22A /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5181D3E1FF95DF900F7F22A /* TodayViewModel.swift */; };
 		B51F120F1FEE814400130DEB /* TaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F120E1FEE814400130DEB /* TaskType.swift */; };
 		B51F12111FEE81E100130DEB /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F12101FEE81E100130DEB /* Test.swift */; };
 		B51F12131FEE82B800130DEB /* DailyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F12121FEE82B800130DEB /* DailyTask.swift */; };
@@ -213,6 +217,10 @@
 		B50381981FF2B662003265B9 /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
 		B503819B1FF4FCCE003265B9 /* LocalNotificationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsService.swift; sourceTree = "<group>"; };
 		B503819D1FF5218D003265B9 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
+		B5181D331FF938B600F7F22A /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
+		B5181D391FF9390100F7F22A /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		B5181D3B1FF9394A00F7F22A /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		B5181D3E1FF95DF900F7F22A /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
 		B51F120E1FEE814400130DEB /* TaskType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskType.swift; sourceTree = "<group>"; };
 		B51F12101FEE81E100130DEB /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		B51F12121FEE82B800130DEB /* DailyTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTask.swift; sourceTree = "<group>"; };
@@ -654,6 +662,56 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		B5181D321FF9389B00F7F22A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B5181D381FF938E500F7F22A /* New Group */,
+				B5181D371FF938DA00F7F22A /* ViewModels */,
+				B5181D361FF938D300F7F22A /* Views */,
+				B5181D351FF938CC00F7F22A /* ViewControllers */,
+				B5181D331FF938B600F7F22A /* Root.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B5181D351FF938CC00F7F22A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B5181D391FF9390100F7F22A /* RootViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B5181D361FF938D300F7F22A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B5181D371FF938DA00F7F22A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B5181D3B1FF9394A00F7F22A /* RootViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B5181D381FF938E500F7F22A /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		B5181D3D1FF95DE700F7F22A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B5181D3E1FF95DF900F7F22A /* TodayViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		B51F120C1FEE811800130DEB /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -731,6 +789,7 @@
 		B57B666A1FD47D7700127B01 /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				B5181D321FF9389B00F7F22A /* Main */,
 				B51F12181FEE846000130DEB /* Activities */,
 				B57B666B1FD47D8100127B01 /* Today */,
 			);
@@ -740,6 +799,7 @@
 		B57B666B1FD47D8100127B01 /* Today */ = {
 			isa = PBXGroup;
 			children = (
+				B5181D3D1FF95DE700F7F22A /* ViewModel */,
 				B51F12141FEE840D00130DEB /* ViewControllers */,
 				B57B666C1FD47DBA00127B01 /* Today.storyboard */,
 			);
@@ -875,6 +935,7 @@
 				9995B6881FAF7555000AAEFD /* Setup.storyboard in Resources */,
 				9969D8B91FAF3CA900196C82 /* Registration.storyboard in Resources */,
 				9969D8891FAF1B6A00196C82 /* WalkThrough.storyboard in Resources */,
+				B5181D341FF938B600F7F22A /* Root.storyboard in Resources */,
 				B51F121C1FEE84CF00130DEB /* Activities.storyboard in Resources */,
 				9919AFC91FACEAD4008612A0 /* LaunchScreen.storyboard in Resources */,
 				9919AFC61FACEAD4008612A0 /* Assets.xcassets in Resources */,
@@ -1016,6 +1077,7 @@
 				99C5E0831FD5CE7C00CEF351 /* PNGenericChart.swift in Sources */,
 				B5AAE2791FD46272006C6435 /* RegistrationViewController.swift in Sources */,
 				9969D8B41FAF3AC500196C82 /* LocalStorage.swift in Sources */,
+				B5181D3A1FF9390100F7F22A /* RootViewController.swift in Sources */,
 				B5AAE2751FD45523006C6435 /* DatabaseGateway.swift in Sources */,
 				B503816E1FEFB2A8003265B9 /* UICollectionViewCell+Animations.swift in Sources */,
 				99B449FF1FD5C3F7009821C1 /* TakeWhen.swift in Sources */,
@@ -1040,6 +1102,8 @@
 				B51F12241FEEBFC600130DEB /* ActivitiesViewModel.swift in Sources */,
 				9969D8901FAF1BC800196C82 /* Protocols.swift in Sources */,
 				9919AFBF1FACEAD4008612A0 /* AppDelegate.swift in Sources */,
+				B5181D3F1FF95DF900F7F22A /* TodayViewModel.swift in Sources */,
+				B5181D3C1FF9394A00F7F22A /* RootViewModel.swift in Sources */,
 				B59571841FCEC6BB005B7C11 /* InfoCellViewModel.swift in Sources */,
 				99C5E0891FD5CE7C00CEF351 /* PNChartLabel.swift in Sources */,
 				B51F12281FEEC12E00130DEB /* TaskCellViewModel.swift in Sources */,

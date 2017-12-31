@@ -21,7 +21,7 @@ final class RootScreenInitService: NSObject, UIApplicationDelegate {
         
         let rootVC: UIViewController
         if Auth.auth().currentUser != nil {
-            rootVC = ActivitiesViewController.instantiate()
+            rootVC = RootViewController.instantiate()
         } else {
             rootVC = WalkThroughViewController.instantiate()
         }

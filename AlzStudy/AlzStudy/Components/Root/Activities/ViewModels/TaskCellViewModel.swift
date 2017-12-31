@@ -20,6 +20,7 @@ protocol TaskCellViewModelOutputs {
     
     var titleText: Signal<String, NoError> { get }
     var statusImage: Signal<UIImage, NoError> { get }
+    var textColor: Signal<UIColor, NoError> { get }
     
 }
 
@@ -33,10 +34,11 @@ final class TaskCellViewModel: TaskCellViewModelOutputs, TaskCellViewModelInputs
 
     let titleText: Signal<String, NoError>
     let statusImage: Signal<UIImage, NoError>
+    let textColor: Signal<UIColor, NoError>
     
     init() {
         
-        titleText = taskProperty.signal
+        self.titleText = taskProperty.signal
             .skipNil()
             .map { (viewData: TaskCellViewData) -> String in
                 let text: String
@@ -50,10 +52,16 @@ final class TaskCellViewModel: TaskCellViewModelOutputs, TaskCellViewModelInputs
                 return text
             }
         
-        statusImage = taskProperty.signal
+        self.statusImage = taskProperty.signal
             .skipNil()
             .map { (viewData: TaskCellViewData) -> UIImage in
                 return viewData.isDone ? #imageLiteral(resourceName: "checkmark") : #imageLiteral(resourceName: "empty_checkmark")
+            }
+        
+        self.textColor = taskProperty.signal
+            .skipNil()
+            .map {
+                return $0.isDone ? UIColor.lightGray : UIColor.black
             }
         
     }

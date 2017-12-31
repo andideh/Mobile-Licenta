@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlzStudy/Components/Tests/Numbers/ViewModels/NumbersTaskViewModel.swift"
-            timestampString = "536425867.943827"
+            timestampString = "536442773.884048"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "150"
@@ -81,6 +81,102 @@
             endingLineNumber = "26"
             landmarkName = "requestPermissionIfNeeded(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlzStudy/Components/Root/Today/ViewControllers/TodayViewController.swift"
+            timestampString = "536442773.884205"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "bindViewModel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlzStudy/Chart/PNPieChart.swift"
+            timestampString = "536442773.884263"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "strokeChart()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlzStudy/FirebaseExtensions/Firebase+Reactive.swift"
+            timestampString = "536442773.884315"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "observeEvent(of:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlzStudy/FirebaseExtensions/Firebase+Reactive.swift"
+            timestampString = "536442773.884364"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "observeEvent(of:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (ReactiveSwift.Signal&lt;__ObjC.DataSnapshot, Result.NoError&gt;.Observer, ReactiveSwift.Lifetime) -&gt; () in (extension in AlzStudy):__ObjC.DatabaseReference.observeEvent(of: __C.DataEventType) -&gt; ReactiveSwift.SignalProducer&lt;__ObjC.DataSnapshot, Result.NoError&gt;"
+                  moduleName = "AlzStudy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreid/Documents/GitHub/Mobile-Licenta/AlzStudy/AlzStudy/FirebaseExtensions/Firebase+Reactive.swift"
+                  timestampString = "536442638.943954"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "55">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__ObjC.DataSnapshot) -&gt; () in closure #1 (ReactiveSwift.Signal&lt;__ObjC.DataSnapshot, Result.NoError&gt;.Observer, ReactiveSwift.Lifetime) -&gt; () in (extension in AlzStudy):__ObjC.DatabaseReference.observeEvent(of: __C.DataEventType) -&gt; ReactiveSwift.SignalProducer&lt;__ObjC.DataSnapshot, Result.NoError&gt;"
+                  moduleName = "AlzStudy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreid/Documents/GitHub/Mobile-Licenta/AlzStudy/AlzStudy/FirebaseExtensions/Firebase+Reactive.swift"
+                  timestampString = "536442638.945564"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "18">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

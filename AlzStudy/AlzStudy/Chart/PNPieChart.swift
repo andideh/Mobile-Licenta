@@ -9,9 +9,7 @@
 import UIKit
 
 class PNPieChart: PNGenericChart {
-    lazy var items: [PNPieChartDataItem] = {
-        return [PNPieChartDataItem]()
-    }()
+    var items: [PNPieChartDataItem] = [PNPieChartDataItem]()
     
     var endPercentages = [CGFloat]()
     var contentView = UIView()

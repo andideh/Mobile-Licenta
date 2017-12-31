@@ -38,6 +38,12 @@ final class TaskCell: UICollectionViewCell, ValueCell {
             .observeValues { [weak self] in
                 self?.imageView.image = $0
             }
+        
+        self.viewModel.outputs.textColor
+            .observeForUI()
+            .observeValues { [weak self] in
+                self?.titleLabel.textColor = $0
+            }
     }
     
     override func awakeFromNib() {
