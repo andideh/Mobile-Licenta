@@ -17,8 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     lazy var services: [UIApplicationDelegate] = {
         return [
-            RootScreenInitService(with: self.window),
             FirebaseConfigService(),
+            
+            RootScreenInitService(with: self.window),
             AppearanceService()
         ]
     }()

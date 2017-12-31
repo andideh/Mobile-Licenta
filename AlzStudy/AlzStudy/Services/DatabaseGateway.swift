@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Realm
 
 
 protocol DatabaseGateway {

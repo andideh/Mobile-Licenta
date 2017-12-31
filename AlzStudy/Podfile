@@ -7,9 +7,7 @@ target 'AlzStudy' do
 
   # Pods for AlzStudy
 
-  pod 'Moya'
   pod 'ReactiveSwift'
-  pod 'Realm'
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'

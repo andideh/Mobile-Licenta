@@ -1,5 +1,5 @@
 //
-//  Auth.swift
+//  User.swift
 //  AlzStudy
 //
 //  Created by Dehelean Andrei on 11/12/17.

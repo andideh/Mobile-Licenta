@@ -13,6 +13,7 @@
 		9919AFC61FACEAD4008612A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9919AFC51FACEAD4008612A0 /* Assets.xcassets */; };
 		9919AFC91FACEAD4008612A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9919AFC71FACEAD4008612A0 /* LaunchScreen.storyboard */; };
 		9919AFD41FACEAD4008612A0 /* AlzStudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9919AFD31FACEAD4008612A0 /* AlzStudyTests.swift */; };
+		99253BC11FF8EF1D003688E0 /* FirebaseConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99253BC01FF8EF1D003688E0 /* FirebaseConfigService.swift */; };
 		995C3CE81FDE7B8100D2FD38 /* JoinButtonResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995C3CE71FDE7B8100D2FD38 /* JoinButtonResponder.swift */; };
 		995C3CEA1FDE7CF400D2FD38 /* HelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995C3CE91FDE7CF300D2FD38 /* HelperMethods.swift */; };
 		995C3CEC1FDE7FD700D2FD38 /* AboutYouData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995C3CEB1FDE7FD700D2FD38 /* AboutYouData.swift */; };
@@ -31,12 +32,11 @@
 		9969D8BB1FAF3DCB00196C82 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9969D8BA1FAF3DCB00196C82 /* ContainerViewController.swift */; };
 		9969D8BE1FAF407300196C82 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9969D8BD1FAF407300196C82 /* QuestionViewController.swift */; };
 		9969D8C01FAF508500196C82 /* ConsentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9969D8BF1FAF508500196C82 /* ConsentViewController.swift */; };
-		9992E3EA1FED3D6600DF3F3E /* FirebaseConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9992E3E91FED3D6600DF3F3E /* FirebaseConfigService.swift */; };
 		9995B6881FAF7555000AAEFD /* Setup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9995B6871FAF7555000AAEFD /* Setup.storyboard */; };
 		9995B68A1FAF7571000AAEFD /* AboutYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9995B6891FAF7571000AAEFD /* AboutYouViewController.swift */; };
 		9995B68E1FAF78DA000AAEFD /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9995B68D1FAF78DA000AAEFD /* InfoCell.swift */; };
 		9995B6931FAF7B61000AAEFD /* ParameterViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9995B6921FAF7B61000AAEFD /* ParameterViewData.swift */; };
-		99A34EF41FB87B3700F33BCF /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A34EF31FB87B3700F33BCF /* Auth.swift */; };
+		99A34EF41FB87B3700F33BCF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A34EF31FB87B3700F33BCF /* User.swift */; };
 		99A34EF71FB8913400F33BCF /* WalkThroughViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A34EF61FB8913400F33BCF /* WalkThroughViewModel.swift */; };
 		99A34EFA1FB8925200F33BCF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A34EF91FB8925200F33BCF /* BaseViewController.swift */; };
 		99A34EFC1FB894C200F33BCF /* CardsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A34EFB1FB894C200F33BCF /* CardsFactory.swift */; };
@@ -45,6 +45,10 @@
 		99B449FF1FD5C3F7009821C1 /* TakeWhen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B449FE1FD5C3F7009821C1 /* TakeWhen.swift */; };
 		99B44A011FD5C4C1009821C1 /* WithLatestFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B44A001FD5C4C1009821C1 /* WithLatestFrom.swift */; };
 		99B44A031FD5C6CB009821C1 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B44A021FD5C6CB009821C1 /* TodayViewController.swift */; };
+		99B729141FF8F30A008A3E11 /* Firebase+Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B729131FF8F30A008A3E11 /* Firebase+Reactive.swift */; };
+		99B729161FF8F44D008A3E11 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 99B729151FF8F44D008A3E11 /* GoogleService-Info.plist */; };
+		99B729181FF8FA89008A3E11 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B729171FF8FA89008A3E11 /* APIService.swift */; };
+		99B7291A1FF90093008A3E11 /* FlatMapLatest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B729191FF90093008A3E11 /* FlatMapLatest.swift */; };
 		99C1E6BC1FB856B6008C79B9 /* ObserveForUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C1E6BB1FB856B6008C79B9 /* ObserveForUI.swift */; };
 		99C1E6EB1FB858BC008C79B9 /* RootScreenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C1E6EA1FB858BC008C79B9 /* RootScreenService.swift */; };
 		99C1E6ED1FB85954008C79B9 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C1E6EC1FB85954008C79B9 /* Environment.swift */; };
@@ -65,7 +69,6 @@
 		B503816A1FEFAD12003265B9 /* AppearanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50381691FEFAD12003265B9 /* AppearanceService.swift */; };
 		B503816C1FEFAE8C003265B9 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503816B1FEFAE8C003265B9 /* UIView+Shadow.swift */; };
 		B503816E1FEFB2A8003265B9 /* UICollectionViewCell+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503816D1FEFB2A8003265B9 /* UICollectionViewCell+Animations.swift */; };
-		B50381711FEFD051003265B9 /* DailyTaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50381701FEFD051003265B9 /* DailyTaskService.swift */; };
 		B50381731FEFD10B003265B9 /* UIResponder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50381721FEFD10B003265B9 /* UIResponder+Extension.swift */; };
 		B503817C1FF24B3F003265B9 /* Numbers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B503817B1FF24B3F003265B9 /* Numbers.storyboard */; };
 		B503817E1FF24D30003265B9 /* NumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503817D1FF24D30003265B9 /* NumbersViewController.swift */; };
@@ -142,6 +145,7 @@
 		9919AFCF1FACEAD4008612A0 /* AlzStudyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlzStudyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9919AFD31FACEAD4008612A0 /* AlzStudyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlzStudyTests.swift; sourceTree = "<group>"; };
 		9919AFD51FACEAD4008612A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99253BC01FF8EF1D003688E0 /* FirebaseConfigService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseConfigService.swift; sourceTree = "<group>"; };
 		995C3CE71FDE7B8100D2FD38 /* JoinButtonResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinButtonResponder.swift; sourceTree = "<group>"; };
 		995C3CE91FDE7CF300D2FD38 /* HelperMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperMethods.swift; sourceTree = "<group>"; };
 		995C3CEB1FDE7FD700D2FD38 /* AboutYouData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutYouData.swift; sourceTree = "<group>"; };
@@ -160,12 +164,11 @@
 		9969D8BA1FAF3DCB00196C82 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		9969D8BD1FAF407300196C82 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		9969D8BF1FAF508500196C82 /* ConsentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentViewController.swift; sourceTree = "<group>"; };
-		9992E3E91FED3D6600DF3F3E /* FirebaseConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConfigService.swift; sourceTree = "<group>"; };
 		9995B6871FAF7555000AAEFD /* Setup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setup.storyboard; sourceTree = "<group>"; };
 		9995B6891FAF7571000AAEFD /* AboutYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutYouViewController.swift; sourceTree = "<group>"; };
 		9995B68D1FAF78DA000AAEFD /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		9995B6921FAF7B61000AAEFD /* ParameterViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterViewData.swift; sourceTree = "<group>"; };
-		99A34EF31FB87B3700F33BCF /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		99A34EF31FB87B3700F33BCF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		99A34EF61FB8913400F33BCF /* WalkThroughViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughViewModel.swift; sourceTree = "<group>"; };
 		99A34EF91FB8925200F33BCF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		99A34EFB1FB894C200F33BCF /* CardsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsFactory.swift; sourceTree = "<group>"; };
@@ -174,6 +177,10 @@
 		99B449FE1FD5C3F7009821C1 /* TakeWhen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeWhen.swift; sourceTree = "<group>"; };
 		99B44A001FD5C4C1009821C1 /* WithLatestFrom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithLatestFrom.swift; sourceTree = "<group>"; };
 		99B44A021FD5C6CB009821C1 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		99B729131FF8F30A008A3E11 /* Firebase+Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Reactive.swift"; sourceTree = "<group>"; };
+		99B729151FF8F44D008A3E11 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		99B729171FF8FA89008A3E11 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIService.swift; path = AlzStudy/Components/Root/Activities/Services/APIService.swift; sourceTree = SOURCE_ROOT; };
+		99B729191FF90093008A3E11 /* FlatMapLatest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatMapLatest.swift; sourceTree = "<group>"; };
 		99C1E6BB1FB856B6008C79B9 /* ObserveForUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserveForUI.swift; sourceTree = "<group>"; };
 		99C1E6EA1FB858BC008C79B9 /* RootScreenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreenService.swift; sourceTree = "<group>"; };
 		99C1E6EC1FB85954008C79B9 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
@@ -194,7 +201,6 @@
 		B50381691FEFAD12003265B9 /* AppearanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceService.swift; sourceTree = "<group>"; };
 		B503816B1FEFAE8C003265B9 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		B503816D1FEFB2A8003265B9 /* UICollectionViewCell+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Animations.swift"; sourceTree = "<group>"; };
-		B50381701FEFD051003265B9 /* DailyTaskService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTaskService.swift; sourceTree = "<group>"; };
 		B50381721FEFD10B003265B9 /* UIResponder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Extension.swift"; sourceTree = "<group>"; };
 		B503817B1FF24B3F003265B9 /* Numbers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Numbers.storyboard; sourceTree = "<group>"; };
 		B503817D1FF24D30003265B9 /* NumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersViewController.swift; sourceTree = "<group>"; };
@@ -263,6 +269,7 @@
 				9919AFBC1FACEAD3008612A0 /* Products */,
 				B2B91D4B59F98D6398679A59 /* Pods */,
 				FFC8491F70BAC6E79E13D3D8 /* Frameworks */,
+				99253BBF1FF8EEF4003688E0 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -278,6 +285,7 @@
 		9919AFBD1FACEAD3008612A0 /* AlzStudy */ = {
 			isa = PBXGroup;
 			children = (
+				99B729121FF8F2EC008A3E11 /* FirebaseExtensions */,
 				99C5E0771FD5CE6800CEF351 /* Chart */,
 				9969D8B71FAF3C7D00196C82 /* Registration */,
 				99C1E6E71FB8586B008C79B9 /* Environment */,
@@ -305,6 +313,7 @@
 		9919AFDE1FACEADD008612A0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				99B729151FF8F44D008A3E11 /* GoogleService-Info.plist */,
 				9919AFBE1FACEAD4008612A0 /* AppDelegate.swift */,
 				9919AFCA1FACEAD4008612A0 /* Info.plist */,
 			);
@@ -351,6 +360,13 @@
 			children = (
 			);
 			path = RestAPI;
+			sourceTree = "<group>";
+		};
+		99253BBF1FF8EEF4003688E0 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		9969D8831FAF1AD700196C82 /* WalkThrough */ = {
@@ -424,12 +440,13 @@
 		9969D8B21FAF3AB900196C82 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				99B729171FF8FA89008A3E11 /* APIService.swift */,
+				99253BC01FF8EF1D003688E0 /* FirebaseConfigService.swift */,
 				9969D8B31FAF3AC500196C82 /* LocalStorage.swift */,
 				99C1E6EA1FB858BC008C79B9 /* RootScreenService.swift */,
-				99A34EF31FB87B3700F33BCF /* Auth.swift */,
+				99A34EF31FB87B3700F33BCF /* User.swift */,
 				B5AAE2741FD45523006C6435 /* DatabaseGateway.swift */,
 				B5AAE2761FD455C0006C6435 /* CurrentUser.swift */,
-				9992E3E91FED3D6600DF3F3E /* FirebaseConfigService.swift */,
 				B50381691FEFAD12003265B9 /* AppearanceService.swift */,
 				B50381941FF2A640003265B9 /* Keyboard.swift */,
 				B503819B1FF4FCCE003265B9 /* LocalNotificationsService.swift */,
@@ -516,6 +533,14 @@
 			path = "Value Data Source";
 			sourceTree = "<group>";
 		};
+		99B729121FF8F2EC008A3E11 /* FirebaseExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				99B729131FF8F30A008A3E11 /* Firebase+Reactive.swift */,
+			);
+			path = FirebaseExtensions;
+			sourceTree = "<group>";
+		};
 		99C1E6BA1FB856A3008C79B9 /* ReactiveExtensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -526,6 +551,7 @@
 				B50381961FF2B57F003265B9 /* IgnoreValues.swift */,
 				B5F41E281FF7887F00C2FB6F /* Values.swift */,
 				B5F41E2A1FF7896500C2FB6F /* Errors.swift */,
+				99B729191FF90093008A3E11 /* FlatMapLatest.swift */,
 			);
 			path = ReactiveExtensions;
 			sourceTree = "<group>";
@@ -566,14 +592,6 @@
 				1F75D17A2FF78397B3A74FC1 /* Pods-AlzStudyTests.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		B503816F1FEFD046003265B9 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				B50381701FEFD051003265B9 /* DailyTaskService.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		B50381741FF24ABE003265B9 /* Numbers */ = {
@@ -692,7 +710,6 @@
 		B51F12181FEE846000130DEB /* Activities */ = {
 			isa = PBXGroup;
 			children = (
-				B503816F1FEFD046003265B9 /* Services */,
 				B51F121A1FEE84B300130DEB /* ViewControllers */,
 				B51F120D1FEE813A00130DEB /* Models */,
 				B51F12171FEE843800130DEB /* DataSources */,
@@ -862,6 +879,7 @@
 				9919AFC91FACEAD4008612A0 /* LaunchScreen.storyboard in Resources */,
 				9919AFC61FACEAD4008612A0 /* Assets.xcassets in Resources */,
 				B57B666D1FD47DBA00127B01 /* Today.storyboard in Resources */,
+				99B729161FF8F44D008A3E11 /* GoogleService-Info.plist in Resources */,
 				9919AFC41FACEAD4008612A0 /* Main.storyboard in Resources */,
 				B503817C1FF24B3F003265B9 /* Numbers.storyboard in Resources */,
 			);
@@ -987,6 +1005,7 @@
 				99C5E08B1FD5CE7C00CEF351 /* PNLineChartData.swift in Sources */,
 				B59571861FCEC7F9005B7C11 /* MapConst.swift in Sources */,
 				99C5E08A1FD5CE7C00CEF351 /* PNValue.swift in Sources */,
+				99B729141FF8F30A008A3E11 /* Firebase+Reactive.swift in Sources */,
 				B50381821FF24F4F003265B9 /* NumbersTaskViewModel.swift in Sources */,
 				99B44A031FD5C6CB009821C1 /* TodayViewController.swift in Sources */,
 				B51F12201FEEBD8400130DEB /* TaskCell.swift in Sources */,
@@ -1000,7 +1019,6 @@
 				9969D8BE1FAF407300196C82 /* QuestionViewController.swift in Sources */,
 				9969D8BB1FAF3DCB00196C82 /* ContainerViewController.swift in Sources */,
 				B51F12241FEEBFC600130DEB /* ActivitiesViewModel.swift in Sources */,
-				9992E3EA1FED3D6600DF3F3E /* FirebaseConfigService.swift in Sources */,
 				9969D8901FAF1BC800196C82 /* Protocols.swift in Sources */,
 				9919AFBF1FACEAD4008612A0 /* AppDelegate.swift in Sources */,
 				B59571841FCEC6BB005B7C11 /* InfoCellViewModel.swift in Sources */,
@@ -1021,9 +1039,11 @@
 				99B44A011FD5C4C1009821C1 /* WithLatestFrom.swift in Sources */,
 				B50381731FEFD10B003265B9 /* UIResponder+Extension.swift in Sources */,
 				B51F12111FEE81E100130DEB /* Test.swift in Sources */,
+				99253BC11FF8EF1D003688E0 /* FirebaseConfigService.swift in Sources */,
 				B51F12131FEE82B800130DEB /* DailyTask.swift in Sources */,
 				B51F120F1FEE814400130DEB /* TaskType.swift in Sources */,
 				B5F41E291FF7887F00C2FB6F /* Values.swift in Sources */,
+				99B729181FF8FA89008A3E11 /* APIService.swift in Sources */,
 				B50381931FF29AF5003265B9 /* RoundedBorderButton.swift in Sources */,
 				9995B6931FAF7B61000AAEFD /* ParameterViewData.swift in Sources */,
 				9969D8C01FAF508500196C82 /* ConsentViewController.swift in Sources */,
@@ -1033,7 +1053,6 @@
 				99DBCEDA1FC1A17A004CA222 /* CardCellViewModel.swift in Sources */,
 				9969D8971FAF243800196C82 /* CardViewData.swift in Sources */,
 				99C5E08D1FD5CE7C00CEF351 /* PNLineChart.swift in Sources */,
-				B50381711FEFD051003265B9 /* DailyTaskService.swift in Sources */,
 				9969D8AF1FAF2E9500196C82 /* UIColor.swift in Sources */,
 				B50381991FF2B662003265B9 /* UIAlertController.swift in Sources */,
 				B50381951FF2A640003265B9 /* Keyboard.swift in Sources */,
@@ -1047,6 +1066,7 @@
 				99A34EF71FB8913400F33BCF /* WalkThroughViewModel.swift in Sources */,
 				99C5E0861FD5CE7C00CEF351 /* PNBar.swift in Sources */,
 				9969D89D1FAF25A100196C82 /* CardViewCell.swift in Sources */,
+				99B7291A1FF90093008A3E11 /* FlatMapLatest.swift in Sources */,
 				9995B68E1FAF78DA000AAEFD /* InfoCell.swift in Sources */,
 				9995B68A1FAF7571000AAEFD /* AboutYouViewController.swift in Sources */,
 				B51F12221FEEBD9500130DEB /* DateCell.swift in Sources */,
@@ -1056,7 +1076,7 @@
 				99C5E0871FD5CE7C00CEF351 /* PNPieChart.swift in Sources */,
 				B503816A1FEFAD12003265B9 /* AppearanceService.swift in Sources */,
 				B59571921FCECC6C005B7C11 /* AboutYouDataSource.swift in Sources */,
-				99A34EF41FB87B3700F33BCF /* Auth.swift in Sources */,
+				99A34EF41FB87B3700F33BCF /* User.swift in Sources */,
 				B51F12261FEEC02E00130DEB /* ActivitiesDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1212,10 +1232,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H6DVJBYLVG;
+				DEVELOPMENT_TEAM = Q4H5VCA4SE;
 				INFOPLIST_FILE = "$(SRCROOT)/AlzStudy/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = andid3.AlzStudy;
+				PRODUCT_BUNDLE_IDENTIFIER = andi.com.AlzStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1228,10 +1248,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H6DVJBYLVG;
+				DEVELOPMENT_TEAM = Q4H5VCA4SE;
 				INFOPLIST_FILE = "$(SRCROOT)/AlzStudy/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = andid3.AlzStudy;
+				PRODUCT_BUNDLE_IDENTIFIER = andi.com.AlzStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;

@@ -12,7 +12,6 @@ final class RegistrationViewController: BaseViewController {
     
     // MARK: - IBOutlets
     
-    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
@@ -73,7 +72,6 @@ final class RegistrationViewController: BaseViewController {
     // MARK: - Private methods
     
     private func setupDelegates() {
-        self.nameTextField.delegate = self
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
         self.confirmPasswordTextField.delegate = self
@@ -85,11 +83,6 @@ final class RegistrationViewController: BaseViewController {
                                       action: #selector(emailTextFieldChanged(_:)),
                                       for: .editingChanged)
 
-        
-        self.nameTextField.addTarget(self,
-                                      action: #selector(nameTextFieldChanged(_:)),
-                                      for: .editingChanged)
-        
         self.passwordTextField.addTarget(self,
                                       action: #selector(passwordTextFieldChanged(_:)),
                                       for: .editingChanged)
@@ -102,10 +95,6 @@ final class RegistrationViewController: BaseViewController {
     
     @objc private func emailTextFieldChanged(_ textField: UITextField) {
         self.viewModel.inputs.emailChanged(textField.text ?? "")
-    }
-    
-    @objc private func nameTextFieldChanged(_ textField: UITextField) {
-        self.viewModel.inputs.nameChanged(textField.text ?? "")
     }
     
     @objc private func passwordTextFieldChanged(_ textField: UITextField) {

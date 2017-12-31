@@ -14,8 +14,6 @@ protocol RegistrationViewModelInputs {
     
     func viewDidLoad()
     
-    func nameChanged(_ name: String)
-    
     func emailChanged(_ email: String)
     
     func passwordChanged(_ password: String)
@@ -29,9 +27,7 @@ protocol RegistrationViewModelInputs {
 protocol RegistrationViewModelOutputs {
     
     var isRegisterButtonEnabled: Signal<Bool, NoError> { get }
-    
     var signIn: Signal<(), NoError> { get }
-    
 }
 
 protocol RegistrationViewModelType {
@@ -48,7 +44,6 @@ final class RegistrationViewModel: RegistrationViewModelOutputs, RegistrationVie
     
     init() {
         
-        let name = nameChangedProperty.signal
         let email = emailChangedProperty.signal
         let password = passwordChangedProperty.signal
         let confirmPassword = confirmPasswordChangedProperty.signal
@@ -63,31 +58,22 @@ final class RegistrationViewModel: RegistrationViewModelOutputs, RegistrationVie
         let buttonEnabled = Signal.combineLatest(validEmail, validPassword)
             .map { $0 && $1 }
         
-        isRegisterButtonEnabled = Signal.merge(initial, buttonEnabled)
+        self.isRegisterButtonEnabled = Signal.merge(initial, buttonEnabled)
         
-        signIn = registerTappedProperty.signal
-        
-        let _ = Signal.combineLatest(name, email, password)
-            .takeWhen(signIn)
-            .observeValues {
-                let user = User(name: $0, email: $1, password: $2)
-                
-                AppEnvironment.pushEnvironment(currentUser: user)
-                
-                let archived = NSKeyedArchiver.archivedData(withRootObject: user)
-                UserDefaults.standard.set(archived, forKey: "user")
+        let userCreation = Signal.combineLatest(email, password)
+            .takeWhen(registerTappedProperty.signal)
+            .take(first: 1)
+            .flatMapLatest {
+                AppEnvironment.current.service.login(email: $0.0, password: $0.1).materialize()
             }
+        
+        self.signIn = userCreation.values().ignoreValues()
     }
     
     
     private let viewDidLoadProperty = MutableProperty(())
     func viewDidLoad() {
         viewDidLoadProperty.value = ()
-    }
-    
-    private let nameChangedProperty = MutableProperty("")
-    func nameChanged(_ name: String) {
-        nameChangedProperty.value = name
     }
     
     private let emailChangedProperty = MutableProperty("")

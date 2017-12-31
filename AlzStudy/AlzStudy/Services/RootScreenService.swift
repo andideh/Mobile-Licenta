@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 final class RootScreenInitService: NSObject, UIApplicationDelegate {
     
@@ -17,19 +18,15 @@ final class RootScreenInitService: NSObject, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
-                
-        if !Auth().isAuthenticated {
-            let walkThrough = WalkThroughViewController.instantiate()
-            
-            mainWindow?.rootViewController = walkThrough
+        
+        let rootVC: UIViewController
+        if Auth.auth().currentUser != nil {
+            rootVC = ActivitiesViewController.instantiate()
         } else {
-            // TODO: navigate to
-
-            let activitesVC = ActivitiesViewController.instantiate()
-            
-            mainWindow?.rootViewController = activitesVC
+            rootVC = RegistrationViewController.instantiate()
         }
-                    
+    
+        mainWindow?.rootViewController = rootVC
         mainWindow?.makeKeyAndVisible()
         
         return true
