@@ -18,5 +18,7 @@ struct Theme {
     static let green = UIColor(colorString: "16a085")
 
     static let red = UIColor(colorString: "d35400")
+    
+    static let mainColor = UIColor(colorString: "16a085")
 
 }

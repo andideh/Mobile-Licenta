@@ -14,13 +14,13 @@ import Result
 protocol ActivitiesViewModelInputs {
     
     func viewDidLoad()
-    func didSelect(item index: Int)
+    func didSelect(item indexPath: IndexPath)
 }
 
 protocol ActivitiesViewModelsOutputs {
     
     var loadTodayTasks: Signal<[TaskCellViewData], NoError> { get }
-    
+    var loadYesterdayTasks: Signal<[TaskCellViewData], NoError> { get }
     var goToTest: Signal<Test, NoError> { get }
     
 }
@@ -35,33 +35,42 @@ protocol ActivitiesViewModelType {
 final class ActivitiesViewModel: ActivitiesViewModelType, ActivitiesViewModelInputs, ActivitiesViewModelsOutputs {
     
     let loadTodayTasks: Signal<[TaskCellViewData], NoError>
+    let loadYesterdayTasks: Signal<[TaskCellViewData], NoError>
     let goToTest: Signal<Test, NoError>
     
     init() {
         
-        let dailyTask = DailyTaskService.makeDailyTask()
-        
-        self.loadTodayTasks = self.viewLoadedProperty.signal
+        let todayTask = self.viewLoadedProperty.signal
             .take(first: 1)
-            .map { _ in
-                dailyTask.tests.map { TaskCellViewData(type: $0.type, isDone: $0.isDone) }
+            .flatMap(.latest) {
+                return AppEnvironment.current.service.fetchTodayTask().materialize()
             }
         
-        self.goToTest = self.selectedItemProperty.signal
-            .map {
-                dailyTask.tests[$0]
+        self.loadTodayTasks = todayTask.values()
+            .map { $0.tests.map { TaskCellViewData(type: $0.type, isDone: $0.isDone) } }
+        
+        
+        let yesterdayTask = self.viewLoadedProperty.signal
+            .take(first: 1)
+            .flatMap(.latest) {
+                return AppEnvironment.current.service.fetchYesterdayTask().materialize()
             }
+        
+        self.loadYesterdayTasks = yesterdayTask.values()
+            .map { $0.tests.map { TaskCellViewData(type: $0.type, isDone: $0.isDone) } }
+        
+        self.goToTest = self.selectedItemProperty.signal.combineLatest(with: todayTask.values())
+            .filter { $0.0?.section == .some(1) } // make only today's tasks selectable
+            .map { $0.1.tests[$0.0!.item] }
     }
-    
-    
     
     let viewLoadedProperty = MutableProperty<Void>(())
     func viewDidLoad() {
         viewLoadedProperty.value = ()
     }
     
-    let selectedItemProperty = MutableProperty<Int>(0)
-    func didSelect(item index: Int) {
+    let selectedItemProperty = MutableProperty<IndexPath?>(nil)
+    func didSelect(item index: IndexPath) {
         selectedItemProperty.value = index
     }
     

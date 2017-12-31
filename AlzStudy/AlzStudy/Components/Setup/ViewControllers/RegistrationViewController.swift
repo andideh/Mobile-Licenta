@@ -58,7 +58,7 @@ final class RegistrationViewController: BaseViewController {
             .observeForUI()
             .observeValues { [weak self] in
                 self?.registrationButton.isEnabled = $0
-                self?.registrationButton.backgroundColor = $0 ? UIColor.red : UIColor.lightGray
+                self?.registrationButton.backgroundColor = $0 ? Theme.mainColor : UIColor.lightGray
             }
         
         self.viewModel.outputs.signIn

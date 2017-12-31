@@ -127,7 +127,7 @@ final class AboutYouViewController: BaseViewController {
             .observeForUI()
             .observeValues { [weak self] in
                 self?.nextButton.isEnabled = $0
-                self?.nextButton.backgroundColor = $0 ? UIColor.red : UIColor.lightGray
+                self?.nextButton.backgroundColor = $0 ? Theme.mainColor : UIColor.lightGray
         }
         
         self.viewModel.outputs.goToRegistration

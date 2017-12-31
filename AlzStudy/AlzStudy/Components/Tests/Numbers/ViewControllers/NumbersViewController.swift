@@ -88,7 +88,7 @@ final class NumbersViewController: BaseViewController {
             .observeValues { [weak self] in
                 self?.doneButton.isEnabled = $0
                 
-                let color: UIColor = $0 ? .red : .lightGray
+                let color: UIColor = $0 ? Theme.mainColor : .lightGray
                
                 self?.doneButton.borderColor = color
                 self?.doneButton.setTitleColor(color, for: .normal)

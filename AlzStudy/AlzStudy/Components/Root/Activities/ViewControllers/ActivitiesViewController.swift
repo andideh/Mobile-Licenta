@@ -30,6 +30,13 @@ final class ActivitiesViewController: BaseViewController {
         self.collectionView.contentInset = UIEdgeInsetsMake(0.0, 0.0, 20.0, 0.0)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+//        let service: LocalNotificationsService = AppEnvironment.current.serviceProvider.getService()
+//        service.requestPermissionIfNeeded(self)
+    }
+    
     // MARK: - Public methods
     
     static func instantiate() -> UINavigationController {
@@ -44,6 +51,13 @@ final class ActivitiesViewController: BaseViewController {
                 self?.collectionView.reloadData()
             }
         
+        self.viewModel.outputs.loadYesterdayTasks
+            .observeForUI()
+            .observeValues { [weak self] in
+                self?.dataSource.loadYesterdayTasks($0)
+                self?.collectionView.reloadData()
+        }
+        
         self.viewModel.outputs.goToTest
             .observeForControllerAction()
             .observeValues { [weak self] in
@@ -53,6 +67,8 @@ final class ActivitiesViewController: BaseViewController {
                 
                 self?.present(numbersVC, animated: true)
             }
+        
+       
     }
     
     // MARK: - Private methods
@@ -64,7 +80,7 @@ final class ActivitiesViewController: BaseViewController {
 extension ActivitiesViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.viewModel.inputs.didSelect(item: indexPath.row)
+        self.viewModel.inputs.didSelect(item: indexPath)
     }
 
 }

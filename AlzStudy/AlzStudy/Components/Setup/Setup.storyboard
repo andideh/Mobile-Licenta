@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,7 +32,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="65" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h1M-KJ-rJ2">
-                                <rect key="frame" x="0.0" y="102" width="375" height="487"/>
+                                <rect key="frame" x="0.0" y="102" width="375" height="493"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <prototypes>
@@ -76,10 +75,10 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxT-ur-HZO">
-                                <rect key="frame" x="9.5" y="597" width="356.5" height="50"/>
+                                <rect key="frame" x="0.5" y="603" width="375" height="64"/>
                                 <color key="backgroundColor" red="1" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="v6c-gt-D8u"/>
+                                    <constraint firstAttribute="height" constant="64" id="v6c-gt-D8u"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="17"/>
                                 <state key="normal" title="Next">
@@ -95,8 +94,8 @@
                             <constraint firstItem="h1M-KJ-rJ2" firstAttribute="leading" secondItem="w4a-5r-9u1" secondAttribute="leading" id="IUc-Yv-UXS"/>
                             <constraint firstItem="pxT-ur-HZO" firstAttribute="top" secondItem="h1M-KJ-rJ2" secondAttribute="bottom" constant="8" id="L0f-i7-Mct"/>
                             <constraint firstItem="h1M-KJ-rJ2" firstAttribute="trailing" secondItem="w4a-5r-9u1" secondAttribute="trailing" id="MSH-0E-OCk"/>
-                            <constraint firstItem="pxT-ur-HZO" firstAttribute="width" secondItem="MtK-Dx-CLh" secondAttribute="width" multiplier="0.95" id="Pi2-1u-pCs"/>
-                            <constraint firstItem="w4a-5r-9u1" firstAttribute="bottom" secondItem="pxT-ur-HZO" secondAttribute="bottom" constant="20" id="TMs-OU-g7e"/>
+                            <constraint firstItem="pxT-ur-HZO" firstAttribute="width" secondItem="MtK-Dx-CLh" secondAttribute="width" id="Pi2-1u-pCs"/>
+                            <constraint firstItem="w4a-5r-9u1" firstAttribute="bottom" secondItem="pxT-ur-HZO" secondAttribute="bottom" id="TMs-OU-g7e"/>
                             <constraint firstItem="h1M-KJ-rJ2" firstAttribute="top" secondItem="0mh-aP-dfc" secondAttribute="bottom" constant="20" id="Wx6-33-qLk"/>
                             <constraint firstItem="0mh-aP-dfc" firstAttribute="top" secondItem="w4a-5r-9u1" secondAttribute="top" constant="20" id="Z1q-gI-S3c"/>
                             <constraint firstItem="pxT-ur-HZO" firstAttribute="centerX" secondItem="MtK-Dx-CLh" secondAttribute="centerX" id="kDl-2l-iMe"/>
@@ -170,22 +169,20 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7b-M7-05Z">
-                                                <rect key="frame" x="40.5" y="577" width="294" height="50"/>
+                                                <rect key="frame" x="0.0" y="583" width="375" height="64"/>
                                                 <color key="backgroundColor" red="0.90588235294117647" green="0.29803921568627451" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="WWA-7L-G7E"/>
+                                                    <constraint firstAttribute="height" constant="64" id="WWA-7L-G7E"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="17"/>
                                                 <state key="normal" title="Register">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <integer key="value" value="25"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="nextButtonTapped:" destination="7GP-ZE-cbn" eventType="touchUpInside" id="r1J-pU-UTS"/>
                                                     <action selector="registerButtonTapped:" destination="OGJ-oT-GEY" eventType="touchUpInside" id="NSi-JR-qtG"/>
@@ -195,7 +192,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="I9k-MX-gco" firstAttribute="top" secondItem="GnX-qA-WN7" secondAttribute="bottom" constant="20" id="1Zs-fo-J4g"/>
-                                            <constraint firstItem="d7b-M7-05Z" firstAttribute="width" secondItem="fW5-WE-aVO" secondAttribute="width" multiplier="0.8" constant="-6.4000000000000341" id="77i-vA-P0S"/>
+                                            <constraint firstItem="d7b-M7-05Z" firstAttribute="width" secondItem="fW5-WE-aVO" secondAttribute="width" id="77i-vA-P0S"/>
                                             <constraint firstItem="d7b-M7-05Z" firstAttribute="top" relation="greaterThanOrEqual" secondItem="I9k-MX-gco" secondAttribute="bottom" constant="20" id="MWP-Xp-6il"/>
                                             <constraint firstItem="PI2-Kn-xiu" firstAttribute="top" secondItem="fW5-WE-aVO" secondAttribute="top" constant="20" id="Oxq-Ad-2zd"/>
                                             <constraint firstItem="GnX-qA-WN7" firstAttribute="leading" secondItem="fW5-WE-aVO" secondAttribute="leading" constant="20" id="RJx-Na-Gq7"/>
@@ -204,7 +201,7 @@
                                             <constraint firstAttribute="trailing" secondItem="I9k-MX-gco" secondAttribute="trailing" constant="20" id="iv8-SJ-Grq"/>
                                             <constraint firstItem="GnX-qA-WN7" firstAttribute="top" secondItem="PI2-Kn-xiu" secondAttribute="bottom" constant="20" id="oRy-4C-Eqo"/>
                                             <constraint firstItem="I9k-MX-gco" firstAttribute="leading" secondItem="fW5-WE-aVO" secondAttribute="leading" constant="20" id="poX-pW-MT2"/>
-                                            <constraint firstAttribute="bottom" secondItem="d7b-M7-05Z" secondAttribute="bottom" constant="20" id="w7F-Ae-hzk"/>
+                                            <constraint firstAttribute="bottom" secondItem="d7b-M7-05Z" secondAttribute="bottom" id="w7F-Ae-hzk"/>
                                             <constraint firstAttribute="trailing" secondItem="GnX-qA-WN7" secondAttribute="trailing" constant="20" id="wrU-A5-a1A"/>
                                         </constraints>
                                     </view>

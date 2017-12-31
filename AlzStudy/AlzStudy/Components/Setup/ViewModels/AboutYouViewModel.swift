@@ -64,25 +64,25 @@ final class AboutYouViewModel: AboutYouViewModelType, AboutYouViewModelInputs, A
                 case .age:
                     let ageValue = tuple.value as! Int
                     
-                    AppEnvironment.current.currenUserProfile.age = ageValue
+                    AppEnvironment.current.currentUserProfile.age = ageValue
                     
                 // gender
                 case .gender:
                     let genderValue = tuple.value as! Gender
                     
-                    AppEnvironment.current.currenUserProfile.gender = genderValue
+                    AppEnvironment.current.currentUserProfile.gender = genderValue
                     
                 // height
                 case .height:
                     let heightValue = tuple.value as! Int
                     
-                    AppEnvironment.current.currenUserProfile.height = heightValue
+                    AppEnvironment.current.currentUserProfile.height = heightValue
                     
                 // weight
                 case .weight:
                     let weightValue = tuple.value as! Int
                     
-                    AppEnvironment.current.currenUserProfile.weight = weightValue
+                    AppEnvironment.current.currentUserProfile.weight = weightValue
             }
         }
         
@@ -90,7 +90,7 @@ final class AboutYouViewModel: AboutYouViewModelType, AboutYouViewModelInputs, A
 
         nextButtonTappedProperty.signal
             .observeValues {
-                let currentUserProfile = AppEnvironment.current.currenUserProfile
+                let currentUserProfile = AppEnvironment.current.currentUserProfile
                 let archive = NSKeyedArchiver.archivedData(withRootObject: currentUserProfile)
 
                 UserDefaults.standard.set(archive, forKey: "currentUserProfile")

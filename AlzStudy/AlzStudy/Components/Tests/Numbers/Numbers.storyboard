@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,9 +44,9 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYy-q6-3Qu" customClass="RoundedBorderButton" customModule="AlzStudy" customModuleProvider="target">
-                                <rect key="frame" x="28.5" y="603" width="318.5" height="44"/>
+                                <rect key="frame" x="0.5" y="603" width="375" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="PnX-4f-fAR"/>
+                                    <constraint firstAttribute="height" constant="64" id="PnX-4f-fAR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="15"/>
                                 <state key="normal" title="Done"/>
@@ -79,12 +78,12 @@
                             <constraint firstItem="xlI-MX-9yb" firstAttribute="trailing" secondItem="ESB-Td-gwp" secondAttribute="trailing" id="EBu-Tx-yWe"/>
                             <constraint firstItem="ESB-Td-gwp" firstAttribute="trailing" secondItem="lTq-q6-uNK" secondAttribute="trailing" id="H3d-lt-aGl"/>
                             <constraint firstItem="7gy-Mt-SCw" firstAttribute="centerX" secondItem="zOg-O7-4MW" secondAttribute="centerX" id="JqZ-pT-lTT"/>
-                            <constraint firstItem="Rn5-mi-3Df" firstAttribute="bottom" secondItem="rYy-q6-3Qu" secondAttribute="bottom" constant="20" id="MI9-u9-7GQ"/>
+                            <constraint firstItem="Rn5-mi-3Df" firstAttribute="bottom" secondItem="rYy-q6-3Qu" secondAttribute="bottom" id="MI9-u9-7GQ"/>
                             <constraint firstItem="lTq-q6-uNK" firstAttribute="top" secondItem="Bvn-2Z-7AK" secondAttribute="bottom" constant="20" id="OG7-8c-fsO"/>
                             <constraint firstItem="Bvn-2Z-7AK" firstAttribute="top" secondItem="Rn5-mi-3Df" secondAttribute="top" constant="8" id="W2y-Qf-6TJ"/>
                             <constraint firstItem="7gy-Mt-SCw" firstAttribute="width" secondItem="xlI-MX-9yb" secondAttribute="width" id="WIC-3s-x4C"/>
                             <constraint firstItem="Bvn-2Z-7AK" firstAttribute="leading" secondItem="lTq-q6-uNK" secondAttribute="leading" id="Wnx-IZ-YkJ"/>
-                            <constraint firstItem="rYy-q6-3Qu" firstAttribute="width" secondItem="zOg-O7-4MW" secondAttribute="width" multiplier="0.85" id="avh-nI-f8s"/>
+                            <constraint firstItem="rYy-q6-3Qu" firstAttribute="width" secondItem="zOg-O7-4MW" secondAttribute="width" id="avh-nI-f8s"/>
                             <constraint firstItem="xlI-MX-9yb" firstAttribute="top" secondItem="ESB-Td-gwp" secondAttribute="bottom" constant="24" id="bdI-l6-Uw8"/>
                             <constraint firstItem="ESB-Td-gwp" firstAttribute="leading" secondItem="lTq-q6-uNK" secondAttribute="leading" id="bzx-Z2-XxD"/>
                             <constraint firstItem="xlI-MX-9yb" firstAttribute="leading" secondItem="ESB-Td-gwp" secondAttribute="leading" id="j0p-46-lm2"/>

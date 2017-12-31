@@ -17,9 +17,7 @@ final class RootScreenInitService: NSObject, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
-        
-//        AppearanceConfigurator.configureGlobalAppearance()
-        
+                
         if !Auth().isAuthenticated {
             let walkThrough = WalkThroughViewController.instantiate()
             
@@ -37,5 +35,6 @@ final class RootScreenInitService: NSObject, UIApplicationDelegate {
         return true
     }
     
+  
 }
 

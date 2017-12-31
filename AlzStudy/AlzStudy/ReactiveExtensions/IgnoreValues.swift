@@ -11,16 +11,16 @@ import ReactiveSwift
 import Result
 
 
-extension Signal {
+extension SignalProtocol {
     
     func ignoreValues() -> Signal<Void, Error> {
-        return self.map { _ in return () }
+        return self.signal.map { _ in return () }
     }
 }
 
-extension SignalProducer {
+extension SignalProducerProtocol {
     
     func ignoreValues() -> SignalProducer<Void, Error> {
-        return lift { $0.ignoreValues() }
+        return self.producer.lift { $0.ignoreValues() }
     }
 }

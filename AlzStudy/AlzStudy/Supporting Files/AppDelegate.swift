@@ -18,11 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     lazy var services: [UIApplicationDelegate] = {
         return [
             RootScreenInitService(with: self.window),
-            FirebaseService(),
+            FirebaseConfigService(),
             AppearanceService()
         ]
     }()
-    
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         

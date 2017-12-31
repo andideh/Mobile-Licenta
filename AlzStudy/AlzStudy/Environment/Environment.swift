@@ -11,13 +11,17 @@ import Foundation
 struct Environment {
     
     let currentUser: User?
-    let currenUserProfile: CurrentUserProfile
-        
+    let currentUserProfile: CurrentUserProfile
+    let service: ServiceType
+    
+    
     init(
         currentUser: User? = nil,
-        currenUserProfile: CurrentUserProfile = CurrentUserProfile()) {
+        currentUserProfile: CurrentUserProfile = CurrentUserProfile(),
+        service: ServiceType = MockService()) {
         
         self.currentUser = currentUser
-        self.currenUserProfile = currenUserProfile
+        self.currentUserProfile = currentUserProfile
+        self.service = service
     }
 }

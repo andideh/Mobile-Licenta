@@ -25,6 +25,12 @@ final class ActivitiesDataSource: ValueCellDataSource {
         self.set(values: tasks, cellClass: TaskCell.self, inSection: Sections.todayTasks.rawValue)
     }
     
+    func loadYesterdayTasks(_ tasks: [TaskCellViewData]) {
+        self.set(values: ["Yesterday"], cellClass: DateCell.self, inSection: Sections.yesterday.rawValue)
+        
+        self.set(values: tasks, cellClass: TaskCell.self, inSection: Sections.yesterdayTasks.rawValue)
+    }
+    
     override func configureCell(collectionCell cell: UICollectionViewCell, withValue value: Any) {
         switch (cell, value) {
         
