@@ -18,6 +18,8 @@ enum Storyboard: String {
     case Today
     case Activities
     case Numbers
+    case Profile
+    case Login
     
     func instantiate<T: UIViewController>() -> T {
         let storyboard = UIStoryboard(name: self.rawValue, bundle: nil)

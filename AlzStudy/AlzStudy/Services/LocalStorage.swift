@@ -12,6 +12,7 @@ import Foundation
 enum Key: String {
     case hasJoined
     case isLoggedIn
+    case hasSeenWalkthrough
 }
 
 // Generic interface for a service which stores info on device local storage

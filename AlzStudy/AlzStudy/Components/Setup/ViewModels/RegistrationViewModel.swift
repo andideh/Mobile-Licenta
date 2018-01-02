@@ -65,7 +65,7 @@ final class RegistrationViewModel: RegistrationViewModelOutputs, RegistrationVie
             .takeWhen(registerTappedProperty.signal)
             .take(first: 1)
             .flatMap(.latest) {
-                AppEnvironment.current.service.login(email: $0.0, password: $0.1)
+                AppEnvironment.current.service.signup(email: $0.0, password: $0.1)
             }
         
         // store the newly created user in db
@@ -83,7 +83,10 @@ final class RegistrationViewModel: RegistrationViewModelOutputs, RegistrationVie
         self.signIn = Signal.combineLatest(userCreation, storeUser, profileUpdate)
             .materialize()
             .values()
-            .ignoreValues()
+            .map { _ in
+                AppEnvironment.current.localStorage.set(bool: true, forKey: Key.hasJoined)
+                return
+            }
     }
     
     

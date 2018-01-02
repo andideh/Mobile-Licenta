@@ -47,6 +47,10 @@ final class WalkThroughViewModel: WalkThroughViewModelType, WalkThroughViewModel
             }
         
         goToSetup = joinTappedProperty.signal
+            .map {
+                AppEnvironment.current.localStorage.set(bool: true, forKey: Key.hasSeenWalkthrough)
+                return ()
+            }
             .take(first: 1)
     }
     

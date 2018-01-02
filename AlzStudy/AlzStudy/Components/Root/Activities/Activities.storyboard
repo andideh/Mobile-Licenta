@@ -111,7 +111,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fva-f2-S3n"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Activities" image="checkmark" selectedImage="checkmark" id="7F0-b5-xy6"/>
+                    <tabBarItem key="tabBarItem" title="History" image="activities" selectedImage="activities" id="7F0-b5-xy6"/>
                     <navigationItem key="navigationItem" title="Activities" largeTitleDisplayMode="always" id="ES6-Wn-5ap"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -142,6 +142,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="checkmark" width="24" height="24"/>
+        <image name="activities" width="32" height="32"/>
     </resources>
 </document>

@@ -13,25 +13,32 @@ import Firebase
 
 private let dateFormatter: DateFormatter = {
     let formatter = DateFormatter()
-    formatter.dateStyle = .medium
+    formatter.dateFormat = "dd-MMM-yyyy"
     return formatter
 }()
 
 protocol ServiceType {
     
-    func login(email: String, password: String) -> SignalProducer<Firebase.User, ASError>
+    func signup(email: String, password: String) -> SignalProducer<Firebase.User, ASError>
+    func login(email: String, password: String) -> SignalProducer<Firebase.User, ASError> 
     func store(newUser: Firebase.User) -> SignalProducer<DatabaseReference, ASError>
     func createTodayTask() -> SignalProducer<DailyTask, ASError> 
     func update(userProfile: CurrentUserProfile, uid: String) -> SignalProducer<DatabaseReference, ASError>
     func fetchTodayTask() -> SignalProducer<DailyTask, ASError>
     func fetchYesterdayTask() -> SignalProducer<DailyTask, ASError>
     func update(test: Test) -> SignalProducer<DatabaseReference, ASError>
+    func fetchProfile() -> SignalProducer<CurrentUserProfile, ASError>
+    func logout() -> SignalProducer<(), ASError>
 }
 
 class NetworkService: ServiceType {
     
-    func login(email: String, password: String) -> SignalProducer<Firebase.User, ASError> {
+    func signup(email: String, password: String) -> SignalProducer<Firebase.User, ASError> {
         return Auth.auth().createUser(email: email, password: password)
+    }
+    
+    func login(email: String, password: String) -> SignalProducer<Firebase.User, ASError> {
+        return Auth.auth().login(email: email, password: password)
     }
     
     func store(newUser: Firebase.User) -> SignalProducer<DatabaseReference, ASError> {
@@ -58,7 +65,6 @@ class NetworkService: ServiceType {
                 return SignalProducer<DailyTask, ASError> { obs, _ in
                     if let task = DailyTask(with: snapshot) {
                         obs.send(value: task)
-                        obs.sendCompleted()
                     } else {
                         obs.send(error: .noTodayTask)
                     }
@@ -77,6 +83,7 @@ class NetworkService: ServiceType {
             .flatMap(.latest) { _ in
                 return SignalProducer<DailyTask, ASError> { obs, _ in
                     obs.send(value: todayTask)
+                    obs.sendCompleted()
                 }
             }
     }
@@ -92,99 +99,48 @@ class NetworkService: ServiceType {
         return ref.setValue(json)
     }
     
-//    func fetchTodayTask() -> SignalProducer<DailyTask, ASError> {
-//        let producer = SignalProducer<DailyTask, ASError> { observer, _ in
-//                after(0.5) {
-//                    observer.send(error: ASError.noTodayTask)
-//                }
-//            }
-//            .flatMapError { (error: ASError) -> SignalProducer<DailyTask, ASError> in
-//
-//                print("Entered flatMapError: \(error)")
-//
-//                switch error {
-//                case .jsonParseError: return .init(error: error)
-//                case .noTodayTask: return self.createTodayTask()
-//                }
-//        }
-//
-//        return producer
-//    }
-    
     func fetchYesterdayTask() -> SignalProducer<DailyTask, ASError> {
-        return SignalProducer<DailyTask, ASError> { observer, _ in
-            after(1.0) {
-                let dailyTask = DailyTaskFactory.makeDoneDailyTask()
-                
-                observer.send(value: dailyTask)
-                observer.sendCompleted()
-            }
-        }
+        let yesterday = Date().addingTimeInterval(-60 * 60 * 24)
+        let timestamp = dateFormatter.string(from: yesterday)
+        let uid = (Auth.auth().currentUser?.uid)!
+        let ref = Database.database().reference(withPath: "tasks/\(uid)/\(timestamp)")
+        
+        return ref.observeSingleEvent(of: .value)
+            .flatMap(.latest, { (snapshot: DataSnapshot) -> SignalProducer<DailyTask, ASError> in
+                return SignalProducer<DailyTask, ASError> { obs, _ in
+                    if let task = DailyTask(with: snapshot) {
+                        obs.send(value: task)
+                        obs.sendCompleted()
+                    } else {
+                        obs.sendInterrupted()
+                    }
+                }
+            })
     }
     
-//    private func createTodayTask() -> SignalProducer<DailyTask, ASError> {
-//        return SignalProducer<DailyTask, ASError> { observer, _ in
-//            after(0.5) {
-//                let dailyTask = DailyTaskFactory.makeNewDailyTask()
-//
-//                observer.send(value: dailyTask)
-//                observer.sendCompleted()
-//            }
-//        }
-//    }
+    func fetchProfile() -> SignalProducer<CurrentUserProfile, ASError> {
+        let uid = (Auth.auth().currentUser?.uid)!
+        let ref = Database.database().reference().child("user_profiles/\(uid)")
+        
+        return ref.observeSingleEvent(of: .value)
+            .flatMap(.latest) { (snapshot: DataSnapshot) -> SignalProducer<CurrentUserProfile, ASError> in
+                return SignalProducer<CurrentUserProfile, ASError> { obs, _ in
+                    if let profile = CurrentUserProfile(with: snapshot) {
+                        obs.send(value: profile)
+                        obs.sendCompleted()
+                    } else {
+                        obs.send(error: ASError.jsonParseError)
+                    }
+                }
+            }
+    }
+    
+    func logout() -> SignalProducer<(), ASError> {
+        return Auth.auth().logout()
+    }
     
 }
 
-
-//class MockService: ServiceType {
-//    
-//    func login(email: String, password: String) -> SignalProducer<Firebase.User, NSError> {
-//        let producer = Auth.auth().createUser(email: email, password: password)
-//
-//        return producer
-//    }
-// 
-//    func fetchTodayTask() -> SignalProducer<DailyTask, ASError> {
-//        let producer = SignalProducer<DailyTask, ASError> { observer, _ in
-//                after(0.5) {
-//                    observer.send(error: ASError.noTodayTask)
-//                }
-//            }
-//            .flatMapError { (error: ASError) -> SignalProducer<DailyTask, ASError> in
-//                
-//                print("Entered flatMapError: \(error)")
-//                
-//                switch error {
-//                case .jsonParseError: return .init(error: error)
-//                case .noTodayTask: return self.createTodayTask()
-//                }
-//            }
-//        
-//        return producer
-//    }
-//    
-//    func fetchYesterdayTask() -> SignalProducer<DailyTask, ASError> {
-//        return SignalProducer<DailyTask, ASError> { observer, _ in
-//            after(1.0) {
-//                let dailyTask = DailyTaskFactory.makeDoneDailyTask()
-//                
-//                observer.send(value: dailyTask)
-//                observer.sendCompleted()
-//            }
-//        }
-//    }
-//    
-//    private func createTodayTask() -> SignalProducer<DailyTask, ASError> {
-//        return SignalProducer<DailyTask, ASError> { observer, _ in
-//            after(0.5) {
-//                let dailyTask = DailyTaskFactory.makeNewDailyTask()
-//                
-//                observer.send(value: dailyTask)
-//                observer.sendCompleted()
-//            }
-//        }
-//    }
-//}
 
 private struct DailyTaskFactory {
    

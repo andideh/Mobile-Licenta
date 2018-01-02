@@ -37,7 +37,8 @@ final class Keyboard {
                 return
         }
         
-        let value: Change = (frame: frame.cgRectValue, duration: duration.doubleValue, options: UIViewAnimationOptions(rawValue: UInt(curve.rawValue)), notificationName: notification.name)
+        let finalFrame = notification.name == Notification.Name.UIKeyboardWillHide ? CGRect.zero : frame.cgRectValue
+        let value: Change = (frame: finalFrame, duration: duration.doubleValue, options: UIViewAnimationOptions(rawValue: UInt(curve.rawValue)), notificationName: notification.name)
 
         self.changeObserver.send(value: value)
     }

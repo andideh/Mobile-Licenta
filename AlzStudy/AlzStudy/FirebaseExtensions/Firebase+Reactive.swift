@@ -11,13 +11,43 @@ import Firebase
 import ReactiveSwift
 import Result
 
-let scheduler = QueueScheduler(qos: .default, name: "com.andi.alzstudy")
+private let scheduler = QueueScheduler(qos: .default, name: "com.andi.alzstudy")
 
 extension Firebase.Auth {
     
     func createUser(email: String, password: String) -> SignalProducer<Firebase.User, ASError> {
         return SignalProducer<Firebase.User, ASError> { obs, _ in
             self.createUser(withEmail: email, password: password, completion: { user, error in
+                if let user = user {
+                    obs.send(value: user)
+                    obs.sendCompleted()
+                } else if error != nil {
+                    print("FirebaseError: \(error!)")
+                    obs.send(error: .firebaseError)
+                } else {
+                    obs.sendCompleted()
+                }
+            })
+        }
+        .start(on: scheduler)
+    }
+    
+    func logout() -> SignalProducer<(), ASError> {
+        return SignalProducer<(), ASError> { obs, _ in
+            do {
+                try self.signOut()
+                obs.send(value: ())
+                obs.sendCompleted()
+            } catch {
+                obs.send(error: .logoutError)
+            }
+        }
+        .start(on: scheduler)
+    }
+    
+    func login(email: String, password: String) -> SignalProducer<Firebase.User, ASError> {
+        return SignalProducer<Firebase.User, ASError> { obs, _ in
+            self.signIn(withEmail: email, password: password, completion: { user, error in
                 if let user = user {
                     obs.send(value: user)
                     obs.sendCompleted()

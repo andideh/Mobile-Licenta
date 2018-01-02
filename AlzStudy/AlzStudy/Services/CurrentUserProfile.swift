@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import Firebase
 
 final class CurrentUserProfile: NSObject, NSCoding {
     
@@ -31,6 +31,16 @@ final class CurrentUserProfile: NSObject, NSCoding {
         self.weight = weight
         self.height = height
         self.gender = gender
+    }
+    
+    init?(with snapshot: DataSnapshot) {
+        guard let json = snapshot.value as? [String: Any] else { return nil }
+        
+        self.age = json["age"] as! Int
+        self.weight = json["weight"] as! Int
+        self.height = json["height"] as! Int
+        let genderRawValue = json["gender"] as! Int
+        self.gender = Gender(rawValue: genderRawValue)!
     }
     
     init?(coder aDecoder: NSCoder) {

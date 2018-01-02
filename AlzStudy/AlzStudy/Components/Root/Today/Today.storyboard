@@ -19,7 +19,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="YCn-XO-qkM"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Today" image="empty_checkmark" id="7az-6C-gBM"/>
+                    <tabBarItem key="tabBarItem" title="Today" image="today" selectedImage="today" id="7az-6C-gBM"/>
                     <navigationItem key="navigationItem" title="Today" id="f78-QZ-sz1"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -47,6 +47,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="empty_checkmark" width="24" height="24"/>
+        <image name="today" width="32" height="32"/>
     </resources>
 </document>
