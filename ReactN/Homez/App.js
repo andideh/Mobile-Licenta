@@ -1,14 +1,18 @@
+import styles from './application/styles/styles';
+import FlatsListContainer from './application/components/FlatsListContainer';
 import React from 'react';
-import { StackNavigator } from 'react-navigation';
-import { LoginScreen }  from './screens/LoginScreen';
+import {
+  NavigatorIOS
+} from 'react-native';
 
+class FlatsApp extends React.Component {
+    render() {
+        return (
+            <NavigatorIOS
+                style={styles.navigator}
+                initialRoute={{component: FlatsListContainer, title: 'Homez'}}/>
+        );
+    }
+}
 
-const RootNavigator = StackNavigator({
-  Login: {
-    screen: LoginScreen,
-  },
-
-
-});
-
-export default RootNavigator;
+export default FlatsApp;
