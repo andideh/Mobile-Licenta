@@ -34,6 +34,13 @@ var styles = StyleSheet.create({
         borderRadius: 8,
     },
 
+    reportButton: {
+        borderColor: '#48BBEC',
+        borderWidth: 1,
+        borderRadius: 8,
+        marginTop: 10,
+    },
+
     newButton: {
         marginBottom: 0,
         borderRadius: 0,

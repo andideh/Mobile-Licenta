@@ -2,6 +2,7 @@ import styles from '../styles/styles'
 import FlatsList from './FlatsList';
 import FlatEdit from './FlatEdit';
 import React from 'react';
+import Report from './Report.js';
 import { AsyncStorage, Text, View, ListView, TouchableHighlight, AlertIOS } from 'react-native';
 
 class FlatsListContainer extends React.Component {
@@ -16,6 +17,7 @@ class FlatsListContainer extends React.Component {
         this.deleteItem = this.deleteItem.bind(this);
         this.updateItem = this.updateItem.bind(this);
         this.openItem = this.openItem.bind(this);
+        this.showReport = this.showReport.bind(this);
 
         this.loadFromStorage();
         // AsyncStorage.clear();
@@ -73,7 +75,17 @@ class FlatsListContainer extends React.Component {
         this.props.navigator.push({
             title: rowData && rowData.txt || 'New Item',
             component: FlatEdit,
-            passProps: {item: rowData, id: rowID, update: this.updateItem}
+            passProps: {item: rowData, id: rowID, update: this.updateItem }
+        });
+    }
+
+    showReport() {
+        let items = this.state.items;
+
+        this.props.navigator.push({
+            title: "Report",
+            component: Report,
+            passProps: { items: this.state.items }
         });
     }
 
@@ -89,6 +101,12 @@ class FlatsListContainer extends React.Component {
                     underlayColor='#99d9f4'
                     onPress={this.openItem}>
                     <Text style={styles.buttonText}>+</Text>
+                </TouchableHighlight>
+                <TouchableHighlight
+                    style={[styles.button, styles.newButton]}
+                    underlayColor='#99d9f4'
+                    onPress={this.showReport}>
+                    <Text style={styles.buttonText}>Show statistics</Text>
                 </TouchableHighlight>
             </View>
         );

@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/AndiD/Desktop/react-native-todo-master-2/ios/ToDoApp/main.m \
-  /Users/AndiD/Desktop/react-native-todo-master-2/ios/ToDoApp/AppDelegate.h
+  /Users/AndiD/Documents/Facultate/Mobile-Licenta/ReactN/Homez/ios/ToDoApp/main.m \
+  /Users/AndiD/Documents/Facultate/Mobile-Licenta/ReactN/Homez/ios/ToDoApp/AppDelegate.h

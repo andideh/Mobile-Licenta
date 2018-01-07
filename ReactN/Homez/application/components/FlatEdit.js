@@ -15,6 +15,7 @@ var Flat = t.struct({
     address: t.Str,
     price: t.Number,
     nrRooms: t.Number,
+    neighborhood: t.Str,
     currency: Currency,
     sold: t.Bool});
 
