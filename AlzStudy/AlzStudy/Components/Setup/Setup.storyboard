@@ -139,10 +139,19 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="I9k-MX-gco">
-                                                <rect key="frame" x="20" y="136" width="335" height="190"/>
+                                                <rect key="frame" x="20" y="136" width="335" height="260"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3tL-S7-WoY">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EuA-3l-baV">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="sFN-tc-3Wm"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3tL-S7-WoY">
+                                                        <rect key="frame" x="0.0" y="70" width="335" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="PHb-J3-4Hk"/>
                                                         </constraints>
@@ -151,13 +160,13 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l7T-CB-b6C">
-                                                        <rect key="frame" x="0.0" y="70" width="335" height="50"/>
+                                                        <rect key="frame" x="0.0" y="140" width="335" height="50"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SqB-Vx-ace">
-                                                        <rect key="frame" x="0.0" y="140" width="335" height="50"/>
+                                                        <rect key="frame" x="0.0" y="210" width="335" height="50"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -222,6 +231,7 @@
                     <connections>
                         <outlet property="confirmPasswordTextField" destination="SqB-Vx-ace" id="8fn-gq-ch8"/>
                         <outlet property="emailTextField" destination="3tL-S7-WoY" id="HVx-n8-8Hg"/>
+                        <outlet property="fullNameTextField" destination="EuA-3l-baV" id="lbI-eh-Rkq"/>
                         <outlet property="passwordTextField" destination="l7T-CB-b6C" id="m9c-yV-Lpy"/>
                         <outlet property="registrationButton" destination="d7b-M7-05Z" id="RGd-MD-A1P"/>
                         <outlet property="scrollView" destination="S0B-NK-bFg" id="bUw-Gx-hRG"/>

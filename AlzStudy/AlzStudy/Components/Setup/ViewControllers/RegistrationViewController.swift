@@ -12,6 +12,7 @@ final class RegistrationViewController: BaseViewController {
     
     // MARK: - IBOutlets
     
+    @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!

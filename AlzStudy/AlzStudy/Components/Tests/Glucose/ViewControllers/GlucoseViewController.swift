@@ -55,7 +55,7 @@ final class GlucoseViewController: BaseViewController {
     }
     
     func configure(test: Test) {
-        self.viewModel.inputs.configure(with: test)
+        self.viewModel.inputs.configure(test: test)
     }
     
     // MARK: - Private methods
