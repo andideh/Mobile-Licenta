@@ -40,7 +40,7 @@ final class RootViewModel: RootViewModelOutputs, RootViewModelInputs, RootViewMo
         let profileVC = ProfileViewController.instantiate()
         
         self.viewControllers = viewLoadedProperty.signal
-            .mapConst([todayVC, activitiesVC, profileVC])
+            .mapConst([activitiesVC, todayVC, profileVC])
     }
         
     let viewLoadedProperty = MutableProperty<Void>(())

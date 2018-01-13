@@ -68,6 +68,13 @@ final class ActivitiesViewController: BaseViewController {
                 self?.present(numbersVC, animated: true)
             }
         
+        self.viewModel.outputs.goToGlucoseTest
+            .observeForControllerAction()
+            .observeValues { [weak self] _ in
+                let glucoseVC = GlucoseViewController.instantiate()
+                
+                self?.present(glucoseVC, animated: true)
+            }
        
     }
     

@@ -14,6 +14,9 @@
 		9919AFC91FACEAD4008612A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9919AFC71FACEAD4008612A0 /* LaunchScreen.storyboard */; };
 		9919AFD41FACEAD4008612A0 /* AlzStudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9919AFD31FACEAD4008612A0 /* AlzStudyTests.swift */; };
 		99253BC11FF8EF1D003688E0 /* FirebaseConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99253BC01FF8EF1D003688E0 /* FirebaseConfigService.swift */; };
+		992C8B962008A2F900B49324 /* Glucose.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992C8B952008A2F900B49324 /* Glucose.storyboard */; };
+		992C8B982008A3D900B49324 /* GlucoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C8B972008A3D900B49324 /* GlucoseViewController.swift */; };
+		992C8B9A2008A5B500B49324 /* GlucoseControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C8B992008A5B500B49324 /* GlucoseControllerViewModel.swift */; };
 		995C3CE81FDE7B8100D2FD38 /* JoinButtonResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995C3CE71FDE7B8100D2FD38 /* JoinButtonResponder.swift */; };
 		995C3CEA1FDE7CF400D2FD38 /* HelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995C3CE91FDE7CF300D2FD38 /* HelperMethods.swift */; };
 		995C3CEC1FDE7FD700D2FD38 /* AboutYouData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995C3CEB1FDE7FD700D2FD38 /* AboutYouData.swift */; };
@@ -160,6 +163,9 @@
 		9919AFD31FACEAD4008612A0 /* AlzStudyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlzStudyTests.swift; sourceTree = "<group>"; };
 		9919AFD51FACEAD4008612A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99253BC01FF8EF1D003688E0 /* FirebaseConfigService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseConfigService.swift; sourceTree = "<group>"; };
+		992C8B952008A2F900B49324 /* Glucose.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Glucose.storyboard; sourceTree = "<group>"; };
+		992C8B972008A3D900B49324 /* GlucoseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoseViewController.swift; sourceTree = "<group>"; };
+		992C8B992008A5B500B49324 /* GlucoseControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoseControllerViewModel.swift; sourceTree = "<group>"; };
 		995C3CE71FDE7B8100D2FD38 /* JoinButtonResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinButtonResponder.swift; sourceTree = "<group>"; };
 		995C3CE91FDE7CF300D2FD38 /* HelperMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperMethods.swift; sourceTree = "<group>"; };
 		995C3CEB1FDE7FD700D2FD38 /* AboutYouData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutYouData.swift; sourceTree = "<group>"; };
@@ -388,6 +394,48 @@
 			children = (
 			);
 			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		992C8B902008A2A700B49324 /* Glucose */ = {
+			isa = PBXGroup;
+			children = (
+				992C8B942008A2E100B49324 /* Models */,
+				992C8B932008A2C200B49324 /* ViewModels */,
+				992C8B922008A2BA00B49324 /* Views */,
+				992C8B912008A2AE00B49324 /* ViewControllers */,
+				992C8B952008A2F900B49324 /* Glucose.storyboard */,
+			);
+			path = Glucose;
+			sourceTree = "<group>";
+		};
+		992C8B912008A2AE00B49324 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				992C8B972008A3D900B49324 /* GlucoseViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		992C8B922008A2BA00B49324 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		992C8B932008A2C200B49324 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				992C8B992008A5B500B49324 /* GlucoseControllerViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		992C8B942008A2E100B49324 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		9969D8831FAF1AD700196C82 /* WalkThrough */ = {
@@ -808,6 +856,7 @@
 		B51F120C1FEE811800130DEB /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				992C8B902008A2A700B49324 /* Glucose */,
 				B50381851FF25A38003265B9 /* Common */,
 				B50381741FF24ABE003265B9 /* Numbers */,
 			);
@@ -1031,6 +1080,7 @@
 				9969D8891FAF1B6A00196C82 /* WalkThrough.storyboard in Resources */,
 				B5181D341FF938B600F7F22A /* Root.storyboard in Resources */,
 				B51F121C1FEE84CF00130DEB /* Activities.storyboard in Resources */,
+				992C8B962008A2F900B49324 /* Glucose.storyboard in Resources */,
 				9919AFC91FACEAD4008612A0 /* LaunchScreen.storyboard in Resources */,
 				B5181D421FFA50C100F7F22A /* Profile.storyboard in Resources */,
 				9919AFC61FACEAD4008612A0 /* Assets.xcassets in Resources */,
@@ -1215,6 +1265,7 @@
 				99C5E0851FD5CE7C00CEF351 /* PNLineChartDataItem.swift in Sources */,
 				B5181D471FFA50E200F7F22A /* ProfileViewController.swift in Sources */,
 				995C3CEA1FDE7CF400D2FD38 /* HelperMethods.swift in Sources */,
+				992C8B982008A3D900B49324 /* GlucoseViewController.swift in Sources */,
 				99FD17C31FAF6FAE009D320A /* RegistrationViewController2.swift in Sources */,
 				99C5E0841FD5CE7C00CEF351 /* PNBarChart.swift in Sources */,
 				99C5E0881FD5CE7C00CEF351 /* PNPieChartDataItem.swift in Sources */,
@@ -1253,6 +1304,7 @@
 				99A34EF71FB8913400F33BCF /* WalkThroughViewModel.swift in Sources */,
 				99C5E0861FD5CE7C00CEF351 /* PNBar.swift in Sources */,
 				9969D89D1FAF25A100196C82 /* CardViewCell.swift in Sources */,
+				992C8B9A2008A5B500B49324 /* GlucoseControllerViewModel.swift in Sources */,
 				99B7291A1FF90093008A3E11 /* FlatMapLatest.swift in Sources */,
 				9995B68E1FAF78DA000AAEFD /* InfoCell.swift in Sources */,
 				9995B68A1FAF7571000AAEFD /* AboutYouViewController.swift in Sources */,

@@ -23,6 +23,7 @@ protocol ActivitiesViewModelsOutputs {
     var loadTodayTasks: Signal<[TaskCellViewData], NoError> { get }
     var loadYesterdayTasks: Signal<[TaskCellViewData], NoError> { get }
     var goToTest: Signal<Test, NoError> { get }
+    var goToGlucoseTest: Signal<Test, NoError> { get }
     
 }
 
@@ -38,6 +39,7 @@ final class ActivitiesViewModel: ActivitiesViewModelType, ActivitiesViewModelInp
     let loadTodayTasks: Signal<[TaskCellViewData], NoError>
     let loadYesterdayTasks: Signal<[TaskCellViewData], NoError>
     let goToTest: Signal<Test, NoError>
+    let goToGlucoseTest: Signal<Test, NoError>
     
     init() {
         
@@ -68,9 +70,13 @@ final class ActivitiesViewModel: ActivitiesViewModelType, ActivitiesViewModelInp
         self.loadYesterdayTasks = yesterdayTask.values()
             .map { $0.tests.map { TaskCellViewData(type: $0.type, isDone: $0.isDone) } }
         
-        self.goToTest = self.selectedItemProperty.signal.combineLatest(with: todayTask.values())
+        let testSignal = self.selectedItemProperty.signal.combineLatest(with: todayTask.values())
             .filter { $0.0?.section == .some(1) && !$0.1.tests[$0.0!.item].isDone } // make only today's tasks selectable + those which are not already done
             .map { $0.1.tests[$0.0!.item] }
+        
+        self.goToGlucoseTest = testSignal.filter { $0.type == .glucose }
+        
+        self.goToTest = testSignal.filter { $0.type != .glucose }
     }
     
     let viewLoadedProperty = MutableProperty<Void>(())
