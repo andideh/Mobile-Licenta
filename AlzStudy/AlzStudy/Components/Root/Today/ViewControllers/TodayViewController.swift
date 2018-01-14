@@ -13,28 +13,15 @@ class TodayViewController: BaseViewController {
     
     private let viewModel: TodayViewModelType = TodayViewModel()
     
-    private lazy var chart: PNPieChart = {
-        let width = UIScreen.main.bounds.width * 0.8
-        let rect = CGRect(origin: .zero, size: CGSize(width: width, height: width))
-        let pieChart = PNPieChart(frame: rect, items: [])
-        
-        pieChart.descriptionTextColor = UIColor.white
-        pieChart.descriptionTextFont = UIFont(name: "Avenir-Medium", size: 14)!
-        
-        return pieChart
-    }()
-    
-    
     static func instantiate() -> UINavigationController {
         return UIStoryboard(name: "Today", bundle: nil).instantiateInitialViewController() as! UINavigationController
     }
     
+    weak var pieChart: UIView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        self.view.addSubview(chart)
         self.viewModel.inputs.viewDidLoad()
     }
     
@@ -43,11 +30,11 @@ class TodayViewController: BaseViewController {
         
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        self.chart.center = self.view.center
-    }
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//
+//        self.chart.center = self.view.center
+//    }
     
     
     override func bindViewModel() {
@@ -55,17 +42,36 @@ class TodayViewController: BaseViewController {
         
         self.viewModel.outputs.chartData
             .observeForUI()
-            .observeValues {
+            .observeValues { [weak self] in
+                guard let `self` = self else { return }
+                
+                self.pieChart?.removeFromSuperview()
+                
+                let chart = self.createPieChart()
                 let todoItem = PNPieChartDataItem(dateValue: CGFloat($0.todo), dateColor:  PNLightGreen, description: "To-do")
                 let doneItem = PNPieChartDataItem(dateValue: CGFloat($0.done), dateColor:  PNDeepGreen, description: "Done")
                 let items = [todoItem, doneItem]
+                chart.items = items
                 
-                self.chart.items = items
-                self.chart.strokeChart()
+                self.view.addSubview(chart)
+                self.pieChart = chart
+                self.pieChart?.center = self.view.center
+                
+                chart.strokeChart()
             }
     }
     
     
+    private func createPieChart() -> PNPieChart {
+        let width = UIScreen.main.bounds.width * 0.8
+        let rect = CGRect(origin: .zero, size: CGSize(width: width, height: width))
+        let pieChart = PNPieChart(frame: rect, items: [])
+        
+        pieChart.descriptionTextColor = UIColor.white
+        pieChart.descriptionTextFont = UIFont(name: "Avenir-Medium", size: 14)!
+        
+        return pieChart
+    }
     
     
   

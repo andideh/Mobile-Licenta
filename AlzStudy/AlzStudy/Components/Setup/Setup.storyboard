@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -191,6 +191,15 @@
                                                     <action selector="registerButtonTapped:" destination="OGJ-oT-GEY" eventType="touchUpInside" id="NSi-JR-qtG"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register as doctor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p73-bP-qBx">
+                                                <rect key="frame" x="20" y="555.5" width="122.5" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="13"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nQN-vg-hZK">
+                                                <rect key="frame" x="306" y="549" width="51" height="31"/>
+                                            </switch>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -198,8 +207,13 @@
                                             <constraint firstItem="d7b-M7-05Z" firstAttribute="width" secondItem="fW5-WE-aVO" secondAttribute="width" id="77i-vA-P0S"/>
                                             <constraint firstItem="d7b-M7-05Z" firstAttribute="top" relation="greaterThanOrEqual" secondItem="I9k-MX-gco" secondAttribute="bottom" constant="20" id="MWP-Xp-6il"/>
                                             <constraint firstItem="PI2-Kn-xiu" firstAttribute="top" secondItem="fW5-WE-aVO" secondAttribute="top" constant="20" id="Oxq-Ad-2zd"/>
+                                            <constraint firstItem="nQN-vg-hZK" firstAttribute="trailing" secondItem="SqB-Vx-ace" secondAttribute="trailing" id="Qdy-e1-o62"/>
                                             <constraint firstItem="GnX-qA-WN7" firstAttribute="leading" secondItem="fW5-WE-aVO" secondAttribute="leading" constant="20" id="RJx-Na-Gq7"/>
+                                            <constraint firstItem="d7b-M7-05Z" firstAttribute="top" secondItem="p73-bP-qBx" secondAttribute="bottom" constant="18" id="RXw-i4-Kgo"/>
                                             <constraint firstItem="PI2-Kn-xiu" firstAttribute="leading" secondItem="fW5-WE-aVO" secondAttribute="leading" constant="20" id="RtC-w7-JIJ"/>
+                                            <constraint firstItem="nQN-vg-hZK" firstAttribute="centerY" secondItem="p73-bP-qBx" secondAttribute="centerY" id="UQP-a9-iAX"/>
+                                            <constraint firstItem="p73-bP-qBx" firstAttribute="leading" secondItem="fW5-WE-aVO" secondAttribute="leading" constant="20" id="Whm-oE-hfC"/>
+                                            <constraint firstItem="p73-bP-qBx" firstAttribute="leading" secondItem="SqB-Vx-ace" secondAttribute="leading" id="ezV-Uw-GGm"/>
                                             <constraint firstItem="d7b-M7-05Z" firstAttribute="centerX" secondItem="fW5-WE-aVO" secondAttribute="centerX" id="fdm-gj-JNY"/>
                                             <constraint firstAttribute="trailing" secondItem="I9k-MX-gco" secondAttribute="trailing" constant="20" id="iv8-SJ-Grq"/>
                                             <constraint firstItem="GnX-qA-WN7" firstAttribute="top" secondItem="PI2-Kn-xiu" secondAttribute="bottom" constant="20" id="oRy-4C-Eqo"/>
@@ -233,6 +247,7 @@
                         <outlet property="emailTextField" destination="3tL-S7-WoY" id="HVx-n8-8Hg"/>
                         <outlet property="fullNameTextField" destination="EuA-3l-baV" id="lbI-eh-Rkq"/>
                         <outlet property="passwordTextField" destination="l7T-CB-b6C" id="m9c-yV-Lpy"/>
+                        <outlet property="registerAsDoctorSwitch" destination="nQN-vg-hZK" id="gcP-td-0f4"/>
                         <outlet property="registrationButton" destination="d7b-M7-05Z" id="RGd-MD-A1P"/>
                         <outlet property="scrollView" destination="S0B-NK-bFg" id="bUw-Gx-hRG"/>
                     </connections>

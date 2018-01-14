@@ -53,13 +53,26 @@ final class LoginViewModel: LoginViewModelType, LoginViewModelOutputs, LoginView
         
         self.loginButtonState = Signal.merge(initialState, enabledState)
         
-        self.goToMain = Signal.combineLatest(email, password)
+        let loginAction = Signal.combineLatest(email, password)
             .takeWhen(loginTappedProperty.signal)
             .flatMap(.latest) {
                 AppEnvironment.current.service.login(email: $0.0, password: $0.1).materialize()
-            }        
+            }
             .values()
-            .ignoreValues()
+        
+        loginAction
+            .flatMap(.latest) {
+                return AppEnvironment.current.service.fetchUserRole(for: $0).materialize()
+            }
+            .values()
+            .observeValues {
+                let currentUser = CurrentUser(firUser: $0, role: $1)
+                
+                AppEnvironment.replaceCurrentEnvironment(currentUser: currentUser)                            
+                AppEnvironment.current.localStorage.set(bool: $1 == .doctor, forKey: Key.isDoctor)
+            }
+            
+        self.goToMain = loginAction.ignoreValues()
     }
     
     private let viewLoadedProperty = MutableProperty<Void>(())

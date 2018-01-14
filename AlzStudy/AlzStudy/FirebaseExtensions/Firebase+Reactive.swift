@@ -57,6 +57,7 @@ extension Firebase.Auth {
                 } else {
                     obs.sendCompleted()
                 }
+                
             })
         }
         .start(on: scheduler)

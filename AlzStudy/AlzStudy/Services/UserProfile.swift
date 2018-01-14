@@ -40,9 +40,13 @@ final class UserProfile: NSObject, NSCoding {
         self.fullName = fullName
     }
     
-    init?(with snapshot: DataSnapshot) {
+    convenience init?(with snapshot: DataSnapshot) {
         guard let json = snapshot.value as? [String: Any] else { return nil }
         
+        self.init(with: json)
+    }
+    
+    init(with json: [String:Any]) {
         self.age = json["age"] as! Int
         self.weight = json["weight"] as! Int
         self.height = json["height"] as! Int

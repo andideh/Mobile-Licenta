@@ -22,7 +22,7 @@ final class LocalNotificationsService {
     
     // MARK: - Public methods
     
-    func t(_ vc: UIViewController) {
+    func requestPermissionIfNeeded(_ vc: UIViewController) {
         let center = UNUserNotificationCenter.current()
         
         center.getNotificationSettings { settings in
@@ -69,8 +69,8 @@ final class LocalNotificationsService {
     private func scheduleDailyNotifications() {
         let center = UNUserNotificationCenter.current()
         let notificationContent = Build(UNMutableNotificationContent()) {
-            $0.title = "It works!!!"
-            $0.subtitle = "You're the best!"
+            $0.title = "AlzStudy"
+            $0.subtitle = "Hello, new daily tasks are waiting to be done."
             $0.sound = UNNotificationSound.default()
         }
         
@@ -89,7 +89,7 @@ final class LocalNotificationsService {
     private func getTriggerDate() -> DateComponents {
         let calendar = Calendar.current
         let now = Date()
-        let date14h = calendar.date(bySettingHour: 14, minute: 0, second: 0, of: now)!
+        let date14h = calendar.date(bySettingHour: 12, minute: 21, second: 0, of: now)!
         let components = calendar.dateComponents([.day, .hour, .minute, .second], from: date14h)
         
         return components

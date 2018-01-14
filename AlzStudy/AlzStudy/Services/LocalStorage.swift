@@ -13,6 +13,7 @@ enum Key: String {
     case hasJoined
     case isLoggedIn
     case hasSeenWalkthrough
+    case isDoctor 
 }
 
 // Generic interface for a service which stores info on device local storage

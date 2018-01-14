@@ -9,6 +9,7 @@
 import Foundation
 import ReactiveSwift
 import Result
+import Firebase
 
 protocol GlucoseControllerViewModelInputs {
     
@@ -46,7 +47,26 @@ final class GlucoseControllerViewModel: GlucoseControllerViewModelOutputs, Gluco
             .mapConst((true, Theme.mainColor))
         
         self.doneButtonState = Signal.merge(disabledState, enabledState)
-        self.closeScreen = self.doneButtonTappedProperty.signal
+        
+        // hack to get the test value from the property
+        var test: Test?
+        self.testProperty.signal
+            .observeValues {
+                test = $0
+            }
+        
+        self.closeScreen = doneButtonTappedProperty.signal.combineLatest(with: glucoseText)
+            .flatMap(.latest) { tuple -> SignalProducer<DatabaseReference, ASError> in
+                guard let theTest = test else { fatalError() }
+                
+                let new = theTest.markedAsDone().adding(metadata: tuple.1)
+                
+                return AppEnvironment.current.service.update(test: new)
+            }
+            .materialize()
+            .values()
+            .ignoreValues()
+        
     }
     
     

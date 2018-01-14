@@ -24,8 +24,8 @@ final class GlucoseViewController: BaseViewController {
     
     // MARK: - Lifecycle
     
-    static func instantiate() -> UINavigationController {
-        return Storyboard.Glucose.instantiateInitial() as UINavigationController
+    static func instantiate() -> GlucoseViewController {
+        return Storyboard.Glucose.instantiate() as GlucoseViewController
     }
     
     override func viewDidLoad() {

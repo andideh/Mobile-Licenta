@@ -33,8 +33,8 @@ final class ActivitiesViewController: BaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-//        let service: LocalNotificationsService = AppEnvironment.current.serviceProvider.getService()
-//        service.requestPermissionIfNeeded(self)
+        let service: LocalNotificationsService = LocalNotificationsService()
+        service.requestPermissionIfNeeded(self)
     }
     
     // MARK: - Public methods
@@ -70,8 +70,10 @@ final class ActivitiesViewController: BaseViewController {
         
         self.viewModel.outputs.goToGlucoseTest
             .observeForControllerAction()
-            .observeValues { [weak self] _ in
+            .observeValues { [weak self] in
                 let glucoseVC = GlucoseViewController.instantiate()
+                
+                glucoseVC.configure(test: $0)
                 
                 self?.present(glucoseVC, animated: true)
             }

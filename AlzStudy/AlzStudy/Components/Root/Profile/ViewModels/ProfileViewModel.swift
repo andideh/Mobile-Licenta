@@ -69,12 +69,17 @@ final class ProfileViewModel: ProfileViewModelType, ProfileViewModelInputs, Prof
             .materialize()
             .values()
         
-        self.goToLoginScreen = self.logoutProperty.signal
+        let logoutAction = self.logoutProperty.signal
             .flatMap(.latest) {
-                AppEnvironment.current.service.logout()
+                return AppEnvironment.current.service.logout().materialize()
             }
-            .materialize()
-            .values()
+        
+        logoutAction.values()
+            .observeValues {
+                AppEnvironment.replaceCurrentEnvironment(currentUser: nil)
+            }
+        
+        self.goToLoginScreen = logoutAction.values()
         
     }
     

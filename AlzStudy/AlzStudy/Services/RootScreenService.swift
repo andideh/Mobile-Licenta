@@ -21,15 +21,17 @@ final class RootScreenInitService: NSObject, UIApplicationDelegate {
         
         let rootVC: UIViewController
         if Auth.auth().currentUser != nil {
-            rootVC = RootViewController.instantiate()
+            if AppEnvironment.current.localStorage.bool(for: Key.isDoctor) {
+                rootVC = ParticipantsViewController.instantiate()
+            } else {
+                rootVC = RootViewController.instantiate()
+            }
         } else if AppEnvironment.current.localStorage.bool(for: Key.hasJoined) {
-            // go to login
             rootVC = LoginViewController.instantiate()
         } else {
-            // show walkthrough
             rootVC = WalkThroughViewController.instantiate()
         }
-            
+        
         mainWindow?.rootViewController = rootVC
         mainWindow?.makeKeyAndVisible()
         

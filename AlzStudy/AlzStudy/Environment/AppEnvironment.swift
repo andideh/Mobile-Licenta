@@ -38,8 +38,8 @@ struct AppEnvironment {
     }
     
     static func replaceCurrentEnvironment(
-        currentUser: User? = current.currentUser,
-        currentUserProfile: CurrentUserProfile = current.currentUserProfile,
+        currentUser: CurrentUser? = current.currentUser,
+        currentUserProfile: UserProfile = current.currentUserProfile,
         service: ServiceType = current.service,
         localStorage: LocalStorageType = current.localStorage) {
         
@@ -53,8 +53,8 @@ struct AppEnvironment {
 
     
     static func pushEnvironment(
-        currentUser: User? = current.currentUser,
-        currentUserProfile: CurrentUserProfile = current.currentUserProfile,
+        currentUser: CurrentUser? = current.currentUser,
+        currentUserProfile: UserProfile = current.currentUserProfile,
         service: ServiceType = current.service,
         localStorage: LocalStorageType = current.localStorage) {
         

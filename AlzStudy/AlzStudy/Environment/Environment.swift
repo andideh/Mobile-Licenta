@@ -10,15 +10,15 @@ import Foundation
 
 struct Environment {
     
-    let currentUser: User?
-    let currentUserProfile: CurrentUserProfile
+    let currentUser: CurrentUser?
+    let currentUserProfile: UserProfile
     let service: ServiceType
     let localStorage: LocalStorageType
     
     
     init(
-        currentUser: User? = nil,
-        currentUserProfile: CurrentUserProfile = CurrentUserProfile(),
+        currentUser: CurrentUser? = nil,
+        currentUserProfile: UserProfile = UserProfile(),
         service: ServiceType = NetworkService(),
         localStorage: LocalStorageType = UserDefaultsLocalStorage()) {
         

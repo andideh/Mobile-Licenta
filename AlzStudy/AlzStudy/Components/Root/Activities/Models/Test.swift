@@ -15,16 +15,18 @@ struct Test {
     let nrOfTrials: Float
     let trialsLeft: Float
     let isDone: Bool
+    let metadata: String?
     
     var successRate: Float {
         return trialsLeft / nrOfTrials
     }
     
-    init(type: TaskType, nrOfTrials: Float = 5, trialsLeft: Float = 5, isDone: Bool = false) {
+    init(type: TaskType, nrOfTrials: Float = 5, trialsLeft: Float = 5, isDone: Bool = false, metadata: String? = nil) {
         self.type = type
         self.nrOfTrials = nrOfTrials
         self.trialsLeft = trialsLeft
         self.isDone = isDone
+        self.metadata = metadata
     }
     
     init(with json: [String:Any]) {
@@ -34,6 +36,7 @@ struct Test {
         self.nrOfTrials = json["nrOfTrials"] as! Float
         self.trialsLeft = json["trialsLeft"] as! Float
         self.isDone = json["isDone"] as! Bool
+        self.metadata = json["metadata"] as? String
     }
 
     func decrementedTrialsLeft() -> Test {
@@ -47,17 +50,27 @@ struct Test {
     func markedAsFailed() -> Test {
         return Test(type: self.type, nrOfTrials: self.nrOfTrials, trialsLeft: 0, isDone: true)
     }
+    
+    func adding(metadata: String) -> Test {
+        return Test(type: self.type, nrOfTrials: self.nrOfTrials, trialsLeft: self.trialsLeft, isDone: self.isDone, metadata: metadata)
+    }
 }
 
 extension Test {
     
     func toJSON() -> [String:Any] {
-        return [
+        var json: [String:Any] =  [
             "type":self.type.rawValue,
             "nrOfTrials":self.nrOfTrials,
             "trialsLeft":self.trialsLeft,
             "isDone":self.isDone
         ]
+        
+        if let metadata = metadata {
+            json["metadata"] = metadata
+        }
+
+        return json
     }
 }
 

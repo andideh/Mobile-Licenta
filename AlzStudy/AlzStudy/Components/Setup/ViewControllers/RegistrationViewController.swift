@@ -18,6 +18,7 @@ final class RegistrationViewController: BaseViewController {
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var registrationButton: UIButton!
+    @IBOutlet weak var registerAsDoctorSwitch: UISwitch!
     
     
     // MARK: - Public properties
@@ -61,12 +62,18 @@ final class RegistrationViewController: BaseViewController {
                 self?.registrationButton.backgroundColor = $0 ? Theme.mainColor : UIColor.lightGray
             }
         
-        self.viewModel.outputs.signIn
+        self.viewModel.outputs.signInAsPatient
             .observeForControllerAction()
             .observeValues { [weak self] in
-                let todayVC = TodayViewController.instantiate()
+                let rootVC = RootViewController.instantiate()
                 
-                self?.present(todayVC, animated: true)
+                self?.present(rootVC, animated: true)
+            }
+        
+        self.viewModel.outputs.signInAsDoctor
+            .observeForControllerAction()
+            .observeValues {
+                print("i am a doctor")
             }
     }
     
@@ -80,6 +87,10 @@ final class RegistrationViewController: BaseViewController {
     
     private func setupActions() {
         
+        self.fullNameTextField.addTarget(self,
+                                         action: #selector(fullNameTextFieldChanged(_:)),
+                                         for: .editingChanged)
+        
         self.emailTextField.addTarget(self,
                                       action: #selector(emailTextFieldChanged(_:)),
                                       for: .editingChanged)
@@ -91,8 +102,13 @@ final class RegistrationViewController: BaseViewController {
         self.confirmPasswordTextField.addTarget(self,
                                       action: #selector(confirmPasswordTextFieldChanged(_:)),
                                       for: .editingChanged)
+        
+        self.registerAsDoctorSwitch.addTarget(self, action: #selector(registerAsDoctorSwitchChanged(_:)), for: .valueChanged)
     }
     
+    @objc private func fullNameTextFieldChanged(_ textfield: UITextField) {
+        self.viewModel.inputs.fullNameChanged(textfield.text ?? "")
+    }
     
     @objc private func emailTextFieldChanged(_ textField: UITextField) {
         self.viewModel.inputs.emailChanged(textField.text ?? "")
@@ -104,6 +120,10 @@ final class RegistrationViewController: BaseViewController {
     
     @objc private func confirmPasswordTextFieldChanged(_ textField: UITextField) {
         self.viewModel.inputs.confirmPasswordChanged(textField.text ?? "")
+    }
+    
+    @objc private func registerAsDoctorSwitchChanged(_ sender: UISwitch) {
+        self.viewModel.inputs.registerAsDoctorChanged(sender.isOn)
     }
 }
 

@@ -17,18 +17,22 @@ private let dateFormatter: DateFormatter = {
     return formatter
 }()
 
+private let dbRef = Database.database().reference()
+
 protocol ServiceType {
     
     func signup(email: String, password: String) -> SignalProducer<Firebase.User, ASError>
     func login(email: String, password: String) -> SignalProducer<Firebase.User, ASError> 
-    func store(newUser: Firebase.User) -> SignalProducer<DatabaseReference, ASError>
+    func store(newUser: Firebase.User, role: UserRole) -> SignalProducer<DatabaseReference, ASError>
     func createTodayTask() -> SignalProducer<DailyTask, ASError> 
-    func update(userProfile: CurrentUserProfile, uid: String) -> SignalProducer<DatabaseReference, ASError>
+    func update(userProfile: UserProfile, uid: String) -> SignalProducer<DatabaseReference, ASError>
     func fetchTodayTask() -> SignalProducer<DailyTask, ASError>
     func fetchYesterdayTask() -> SignalProducer<DailyTask, ASError>
     func update(test: Test) -> SignalProducer<DatabaseReference, ASError>
-    func fetchProfile() -> SignalProducer<CurrentUserProfile, ASError>
+    func fetchProfile() -> SignalProducer<UserProfile, ASError>
     func logout() -> SignalProducer<(), ASError>
+    func fetchUserRole(for user: User) -> SignalProducer<(User, UserRole), ASError>
+    func fetchParticipants() -> SignalProducer<[String: UserProfile], ASError>
 }
 
 class NetworkService: ServiceType {
@@ -41,13 +45,13 @@ class NetworkService: ServiceType {
         return Auth.auth().login(email: email, password: password)
     }
     
-    func store(newUser: Firebase.User) -> SignalProducer<DatabaseReference, ASError> {
-        let reference = Database.database().reference().child("users").childByAutoId()
+    func store(newUser: Firebase.User, role: UserRole) -> SignalProducer<DatabaseReference, ASError> {
+        let reference = Database.database().reference().child("users/\(newUser.uid)")
         
-        return reference.setValue(newUser.uid)
+        return reference.setValue(["role":role.rawValue])
     }
     
-    func update(userProfile: CurrentUserProfile, uid: String) -> SignalProducer<DatabaseReference, ASError> {
+    func update(userProfile: UserProfile, uid: String) -> SignalProducer<DatabaseReference, ASError> {
         let reference = Database.database().reference().child("user_profiles/\(uid)")
         let json = userProfile.toJSON()
         
@@ -88,7 +92,6 @@ class NetworkService: ServiceType {
             }
     }
     
-    
     func update(test: Test) -> SignalProducer<DatabaseReference, ASError> {
         let key = dateFormatter.string(from: Date())
         let uid = (Auth.auth().currentUser?.uid)!
@@ -118,14 +121,14 @@ class NetworkService: ServiceType {
             })
     }
     
-    func fetchProfile() -> SignalProducer<CurrentUserProfile, ASError> {
+    func fetchProfile() -> SignalProducer<UserProfile, ASError> {
         let uid = (Auth.auth().currentUser?.uid)!
         let ref = Database.database().reference().child("user_profiles/\(uid)")
         
         return ref.observeSingleEvent(of: .value)
-            .flatMap(.latest) { (snapshot: DataSnapshot) -> SignalProducer<CurrentUserProfile, ASError> in
-                return SignalProducer<CurrentUserProfile, ASError> { obs, _ in
-                    if let profile = CurrentUserProfile(with: snapshot) {
+            .flatMap(.latest) { (snapshot: DataSnapshot) -> SignalProducer<UserProfile, ASError> in
+                return SignalProducer<UserProfile, ASError> { obs, _ in
+                    if let profile = UserProfile(with: snapshot) {
                         obs.send(value: profile)
                         obs.sendCompleted()
                     } else {
@@ -139,6 +142,49 @@ class NetworkService: ServiceType {
         return Auth.auth().logout()
     }
     
+    func fetchUserRole(for user: User) -> SignalProducer<(User, UserRole), ASError> {
+        let ref = dbRef.child("users/\(user.uid)")
+        
+        return ref.observeSingleEvent(of: .value)
+            .flatMap(.latest) { (snapshot: DataSnapshot) -> SignalProducer<(User, UserRole), ASError> in
+                return SignalProducer<(User, UserRole), ASError> { obs, _ in
+                    if let json = snapshot.value as? [String:Any],
+                        let rawValue = json["role"] as? Int,
+                        let role = UserRole(rawValue: rawValue) {
+                        
+                        obs.send(value: (user, role))
+                        obs.sendCompleted()
+                    } else {
+                        obs.send(error: ASError.jsonParseError)
+                    }
+                }
+            }
+    }
+    
+    func fetchParticipants() -> SignalProducer<[String: UserProfile], ASError> {
+        let ref = dbRef.child("user_profiles")
+        
+        return ref.observeEvent(of: .value)
+            .flatMap(.latest) { snapshot -> SignalProducer<[String: UserProfile], ASError> in
+                return SignalProducer<[String: UserProfile], ASError> { obs, _ in
+                    if let json = snapshot.value as? [String:[String:Any]] {
+                        var profilesJSON: [[String:Any]] = []
+                        for (_, value) in json {
+                            profilesJSON.append(value)
+                        }
+                        
+                        let profiles = profilesJSON.map(UserProfile.init(with:))
+                        let zipped = zip(json.keys, profiles)
+                        let values = Dictionary(uniqueKeysWithValues: zipped)
+                       
+                        values.values
+                        obs.send(value: values)
+                    } else {
+                        obs.send(error: ASError.jsonParseError)
+                    }
+                }
+            }
+    }
 }
 
 
