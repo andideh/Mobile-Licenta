@@ -23,6 +23,7 @@ protocol LoginViewModelOutputs {
     
     var loginButtonState: Signal<(Bool, UIColor), NoError> { get }
     var goToMain: Signal<(), NoError> { get }
+    var goToParticipants: Signal<(), NoError> { get }
 //    var showAlert: Signal<String, NoError> { get }
     
 }
@@ -38,6 +39,7 @@ final class LoginViewModel: LoginViewModelType, LoginViewModelOutputs, LoginView
     
     let loginButtonState: Signal<(Bool, UIColor), NoError>
     let goToMain: Signal<(), NoError>
+    let goToParticipants: Signal<(), NoError>
 //    let showAlert: Signal<String, NoError>
     
     init() {
@@ -60,19 +62,21 @@ final class LoginViewModel: LoginViewModelType, LoginViewModelOutputs, LoginView
             }
             .values()
         
-        loginAction
+        let userRole = loginAction
             .flatMap(.latest) {
                 return AppEnvironment.current.service.fetchUserRole(for: $0).materialize()
             }
             .values()
-            .observeValues {
+        
+        userRole.observeValues {
                 let currentUser = CurrentUser(firUser: $0, role: $1)
                 
-                AppEnvironment.replaceCurrentEnvironment(currentUser: currentUser)                            
+                AppEnvironment.replaceCurrentEnvironment(currentUser: currentUser)
                 AppEnvironment.current.localStorage.set(bool: $1 == .doctor, forKey: Key.isDoctor)
-            }
+        }
             
-        self.goToMain = loginAction.ignoreValues()
+        self.goToMain = userRole.filter { $0.1 == .participant }.ignoreValues()
+        self.goToParticipants = userRole.filter { $0.1 == .doctor }.ignoreValues()
     }
     
     private let viewLoadedProperty = MutableProperty<Void>(())

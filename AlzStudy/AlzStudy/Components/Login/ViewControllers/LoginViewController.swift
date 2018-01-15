@@ -54,6 +54,14 @@ final class LoginViewController: BaseViewController {
                 self?.present(root, animated: true)
             }
         
+        self.viewModel.outputs.goToParticipants
+            .observeForControllerAction()
+            .observeValues { [weak self] in
+                let main = ParticipantsViewController.instantiate()
+                
+                self?.present(main, animated: true)
+            }
+        
         Keyboard.signal
             .observeForUI()
             .observeValues { [weak self] change in
