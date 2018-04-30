@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UqN-2I-TEF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="LLb-XP-WXZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UqN-2I-TEF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="IEo-eO-yNp">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OzG-JS-wU8" kind="relationship" relationship="rootViewController" id="4II-hQ-9gi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iRK-zU-Pbb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-39" y="46"/>
+        </scene>
+        <!--Registration-->
+        <scene sceneID="fe4-da-O6X">
+            <objects>
+                <viewController id="OzG-JS-wU8" customClass="RegistrationViewController" customModule="AlzStudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NFu-YS-LdR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAV-rk-5rm">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rZ4-Rj-oJQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In order to use the application, you must create an account and provide some basic information." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0V-Gv-IQk">
+                                                <rect key="frame" x="20" y="16" width="335" height="36.5"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5XZ-T3-avF">
+                                                <rect key="frame" x="0.0" y="496" width="375" height="55"/>
+                                                <color key="backgroundColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="s9L-lL-NGp"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="17"/>
+                                                <state key="normal" title="Register">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="registerButtonTapped:" destination="OzG-JS-wU8" eventType="touchUpInside" id="CiB-C1-d4P"/>
+                                                </connections>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="zdm-46-vEX">
+                                                <rect key="frame" x="16" y="82.5" width="343" height="278"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="anX-ia-SCO" customClass="LineTextField" customModule="AlzStudy" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="bgF-2S-sT6"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Full name"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uGf-IH-Obn" customClass="LineTextField" customModule="AlzStudy" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="76" width="343" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="mO5-BN-ar1"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Email"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XI4-Kt-9RO" customClass="LineTextField" customModule="AlzStudy" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="152" width="343" height="50"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Password"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ncm-U2-T27" customClass="LineTextField" customModule="AlzStudy" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="228" width="343" height="50"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Confirm password"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="zdm-46-vEX" firstAttribute="leading" secondItem="rZ4-Rj-oJQ" secondAttribute="leading" constant="16" id="6y1-9E-9XB"/>
+                                            <constraint firstItem="5XZ-T3-avF" firstAttribute="width" secondItem="rZ4-Rj-oJQ" secondAttribute="width" id="QAq-0G-Uoo"/>
+                                            <constraint firstAttribute="bottom" secondItem="5XZ-T3-avF" secondAttribute="bottom" id="WWs-ig-wuG"/>
+                                            <constraint firstItem="5XZ-T3-avF" firstAttribute="centerX" secondItem="rZ4-Rj-oJQ" secondAttribute="centerX" id="Zd7-2y-oms"/>
+                                            <constraint firstItem="zdm-46-vEX" firstAttribute="top" secondItem="j0V-Gv-IQk" secondAttribute="bottom" constant="30" id="a0Q-hm-po3"/>
+                                            <constraint firstAttribute="trailing" secondItem="zdm-46-vEX" secondAttribute="trailing" constant="16" id="alh-oq-3h2"/>
+                                            <constraint firstAttribute="trailing" secondItem="j0V-Gv-IQk" secondAttribute="trailing" constant="20" id="bxF-PP-anW"/>
+                                            <constraint firstItem="j0V-Gv-IQk" firstAttribute="leading" secondItem="rZ4-Rj-oJQ" secondAttribute="leading" constant="20" id="lDA-A8-jE9"/>
+                                            <constraint firstItem="j0V-Gv-IQk" firstAttribute="top" secondItem="rZ4-Rj-oJQ" secondAttribute="top" constant="16" id="tpm-jm-tjq"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rZ4-Rj-oJQ" firstAttribute="top" secondItem="vAV-rk-5rm" secondAttribute="top" id="GrY-bt-9cT"/>
+                                    <constraint firstItem="rZ4-Rj-oJQ" firstAttribute="leading" secondItem="vAV-rk-5rm" secondAttribute="leading" id="HSo-co-bvW"/>
+                                    <constraint firstAttribute="bottom" secondItem="rZ4-Rj-oJQ" secondAttribute="bottom" id="JTR-Eg-L2S"/>
+                                    <constraint firstAttribute="trailing" secondItem="rZ4-Rj-oJQ" secondAttribute="trailing" id="VWv-bI-eXQ"/>
+                                    <constraint firstItem="rZ4-Rj-oJQ" firstAttribute="height" secondItem="vAV-rk-5rm" secondAttribute="height" id="aeJ-Hs-XKj"/>
+                                    <constraint firstItem="rZ4-Rj-oJQ" firstAttribute="width" secondItem="vAV-rk-5rm" secondAttribute="width" id="ycL-hY-zYP"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vAV-rk-5rm" firstAttribute="top" secondItem="kgD-31-C7L" secondAttribute="top" id="HC8-Cd-VI9"/>
+                            <constraint firstItem="vAV-rk-5rm" firstAttribute="leading" secondItem="NFu-YS-LdR" secondAttribute="leading" id="IcV-qv-KqI"/>
+                            <constraint firstAttribute="trailing" secondItem="vAV-rk-5rm" secondAttribute="trailing" id="NKb-tl-ixC"/>
+                            <constraint firstItem="kgD-31-C7L" firstAttribute="bottom" secondItem="vAV-rk-5rm" secondAttribute="bottom" id="ryK-Kn-nB6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kgD-31-C7L"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Registration" id="JZM-Y6-tOv"/>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="Ncm-U2-T27" id="mnP-v2-Fdv"/>
+                        <outlet property="emailTextField" destination="uGf-IH-Obn" id="BgG-7u-QId"/>
+                        <outlet property="fullNameTextField" destination="anX-ia-SCO" id="RdM-l8-nco"/>
+                        <outlet property="passwordTextField" destination="XI4-Kt-9RO" id="OEd-bk-ISt"/>
+                        <outlet property="registrationButton" destination="5XZ-T3-avF" id="bA9-GH-v5A"/>
+                        <outlet property="scrollView" destination="vAV-rk-5rm" id="07X-QU-Eqy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Qk-dP-knK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="804" y="60"/>
+        </scene>
+    </scenes>
+</document>
